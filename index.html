@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Jadwal Ramadhan 1447H — SMKN 1 Maluku Tengah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════ RESET & BASE ═══════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Sora',sans-serif;
+  background:#f0ede8;
+  color:#1a1a2e;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ═══════════════ CSS VARIABLES ═══════════════ */
+:root{
+  --bg:#f0ede8;
+  --surface:#fff;
+  --surface2:#f7f4ef;
+  --border:#e2ddd6;
+  --ink:#1a1a2e;
+  --ink2:#5a5a72;
+  --ink3:#9090a8;
+  --red:#c0392b;
+  --teal:#0d7377;
+  --teal-lt:#e8f5f6;
+  --amber:#d4880a;
+  --amber-lt:#fef3dc;
+  --green:#217a3c;
+  --green-lt:#e8f5ed;
+  --blue:#1a5276;
+  --blue-lt:#e8f0f7;
+  --shadow:0 2px 16px rgba(26,26,46,.08);
+  --shadow-md:0 6px 32px rgba(26,26,46,.12);
+  --radius:14px;
+  --h:60px;
+}
+
+/* ═══════════════ HEADER ═══════════════ */
+.hdr{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:var(--h);
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 1.25rem;
+  gap:.75rem;
+}
+.hdr-brand{display:flex;align-items:center;gap:.7rem;min-width:0}
+.hdr-logo{
+  width:34px;height:34px;border-radius:9px;flex-shrink:0;
+  background:linear-gradient(135deg,#c0392b,#e74c3c);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Instrument Serif',serif;font-size:1rem;color:#fff;font-weight:400;
+}
+.hdr-text{min-width:0}
+.hdr-title{
+  font-size:.8rem;font-weight:700;color:#fff;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  letter-spacing:.01em;
+}
+.hdr-sub{font-size:.58rem;color:rgba(255,255,255,.45);margin-top:1px;letter-spacing:.05em}
+.hdr-right{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+.badge{
+  font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 9px;border-radius:20px;white-space:nowrap;
+}
+.badge-ok{background:rgba(33,122,60,.25);color:#4dcc7a;border:1px solid rgba(77,204,122,.3)}
+.badge-ram{background:rgba(212,136,10,.2);color:#f0b429;border:1px solid rgba(240,180,41,.3)}
+
+/* ═══════════════ NAV BAR (bottom mobile / top desktop) ═══════════════ */
+.nav{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--ink);
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex;
+  height:62px;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;border:none;background:transparent;cursor:pointer;
+  padding:8px 4px;font-family:'Sora',sans-serif;
+  transition:all .18s;color:rgba(255,255,255,.35);
+}
+.nav-btn.on{color:#fff}
+.nav-btn.on .nav-ico{background:rgba(192,57,43,.2);color:#e74c3c}
+.nav-ico{
+  width:36px;height:36px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;transition:all .18s;
+}
+.nav-lbl{font-size:.6rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+@media(min-width:768px){
+  .nav{
+    top:var(--h);bottom:auto;height:52px;border-top:none;
+    border-bottom:1px solid rgba(255,255,255,.06);
+    padding-bottom:0;
+  }
+  .nav-btn{flex-direction:row;gap:6px;padding:8px 16px}
+  .nav-ico{width:30px;height:30px;font-size:.95rem}
+  .nav-lbl{font-size:.72rem}
+}
+
+/* ═══════════════ MAIN LAYOUT ═══════════════ */
+.main{
+  padding-top:calc(var(--h) + 8px);
+  padding-bottom:calc(62px + env(safe-area-inset-bottom) + 8px);
+  min-height:100vh;
+}
+@media(min-width:768px){
+  .main{padding-top:calc(var(--h) + 52px + 12px);padding-bottom:20px}
+}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero{
+  background:var(--ink);
+  color:#fff;
+  padding:1.5rem 1.25rem 1.75rem;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;
+  top:-80px;right:-80px;
+  width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,57,43,.18) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'RAMADHAN 1447H';
+  position:absolute;bottom:-12px;right:-4px;
+  font-family:'Instrument Serif',serif;font-size:4.5rem;color:rgba(255,255,255,.04);
+  white-space:nowrap;letter-spacing:.05em;pointer-events:none;
+  line-height:1;
+}
+.hero-school{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.5rem}
+.hero-title{
+  font-family:'Instrument Serif',serif;font-size:clamp(1.5rem,5vw,2.2rem);
+  font-weight:400;line-height:1.1;margin-bottom:.4rem;
+}
+.hero-title em{color:#e74c3c;font-style:italic}
+.hero-date{font-size:.72rem;color:rgba(255,255,255,.5);font-family:'JetBrains Mono',monospace;margin-bottom:1.2rem}
+.stats-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.stat{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;padding:8px 14px;text-align:center;flex:1;min-width:64px;
+}
+.stat-n{font-family:'Instrument Serif',serif;font-size:1.35rem;color:#e74c3c;line-height:1}
+.stat-l{font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-top:2px}
+
+/* ═══════════════ CONTROLS ═══════════════ */
+.ctrl{
+  background:var(--surface);
+  padding:.9rem 1rem;
+  border-bottom:1px solid var(--border);
+  display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-end;
+  position:sticky;top:calc(var(--h) + 52px);z-index:100;
+}
+@media(max-width:767px){.ctrl{position:static}}
+
+.ctrl-g{display:flex;flex-direction:column;gap:3px}
+.ctrl-g.grow{flex:1;min-width:140px}
+.ctrl-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3)}
+
+select,input{
+  font-family:'Sora',sans-serif;font-size:.8rem;
+  padding:8px 10px;
+  border:1.5px solid var(--border);border-radius:9px;
+  background:var(--surface2);color:var(--ink);
+  transition:border-color .18s,box-shadow .18s;
+  -webkit-appearance:none;appearance:none;
+  min-width:0;width:100%;
+}
+select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239090a8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 9px center;
+  padding-right:26px;cursor:pointer;
+}
+select:focus,input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,115,119,.12)}
+.search-wrap{position:relative}
+.search-ico{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--ink3);font-size:.85rem;pointer-events:none}
+input.si{padding-left:28px}
+
+/* ═══════════════ SECTION ═══════════════ */
+.section{
+  max-width:1440px;margin:0 auto;padding:1rem 1rem 1.5rem;
+}
+.section.hidden{display:none}
+
+/* ═══════════════ DAY HEADER ═══════════════ */
+.day-hdr{
+  display:flex;align-items:center;gap:.75rem;
+  padding:.5rem 0 .9rem;
+}
+.day-name{
+  font-family:'Instrument Serif',serif;font-size:1.6rem;color:var(--ink);font-weight:400;
+}
+.day-pill{
+  font-size:.6rem;font-family:'JetBrains Mono',monospace;
+  padding:3px 9px;border-radius:20px;
+  background:var(--teal-lt);color:var(--teal);border:1px solid rgba(13,115,119,.2);
+  white-space:nowrap;
+}
+
+/* ═══════════════ TABLE ═══════════════ */
+.tbl-outer{
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  margin-bottom:1.25rem;
+}
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;min-width:600px;width:100%}
+
+thead th{
+  background:var(--ink);color:rgba(255,255,255,.7);
+  padding:8px 7px;font-size:.58rem;font-weight:600;
+  text-align:center;letter-spacing:.08em;text-transform:uppercase;
+  white-space:nowrap;border-bottom:2px solid rgba(255,255,255,.05);
+}
+th.th-fix{
+  background:#111128;min-width:38px;
+  position:sticky;left:0;z-index:3;
+  border-right:1px solid rgba(255,255,255,.07);color:rgba(255,255,255,.35);
+}
+th.th-time{
+  background:#111128;min-width:82px;
+  border-right:2px solid rgba(255,255,255,.07);
+  font-family:'JetBrains Mono',monospace;font-size:.55rem;
+}
+th.th-k{min-width:90px;cursor:pointer;transition:background .15s}
+th.th-k:hover{background:#2a2a45}
+.th-kn{font-family:'Instrument Serif',serif;font-size:.72rem;font-weight:400;font-style:italic;text-transform:none;letter-spacing:0;color:#fff;display:block}
+.th-kj{font-size:.55rem;color:rgba(255,255,255,.35);font-style:normal;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.07em;display:block;margin-top:1px}
+
+tbody tr{border-bottom:1px solid #f0ece4}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover td{background:#faf8f5}
+
+td{padding:5px 5px;text-align:center;vertical-align:middle}
+td.td-jp{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;
+  color:var(--ink3);background:#faf8f5;
+  border-right:1px solid #e8e4dc;
+  position:sticky;left:0;z-index:1;width:36px;
+}
+td.td-time{
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--ink3);
+  background:#faf8f5;border-right:2px solid #ddd8ce;white-space:nowrap;
+}
+tr.tr-ist td{
+  background:repeating-linear-gradient(45deg,#faf7f2,#faf7f2 5px,#f5f0e8 5px,#f5f0e8 10px);
+  font-size:.58rem;color:var(--amber);font-weight:600;letter-spacing:.04em;
+  padding:5px;
+}
+tr.tr-ist td.td-jp,tr.tr-ist td.td-time{background:repeating-linear-gradient(45deg,#f5f0e8,#f5f0e8 5px,#ede8de 5px,#ede8de 10px)}
+
+/* ═══════════════ CHIP ═══════════════ */
+.chip{
+  display:inline-flex;flex-direction:column;align-items:center;
+  border-radius:8px;padding:4px 5px;min-width:78px;max-width:88px;
+  cursor:pointer;border:1.5px solid;
+  transition:transform .15s,box-shadow .15s;
+  position:relative;
+}
+@media(hover:hover){
+  .chip:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.12);z-index:5}
+  .chip:hover .tt{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+}
+.chip-code{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;line-height:1}
+.chip-guru{font-size:.55rem;color:var(--ink3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:82px}
+.chip-par{position:absolute;top:2px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--amber)}
+.chip-nc{display:inline-block;width:14px;height:2px;border-radius:1px;background:#d0c8bc;opacity:.5}
+
+/* chip colors by category */
+.ca{background:rgba(192,57,43,.06);border-color:rgba(192,57,43,.2);--cc:#c0392b}
+.cb{background:rgba(13,115,119,.06);border-color:rgba(13,115,119,.2);--cc:#0d7377}
+.cc{background:rgba(33,122,60,.06);border-color:rgba(33,122,60,.2);--cc:#217a3c}
+.cd{background:rgba(212,136,10,.07);border-color:rgba(212,136,10,.22);--cc:#c47c00}
+.ce{background:rgba(26,82,118,.06);border-color:rgba(26,82,118,.2);--cc:#1a5276}
+.cf{background:rgba(100,30,120,.06);border-color:rgba(100,30,120,.2);--cc:#641e78}
+.chip-code{color:var(--cc)}
+
+/* revised cell highlight */
+.chip.revised{
+  background:rgba(33,122,60,.08)!important;
+  border-color:rgba(33,122,60,.35)!important;
+  --cc:#217a3c!important;
+}
+.chip.revised::after{
+  content:'✎';position:absolute;top:1px;left:3px;
+  font-size:.45rem;color:var(--green);opacity:.6;
+}
+
+/* ═══════════════ TOOLTIP ═══════════════ */
+.tt{
+  position:absolute;bottom:calc(100% + 8px);left:50%;
+  transform:translateX(-50%) translateY(4px);
+  background:var(--ink);color:#fff;
+  font-size:.68rem;padding:10px 13px;
+  border-radius:10px;white-space:nowrap;min-width:190px;text-align:left;
+  pointer-events:none;opacity:0;
+  transition:opacity .18s,transform .18s;
+  z-index:500;
+  box-shadow:0 8px 32px rgba(0,0,0,.25);
+  line-height:1.65;
+}
+.tt::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--ink)}
+.tt-mc{color:#f5a623;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700}
+.tt-mn{color:rgba(255,255,255,.6);font-size:.63rem}
+.tt-g{color:#fff;font-weight:500}
+.tt-t{color:rgba(255,255,255,.45);font-family:'JetBrains Mono',monospace;font-size:.62rem}
+.tt-par{color:#f0b429;font-size:.6rem}
+.tt-rev{color:#4dcc7a;font-size:.6rem}
+
+/* ═══════════════ BOTTOM SHEET (Mobile popup) ═══════════════ */
+.sheet-overlay{
+  position:fixed;inset:0;z-index:800;
+  background:rgba(0,0,0,.45);
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.sheet-overlay.open{opacity:1;pointer-events:all}
+.sheet{
+  position:absolute;bottom:0;left:0;right:0;
+  background:var(--surface);
+  border-radius:20px 20px 0 0;
+  padding:0 0 env(safe-area-inset-bottom);
+  transform:translateY(100%);
+  transition:transform .28s cubic-bezier(.32,.72,0,1);
+  max-height:80vh;overflow-y:auto;
+}
+.sheet-overlay.open .sheet{transform:translateY(0)}
+.sheet-handle{width:40px;height:4px;border-radius:2px;background:#ddd;margin:12px auto 0}
+.sheet-hdr{padding:14px 18px 12px;border-bottom:1px solid var(--border)}
+.sheet-title{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--ink)}
+.sheet-sub{font-size:.7rem;color:var(--ink3);font-family:'JetBrains Mono',monospace;margin-top:2px}
+.sheet-body{padding:14px 18px}
+.sheet-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid #f0ece4}
+.sheet-row:last-child{border-bottom:none}
+.sheet-key{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);min-width:100px;flex-shrink:0;padding-top:1px}
+.sheet-val{font-size:.82rem;color:var(--ink);text-align:right;font-weight:500;line-height:1.3}
+.sheet-val.mono{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--teal)}
+.sheet-val.green{color:var(--green);font-size:.75rem}
+.sheet-val.gold{color:var(--amber)}
+.kl-list{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
+.kl-tag{font-size:.62rem;padding:2px 8px;border-radius:12px;background:var(--teal-lt);color:var(--teal);border:1px solid rgba(13,115,119,.2);font-weight:600}
+
+/* ═══════════════ CARDS (Guru/Mapel view) ═══════════════ */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:.9rem;
+}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+.card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .2s,box-shadow .2s;
+}
+@media(hover:hover){
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+}
+.card-hdr{
+  padding:13px 15px;display:flex;align-items:center;gap:11px;
+  border-bottom:1px solid var(--border);
+  background:var(--surface2);
+}
+.avatar{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Instrument Serif',serif;font-size:.9rem;color:#fff;font-weight:400;
+}
+.card-name{font-size:.82rem;font-weight:700;color:var(--ink);line-height:1.2}
+.card-id{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--ink3);margin-top:2px}
+.card-body{padding:12px 15px}
+
+.gsi-list{list-style:none}
+.gsi{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid #f0ece4;font-size:.76rem}
+.gsi:last-child{border-bottom:none}
+.gsi-day{font-weight:700;color:var(--teal);min-width:50px;font-size:.68rem;padding-top:1px}
+.gsi-info{flex:1;min-width:0}
+.gsi-mc{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:700;color:var(--ink)}
+.gsi-mn{font-size:.65rem;color:var(--ink3);font-style:italic}
+.gsi-kelas{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+.kl-mini{font-size:.58rem;padding:1px 6px;border-radius:10px;background:var(--teal-lt);color:var(--teal);border:1px solid rgba(13,115,119,.2);font-weight:600}
+.gsi-jp{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--ink3);min-width:58px;text-align:right;padding-top:1px}
+
+.mcard-hdr-row{display:flex;align-items:flex-start;gap:10px}
+.mcode{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;
+  padding:4px 9px;border-radius:7px;
+  background:var(--ink);color:#fff;white-space:nowrap;flex-shrink:0;
+}
+.mfull{font-size:.8rem;font-weight:500;color:var(--ink);line-height:1.3}
+.mguru{font-size:.72rem;color:var(--ink2);margin:8px 0 5px}
+.mguru-n{color:var(--ink);font-weight:600}
+.mkelas{display:flex;flex-wrap:wrap;gap:4px}
+.mjp{margin-top:6px;font-size:.62rem;color:var(--ink3);font-family:'JetBrains Mono',monospace}
+
+/* ═══════════════ EMPTY / LOADING ═══════════════ */
+.empty{text-align:center;padding:48px 16px;color:var(--ink3)}
+.empty-ico{font-size:2.2rem;margin-bottom:8px}
+.empty-txt{font-size:.85rem}
+
+/* ═══════════════ SCROLLBAR ═══════════════ */
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+
+/* ═══════════════ ANIM ═══════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp .25s ease both}
+@keyframes shimmer{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* ═══════════════ HIGHLIGHT ═══════════════ */
+.hl{background:#fde9a0;border-radius:2px;padding:0 1px}
+
+/* ═══════════════ SEARCH RESULT COUNT ═══════════════ */
+.result-info{
+  font-size:.68rem;color:var(--ink3);padding:.4rem 1rem .25rem;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* ═══════════════ RESPONSIVE TWEAKS ═══════════════ */
+@media(max-width:480px){
+  .hero-title{font-size:1.4rem}
+  .stats-row{gap:.4rem}
+  .stat{padding:7px 10px;min-width:56px}
+  .stat-n{font-size:1.15rem}
+  .ctrl{padding:.7rem .8rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-brand">
+    <div class="hdr-logo">S</div>
+    <div class="hdr-text">
+      <div class="hdr-title">SMKN 1 Maluku Tengah</div>
+      <div class="hdr-sub">Dinas Pendidikan — Prov. Maluku</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <span class="badge badge-ok">✓ Terverifikasi</span>
+    <span class="badge badge-ram">Ramadhan 1447H</span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <button class="nav-btn on" id="nb-kelas" onclick="setView('kelas')">
+    <div class="nav-ico">📅</div>
+    <span class="nav-lbl">Kelas</span>
+  </button>
+  <button class="nav-btn" id="nb-guru" onclick="setView('guru')">
+    <div class="nav-ico">👤</div>
+    <span class="nav-lbl">Guru</span>
+  </button>
+  <button class="nav-btn" id="nb-mapel" onclick="setView('mapel')">
+    <div class="nav-ico">📚</div>
+    <span class="nav-lbl">Mapel</span>
+  </button>
+  <button class="nav-btn" id="nb-cari" onclick="focusSearch()">
+    <div class="nav-ico">🔍</div>
+    <span class="nav-lbl">Cari</span>
+  </button>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-school">SMK Negeri 1 Maluku Tengah</div>
+    <h1 class="hero-title">Jadwal <em>Ramadhan</em><br>1447H / 2026M</h1>
+    <div class="hero-date">23 Feb – 17 Mar 2026 &nbsp;·&nbsp; 1 JP = 30 mnt &nbsp;·&nbsp; Masuk 08.00 WIT</div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-n">21</div><div class="stat-l">Kelas</div></div>
+      <div class="stat"><div class="stat-n">45</div><div class="stat-l">Guru</div></div>
+      <div class="stat"><div class="stat-n" id="st-mp">63</div><div class="stat-l">Mapel</div></div>
+      <div class="stat"><div class="stat-n">984</div><div class="stat-l">Entri JP</div></div>
+      <div class="stat"><div class="stat-n">0</div><div class="stat-l">Konflik</div></div>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="ctrl" id="ctrl-bar">
+    <div class="ctrl-g" id="ctrl-hari-wrap">
+      <div class="ctrl-lbl">Hari</div>
+      <select id="sel-hari" onchange="render()">
+        <option>Senin</option><option>Selasa</option>
+        <option>Rabu</option><option>Kamis</option><option>Jumat</option>
+      </select>
+    </div>
+    <div class="ctrl-g" id="ctrl-kelas-wrap">
+      <div class="ctrl-lbl">Kelas</div>
+      <select id="sel-kelas" onchange="render()">
+        <option value="">Semua Kelas</option>
+      </select>
+    </div>
+    <div class="ctrl-g grow">
+      <div class="ctrl-lbl">Cari Guru / Mapel</div>
+      <div class="search-wrap">
+        <span class="search-ico">⌕</span>
+        <input type="search" id="q" class="si" placeholder="Nama guru, kode mapel..." oninput="render()" autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <div id="result-info" class="result-info"></div>
+
+  <!-- VIEWS -->
+  <div id="view-kelas" class="section anim"></div>
+  <div id="view-guru" class="section anim hidden"></div>
+  <div id="view-mapel" class="section anim hidden"></div>
+
+</main>
+
+<!-- BOTTOM SHEET -->
+<div class="sheet-overlay" id="sheet-ov" onclick="closeSheet(event)">
+  <div class="sheet" id="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-hdr">
+      <div class="sheet-title" id="sh-title">Detail</div>
+      <div class="sheet-sub" id="sh-sub"></div>
+    </div>
+    <div class="sheet-body" id="sh-body"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════
+// DATA
+// ══════════════════════════════════════
+const D={"schedule":{"Senin":{"X MPLB":{"1":{"g":"5","m":"L","w":"08.00 - 08.30"},"2":{"g":"5","m":"L","w":"08.30 - 09.00"},"3":{"g":"5","m":"L","w":"09.00 - 09.30"},"4":{"g":"8","m":"I","w":"09.30 - 10.00"},"5":{"g":"8","m":"I","w":"10.20 - 10.50"},"6":{"g":"8","m":"I","w":"10.50 - 11.20"},"7":{"g":"6","m":"H","w":"11.20 - 11.50"},"8":{"g":"6","m":"H","w":"11.50 - 12.20"},"9":{"g":"6","m":"H","w":"12.40 - 13.10"},"10":{"g":"21","m":"K","w":"13.10 - 13.40"},"11":{"g":"21","m":"K","w":"13.40 - 14.10"}},"X AKL":{"1":{"g":"44","m":"J","w":"08.00 - 08.30"},"2":{"g":"44","m":"J","w":"08.30 - 09.00"},"3":{"g":"44","m":"J","w":"09.00 - 09.30"},"4":{"g":"21","m":"K","w":"09.30 - 10.00"},"5":{"g":"21","m":"K","w":"10.20 - 10.50"},"6":{"g":"33","m":"C","w":"10.50 - 11.20"},"7":{"g":"33","m":"C","w":"11.20 - 11.50"},"8":{"g":"33","m":"C","w":"11.50 - 12.20"},"9":{"g":"1","m":"ww","w":"12.40 - 13.10"},"10":{"g":"1","m":"ww","w":"13.10 - 13.40"},"11":{"g":"1","m":"ww","w":"13.40 - 14.10"}},"X PMS":{"1":{"g":"20","m":"O","w":"08.00 - 08.30"},"2":{"g":"20","m":"O","w":"08.30 - 09.00"},"3":{"g":"20","m":"O","w":"09.00 - 09.30"},"4":{"g":"20","m":"O","w":"09.30 - 10.00"},"5":{"g":"10","m":"I","w":"10.20 - 10.50"},"6":{"g":"10","m":"I","w":"10.50 - 11.20"},"7":{"g":"10","m":"I","w":"11.20 - 11.50"},"8":{"g":"37","m":"G","w":"11.50 - 12.20"},"9":{"g":"37","m":"G","w":"12.40 - 13.10"},"10":{"g":"18","m":"E","w":"13.10 - 13.40"},"11":{"g":"18","m":"E","w":"13.40 - 14.10"}},"X ULP":{"1":{"g":"18","m":"E","w":"08.00 - 08.30"},"2":{"g":"18","m":"E","w":"08.30 - 09.00"},"3":{"g":"31","m":"R","w":"09.00 - 09.30"},"4":{"g":"31","m":"R","w":"09.30 - 10.00"},"5":{"g":"31","m":"R","w":"10.20 - 10.50"},"6":{"g":"24","m":"ww","w":"10.50 - 11.20"},"7":{"g":"24","m":"ww","w":"11.20 - 11.50"},"8":{"g":"24","m":"ww","w":"11.50 - 12.20"},"9":{"g":"24","m":"J","w":"12.40 - 13.10"},"10":{"g":"24","m":"J","w":"13.10 - 13.40"},"11":{"g":"24","m":"J","w":"13.40 - 14.10"}},"X TJKT1":{"1":{"g":"37","m":"G","w":"08.00 - 08.30"},"2":{"g":"37","m":"G","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.30 - 10.00"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"},"6":{"g":"18","m":"E","w":"10.50 - 11.20"},"7":{"g":"18","m":"E","w":"11.20 - 11.50"},"8":{"g":"45","m":"tjkt2","w":"11.50 - 12.20"},"9":{"g":"45","m":"tjkt2","w":"12.40 - 13.10"},"10":{"g":"2","m":"B","w":"13.10 - 13.40"},"11":{"g":"2","m":"B","w":"13.40 - 14.10"}},"X TJKT2":{"1":{"g":"19","m":"ww","w":"08.00 - 08.30"},"2":{"g":"19","m":"ww","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.30 - 10.00"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"},"6":{"g":"37","m":"G","w":"10.50 - 11.20"},"7":{"g":"37","m":"G","w":"11.20 - 11.50"},"8":{"g":"2","m":"B","w":"11.50 - 12.20"},"9":{"g":"2","m":"B","w":"12.40 - 13.10"},"10":{"g":"29","m":"F","w":"13.10 - 13.40"},"11":{"g":"29","m":"F","w":"13.40 - 14.10"}},"X TK":{"1":{"g":"38","m":"K","w":"08.00 - 08.30"},"2":{"g":"38","m":"K","w":"08.30 - 09.00"},"3":{"g":"38","m":"K","w":"09.00 - 09.30"},"4":{"g":"30","m":"H","w":"09.30 - 10.00"},"5":{"g":"30","m":"H","w":"10.20 - 10.50"},"6":{"g":"30","m":"H","w":"10.50 - 11.20"},"7":{"g":"25","m":"U","w":"11.20 - 11.50"},"8":{"g":"25","m":"U","w":"11.50 - 12.20"},"9":{"g":"25","m":"U","w":"12.40 - 13.10"},"10":{"g":"10","m":"ww","w":"13.10 - 13.40"},"11":{"g":"10","m":"ww","w":"13.40 - 14.10"}},"X TK2":{"1":{"g":"28","m":"U","w":"08.00 - 08.30"},"2":{"g":"28","m":"U","w":"08.30 - 09.00"},"3":{"g":"28","m":"U","w":"09.00 - 09.30"},"4":{"g":"37","m":"G","w":"09.30 - 10.00"},"5":{"g":"37","m":"G","w":"10.20 - 10.50"},"6":{"g":"49","m":"K","w":"10.50 - 11.20"},"7":{"g":"49","m":"K","w":"11.20 - 11.50"},"8":{"g":"49","m":"K","w":"11.50 - 12.20"},"9":{"g":"30","m":"ww","w":"12.40 - 13.10"},"10":{"g":"30","m":"ww","w":"13.10 - 13.40"},"11":{"g":"30","m":"ww","w":"13.40 - 14.10"}},"XI MPLB":{"1":{"g":"23","m":"A1","w":"08.00 - 08.30"},"2":{"g":"23","m":"A1","w":"08.30 - 09.00"},"3":{"g":"23","m":"A1","w":"09.00 - 09.30"},"4":{"g":"6","m":"H","w":"09.30 - 10.00"},"5":{"g":"6","m":"H","w":"10.20 - 10.50"},"6":{"g":"5","m":"U1","w":"10.50 - 11.20"},"7":{"g":"5","m":"U1","w":"11.20 - 11.50"},"8":{"g":"32","m":"X","w":"11.50 - 12.20"},"9":{"g":"32","m":"X","w":"12.40 - 13.10"},"10":{"g":"22","m":"aa","w":"13.10 - 13.40"},"11":{"g":"22","m":"aa","w":"13.40 - 14.10"}},"XI AKL":{"1":{"g":"4","m":"G1","w":"08.00 - 08.30"},"2":{"g":"4","m":"G1","w":"08.30 - 09.00"},"3":{"g":"4","m":"G1","w":"09.00 - 09.30"},"4":{"g":"4","m":"G1","w":"09.30 - 10.00"},"5":{"g":"22","m":"aa","w":"10.20 - 10.50"},"6":{"g":"22","m":"aa","w":"10.50 - 11.20"},"7":{"g":"22","m":"aa","w":"11.20 - 11.50"},"8":{"g":"4","m":"V1","w":"11.50 - 12.20"},"9":{"g":"4","m":"V1","w":"12.40 - 13.10"},"10":{"g":"4","m":"V1","w":"13.10 - 13.40"},"11":{"g":"4","m":"V1","w":"13.40 - 14.10"}},"XI PMS":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"12","m":"M1","w":"09.00 - 09.30"},"4":{"g":"12","m":"M1","w":"09.30 - 10.00"},"5":{"g":"12","m":"M1","w":"10.20 - 10.50"},"6":{"g":"14","m":"ww","w":"10.50 - 11.20"},"7":{"g":"14","m":"ww","w":"11.20 - 11.50"},"8":{"g":"18","m":"E","w":"11.50 - 12.20"},"9":{"g":"18","m":"E","w":"12.40 - 13.10"},"10":{"g":"19","m":"C","w":"13.10 - 13.40"},"11":{"g":"19","m":"C","w":"13.40 - 14.10"}},"XI ULP":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"24","m":"O1","w":"09.00 - 09.30"},"4":{"g":"24","m":"O1","w":"09.30 - 10.00"},"5":{"g":"24","m":"O1","w":"10.20 - 10.50"},"6":{"g":"29","m":"rr","w":"10.50 - 11.20"},"7":{"g":"29","m":"rr","w":"11.20 - 11.50"},"8":{"g":"5","m":"X1","w":"11.50 - 12.20"},"9":{"g":"5","m":"X1","w":"12.40 - 13.10"},"10":{"g":"14","m":"H","w":"13.10 - 13.40"},"11":{"g":"14","m":"H","w":"13.40 - 14.10"}},"XI TJKT":{"1":{"g":"9","m":"aa","w":"08.00 - 08.30"},"2":{"g":"9","m":"aa","w":"08.30 - 09.00"},"3":{"g":"9","m":"aa","w":"09.00 - 09.30"},"4":{"g":"45","m":"hh","w":"09.30 - 10.00"},"5":{"g":"45","m":"hh","w":"10.20 - 10.50"},"6":{"g":"45","m":"hh","w":"10.50 - 11.20"},"7":{"g":"19","m":"ww","w":"11.20 - 11.50"},"8":{"g":"19","m":"ww","w":"11.50 - 12.20"},"9":{"g":"44","m":"oo","w":"12.40 - 13.10"},"10":{"g":"44","m":"oo","w":"13.10 - 13.40"},"11":{"g":"44","m":"oo","w":"13.40 - 14.10"}},"XI TJKT2":{"1":{"g":"45","m":"hh","w":"08.00 - 08.30"},"2":{"g":"45","m":"hh","w":"08.30 - 09.00"},"3":{"g":"45","m":"hh","w":"09.00 - 09.30"},"4":{"g":"44","m":"oo","w":"09.30 - 10.00"},"5":{"g":"44","m":"oo","w":"10.20 - 10.50"},"6":{"g":"44","m":"oo","w":"10.50 - 11.20"},"7":{"g":"40","m":"gg","w":"11.20 - 11.50"},"8":{"g":"40","m":"gg","w":"11.50 - 12.20"},"9":{"g":"40","m":"gg","w":"12.40 - 13.10"},"10":{"g":"23","m":"ww","w":"13.10 - 13.40"},"11":{"g":"23","m":"ww","w":"13.40 - 14.10"}},"XI TK":{"1":{"g":"34","m":"pp","w":"08.00 - 08.30"},"2":{"g":"34","m":"pp","w":"08.30 - 09.00"},"3":{"g":"34","m":"pp","w":"09.00 - 09.30"},"4":{"g":"25","m":"mm","w":"09.30 - 10.00"},"5":{"g":"25","m":"mm","w":"10.20 - 10.50"},"6":{"g":"25","m":"mm","w":"10.50 - 11.20"},"7":{"g":"30","m":"H","w":"11.20 - 11.50"},"8":{"g":"30","m":"H","w":"11.50 - 12.20"},"9":{"g":"34","m":"ll","w":"12.40 - 13.10"},"10":{"g":"34","m":"ll","w":"13.10 - 13.40"},"11":{"g":"34","m":"ll","w":"13.40 - 14.10"}},"XII MPLB":{"1":{"g":"32","m":"Y","w":"08.00 - 08.30"},"2":{"g":"32","m":"Y","w":"08.30 - 09.00"},"3":{"g":"17","m":"A","w":"09.00 - 09.30"},"4":{"g":"17","m":"A","w":"09.30 - 10.00"},"5":{"g":"2","m":"B","w":"10.20 - 10.50"},"6":{"g":"2","m":"B","w":"10.50 - 11.20"},"7":{"g":"23","m":"tt","w":"11.20 - 11.50"},"8":{"g":"23","m":"tt","w":"11.50 - 12.20"},"9":{"g":"26","m":"D1","w":"12.40 - 13.10"},"10":{"g":"26","m":"D1","w":"13.10 - 13.40"}},"XII AKL":{"1":{"g":"26","m":"H1","w":"08.00 - 08.30"},"2":{"g":"26","m":"H1","w":"08.30 - 09.00"},"3":{"g":"17","m":"A","w":"09.00 - 09.30"},"4":{"g":"17","m":"A","w":"09.30 - 10.00"},"5":{"g":"26","m":"J1","w":"10.20 - 10.50"},"6":{"g":"26","m":"J1","w":"10.50 - 11.20"},"7":{"g":"26","m":"J1","w":"11.20 - 11.50"},"8":{"g":"26","m":"J1","w":"11.50 - 12.20"},"9":{"g":"13","m":"B","w":"12.40 - 13.10"},"10":{"g":"13","m":"B","w":"13.10 - 13.40"}},"XII PMS":{"1":{"g":"27","m":"S1","w":"08.00 - 08.30"},"2":{"g":"27","m":"S1","w":"08.30 - 09.00"},"3":{"g":"27","m":"S1","w":"09.00 - 09.30"},"4":{"g":"27","m":"S1","w":"09.30 - 10.00"},"5":{"g":"7","m":"W1","w":"10.20 - 10.50"},"6":{"g":"7","m":"W1","w":"10.50 - 11.20"},"7":{"g":"7","m":"W1","w":"11.20 - 11.50"},"8":{"g":"7","m":"W1","w":"11.50 - 12.20"},"9":{"g":"7","m":"aa","w":"12.40 - 13.10"},"10":{"g":"7","m":"aa","w":"13.10 - 13.40"}},"XII ULP":{"1":{"g":"14","m":"H","w":"08.00 - 08.30"},"2":{"g":"14","m":"H","w":"08.30 - 09.00"},"3":{"g":"14","m":"H","w":"09.00 - 09.30"},"4":{"g":"5","m":"X1","w":"09.30 - 10.00"},"5":{"g":"5","m":"X1","w":"10.20 - 10.50"},"6":{"g":"31","m":"cc","w":"10.50 - 11.20"},"7":{"g":"31","m":"cc","w":"11.20 - 11.50"},"8":{"g":"31","m":"cc","w":"11.50 - 12.20"},"9":{"g":"8","m":"I","w":"12.40 - 13.10"},"10":{"g":"8","m":"I","w":"13.10 - 13.40"}},"XII TJKT":{"1":{"g":"1","m":"I","w":"08.00 - 08.30"},"2":{"g":"1","m":"I","w":"08.30 - 09.00"},"3":{"g":"1","m":"I","w":"09.00 - 09.30"},"4":{"g":"1","m":"I","w":"09.30 - 10.00"},"5":{"g":"9","m":"KT3","w":"10.20 - 10.50"},"6":{"g":"9","m":"KT3","w":"10.50 - 11.20"},"7":{"g":"9","m":"KT1","w":"11.20 - 11.50"},"8":{"g":"9","m":"KT1","w":"11.50 - 12.20"},"9":{"g":"9","m":"Y1","w":"12.40 - 13.10"},"10":{"g":"9","m":"Y1","w":"13.10 - 13.40"}},"XII TK":{"1":{"g":"10","m":"I","w":"08.00 - 08.30"},"2":{"g":"10","m":"I","w":"08.30 - 09.00"},"3":{"g":"10","m":"I","w":"09.00 - 09.30"},"4":{"g":"10","m":"I","w":"09.30 - 10.00"},"5":{"g":"19","m":"C","w":"10.20 - 10.50"},"6":{"g":"19","m":"C","w":"10.50 - 11.20"},"7":{"g":"11","m":"ll","w":"11.20 - 11.50"},"8":{"g":"11","m":"ll","w":"11.50 - 12.20"},"9":{"g":"11","m":"ll","w":"12.40 - 13.10"},"10":{"g":"11","m":"ll","w":"13.10 - 13.40"}}},"Selasa":{"X MPLB":{"1":{"g":"18","m":"E","w":"08.00 - 08.30"},"2":{"g":"18","m":"E","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.30 - 10.00"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"},"6":{"g":"21","m":"K","w":"10.50 - 11.20"},"7":{"g":"21","m":"K","w":"11.20 - 11.50"},"8":{"g":"21","m":"K","w":"11.50 - 12.20"},"9":{"g":"5","m":"L","w":"12.40 - 13.10"},"10":{"g":"5","m":"L","w":"13.10 - 13.40"},"11":{"g":"5","m":"L","w":"13.40 - 14.10"}},"X AKL":{"1":{"g":"2","m":"B","w":"08.00 - 08.30"},"2":{"g":"2","m":"B","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.30 - 10.00"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"},"6":{"g":"35","m":"M","w":"10.50 - 11.20"},"7":{"g":"35","m":"M","w":"11.20 - 11.50"},"8":{"g":"35","m":"M","w":"11.50 - 12.20"},"9":{"g":"6","m":"H","w":"12.40 - 13.10"},"10":{"g":"6","m":"H","w":"13.10 - 13.40"},"11":{"g":"6","m":"H","w":"13.40 - 14.10"}},"X PMS":{"1":{"g":"29","m":"F","w":"08.00 - 08.30"},"2":{"g":"29","m":"F","w":"08.30 - 09.00"},"3":{"g":"5","m":"ww","w":"09.00 - 09.30"},"4":{"g":"5","m":"ww","w":"09.30 - 10.00"},"5":{"g":"5","m":"ww","w":"10.20 - 10.50"},"6":{"g":"46","m":"C","w":"10.50 - 11.20"},"7":{"g":"46","m":"C","w":"11.20 - 11.50"},"8":{"g":"46","m":"C","w":"11.50 - 12.20"},"9":{"g":"40","m":"J","w":"12.40 - 13.10"},"10":{"g":"40","m":"J","w":"13.10 - 13.40"},"11":{"g":"40","m":"J","w":"13.40 - 14.10"}},"X ULP":{"1":{"g":"14","m":"H","w":"08.00 - 08.30"},"2":{"g":"14","m":"H","w":"08.30 - 09.00"},"3":{"g":"14","m":"H","w":"09.00 - 09.30"},"4":{"g":"31","m":"R","w":"09.30 - 10.00"},"5":{"g":"31","m":"R","w":"10.20 - 10.50"},"6":{"g":"31","m":"R","w":"10.50 - 11.20"},"7":{"g":"2","m":"B","w":"11.20 - 11.50"},"8":{"g":"2","m":"B","w":"11.50 - 12.20"},"9":{"g":"33","m":"C","w":"12.40 - 13.10"},"10":{"g":"33","m":"C","w":"13.10 - 13.40"},"11":{"g":"33","m":"C","w":"13.40 - 14.10"}},"X TJKT1":{"1":{"g":"21","m":"K","w":"08.00 - 08.30"},"2":{"g":"21","m":"K","w":"08.30 - 09.00"},"3":{"g":"21","m":"K","w":"09.00 - 09.30"},"4":{"g":"1","m":"I","w":"09.30 - 10.00"},"5":{"g":"1","m":"I","w":"10.20 - 10.50"},"6":{"g":"1","m":"I","w":"10.50 - 11.20"},"7":{"g":"39","m":"J","w":"11.20 - 11.50"},"8":{"g":"39","m":"J","w":"11.50 - 12.20"},"9":{"g":"39","m":"J","w":"12.40 - 13.10"},"10":{"g":"45","m":"tjkt2","w":"13.10 - 13.40"},"11":{"g":"45","m":"tjkt2","w":"13.40 - 14.10"}},"X TJKT2":{"1":{"g":"9","m":"tjkt2","w":"08.00 - 08.30"},"2":{"g":"9","m":"tjkt2","w":"08.30 - 09.00"},"3":{"g":"45","m":"tjkt3","w":"09.00 - 09.30"},"4":{"g":"45","m":"tjkt3","w":"09.30 - 10.00"},"5":{"g":"45","m":"tjkt3","w":"10.20 - 10.50"},"6":{"g":"45","m":"tjkt3","w":"10.50 - 11.20"},"7":{"g":"43","m":"H","w":"11.20 - 11.50"},"8":{"g":"43","m":"H","w":"11.50 - 12.20"},"9":{"g":"43","m":"H","w":"12.40 - 13.10"},"10":{"g":"21","m":"K","w":"13.10 - 13.40"},"11":{"g":"21","m":"K","w":"13.40 - 14.10"}},"X TK":{"1":{"g":"30","m":"J","w":"08.00 - 08.30"},"2":{"g":"30","m":"J","w":"08.30 - 09.00"},"3":{"g":"30","m":"J","w":"09.00 - 09.30"},"4":{"g":"25","m":"U","w":"09.30 - 10.00"},"5":{"g":"25","m":"U","w":"10.20 - 10.50"},"6":{"g":"25","m":"U","w":"10.50 - 11.20"},"7":{"g":"37","m":"G","w":"11.20 - 11.50"},"8":{"g":"37","m":"G","w":"11.50 - 12.20"},"9":{"g":"10","m":"I","w":"12.40 - 13.10"},"10":{"g":"10","m":"I","w":"13.10 - 13.40"},"11":{"g":"10","m":"I","w":"13.40 - 14.10"}},"X TK2":{"1":{"g":"33","m":"C","w":"08.00 - 08.30"},"2":{"g":"33","m":"C","w":"08.30 - 09.00"},"3":{"g":"33","m":"C","w":"09.00 - 09.30"},"4":{"g":"28","m":"U","w":"09.30 - 10.00"},"5":{"g":"28","m":"U","w":"10.20 - 10.50"},"6":{"g":"28","m":"U","w":"10.50 - 11.20"},"7":{"g":"30","m":"ww","w":"11.20 - 11.50"},"8":{"g":"30","m":"ww","w":"11.50 - 12.20"},"9":{"g":"30","m":"H","w":"12.40 - 13.10"},"10":{"g":"30","m":"H","w":"13.10 - 13.40"},"11":{"g":"30","m":"H","w":"13.40 - 14.10"}},"XI MPLB":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"16","m":"A","w":"09.00 - 09.30"},"4":{"g":"16","m":"A","w":"09.30 - 10.00"},"5":{"g":"26","m":"D1","w":"10.20 - 10.50"},"6":{"g":"26","m":"D1","w":"10.50 - 11.20"},"7":{"g":"5","m":"U1","w":"11.20 - 11.50"},"8":{"g":"5","m":"U1","w":"11.50 - 12.20"},"9":{"g":"22","m":"aa","w":"12.40 - 13.10"},"10":{"g":"22","m":"aa","w":"13.10 - 13.40"},"11":{"g":"22","m":"aa","w":"13.40 - 14.10"}},"XI AKL":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"16","m":"A","w":"09.00 - 09.30"},"4":{"g":"16","m":"A","w":"09.30 - 10.00"},"5":{"g":"22","m":"aa","w":"10.20 - 10.50"},"6":{"g":"22","m":"aa","w":"10.50 - 11.20"},"7":{"g":"4","m":"G1","w":"11.20 - 11.50"},"8":{"g":"4","m":"G1","w":"11.50 - 12.20"},"9":{"g":"4","m":"G1","w":"12.40 - 13.10"},"10":{"g":"23","m":"B","w":"13.10 - 13.40"},"11":{"g":"23","m":"B","w":"13.40 - 14.10"}},"XI PMS":{"1":{"g":"17","m":"A","w":"08.00 - 08.30"},"2":{"g":"17","m":"A","w":"08.30 - 09.00"},"3":{"g":"20","m":"M3","w":"09.00 - 09.30"},"4":{"g":"20","m":"M3","w":"09.30 - 10.00"},"5":{"g":"20","m":"M3","w":"10.20 - 10.50"},"6":{"g":"12","m":"M1","w":"10.50 - 11.20"},"7":{"g":"12","m":"M1","w":"11.20 - 11.50"},"8":{"g":"12","m":"M1","w":"11.50 - 12.20"},"9":{"g":"27","m":"M2","w":"12.40 - 13.10"},"10":{"g":"27","m":"M2","w":"13.10 - 13.40"},"11":{"g":"27","m":"M2","w":"13.40 - 14.10"}},"XI ULP":{"1":{"g":"17","m":"A","w":"08.00 - 08.30"},"2":{"g":"17","m":"A","w":"08.30 - 09.00"},"3":{"g":"23","m":"B","w":"09.00 - 09.30"},"4":{"g":"23","m":"B","w":"09.30 - 10.00"},"5":{"g":"8","m":"I","w":"10.20 - 10.50"},"6":{"g":"8","m":"I","w":"10.50 - 11.20"},"7":{"g":"8","m":"I","w":"11.20 - 11.50"},"8":{"g":"24","m":"ee","w":"11.50 - 12.20"},"9":{"g":"24","m":"ee","w":"12.40 - 13.10"},"10":{"g":"24","m":"ee","w":"13.10 - 13.40"},"11":{"g":"24","m":"ee","w":"13.40 - 14.10"}},"XI TJKT":{"1":{"g":"19","m":"C","w":"08.00 - 08.30"},"2":{"g":"19","m":"C","w":"08.30 - 09.00"},"3":{"g":"18","m":"E","w":"09.00 - 09.30"},"4":{"g":"18","m":"E","w":"09.30 - 10.00"},"5":{"g":"40","m":"gg","w":"10.20 - 10.50"},"6":{"g":"40","m":"gg","w":"10.50 - 11.20"},"7":{"g":"45","m":"hh","w":"11.20 - 11.50"},"8":{"g":"45","m":"hh","w":"11.50 - 12.20"},"9":{"g":"45","m":"hh","w":"12.40 - 13.10"},"10":{"g":"29","m":"rr","w":"13.10 - 13.40"},"11":{"g":"29","m":"rr","w":"13.40 - 14.10"}},"XI TJKT2":{"1":{"g":"1","m":"I","w":"08.00 - 08.30"},"2":{"g":"1","m":"I","w":"08.30 - 09.00"},"3":{"g":"1","m":"I","w":"09.00 - 09.30"},"4":{"g":"19","m":"C","w":"09.30 - 10.00"},"5":{"g":"19","m":"C","w":"10.20 - 10.50"},"6":{"g":"18","m":"E","w":"10.50 - 11.20"},"7":{"g":"18","m":"E","w":"11.20 - 11.50"},"8":{"g":"9","m":"jj","w":"11.50 - 12.20"},"9":{"g":"9","m":"jj","w":"12.40 - 13.10"},"10":{"g":"9","m":"jj","w":"13.10 - 13.40"},"11":{"g":"9","m":"jj","w":"13.40 - 14.10"}},"XI TK":{"1":{"g":"34","m":"pp","w":"08.00 - 08.30"},"2":{"g":"34","m":"pp","w":"08.30 - 09.00"},"3":{"g":"34","m":"pp","w":"09.00 - 09.30"},"4":{"g":"34","m":"ll","w":"09.30 - 10.00"},"5":{"g":"34","m":"ll","w":"10.20 - 10.50"},"6":{"g":"34","m":"ll","w":"10.50 - 11.20"},"7":{"g":"28","m":"aa","w":"11.20 - 11.50"},"8":{"g":"28","m":"aa","w":"11.50 - 12.20"},"9":{"g":"28","m":"aa","w":"12.40 - 13.10"},"10":{"g":"18","m":"E","w":"13.10 - 13.40"},"11":{"g":"18","m":"E","w":"13.40 - 14.10"}},"XII MPLB":{"1":{"g":"8","m":"I","w":"08.00 - 08.30"},"2":{"g":"8","m":"I","w":"08.30 - 09.00"},"3":{"g":"8","m":"I","w":"09.00 - 09.30"},"4":{"g":"8","m":"I","w":"09.30 - 10.00"},"5":{"g":"32","m":"Z","w":"10.20 - 10.50"},"6":{"g":"32","m":"Z","w":"10.50 - 11.20"},"7":{"g":"19","m":"ww","w":"11.20 - 11.50"},"8":{"g":"19","m":"ww","w":"11.50 - 12.20"},"9":{"g":"19","m":"C","w":"12.40 - 13.10"},"10":{"g":"19","m":"C","w":"13.10 - 13.40"}},"XII AKL":{"1":{"g":"22","m":"Q1","w":"08.00 - 08.30"},"2":{"g":"22","m":"Q1","w":"08.30 - 09.00"},"3":{"g":"4","m":"G1","w":"09.00 - 09.30"},"4":{"g":"14","m":"H","w":"09.30 - 10.00"},"5":{"g":"4","m":"G1","w":"10.20 - 10.50"},"6":{"g":"4","m":"G1","w":"10.50 - 11.20"},"7":{"g":"1","m":"I","w":"11.20 - 11.50"},"8":{"g":"1","m":"I","w":"11.50 - 12.20"},"9":{"g":"1","m":"I","w":"12.40 - 13.10"},"10":{"g":"1","m":"I","w":"13.10 - 13.40"}},"XII PMS":{"1":{"g":"7","m":"aa","w":"08.00 - 08.30"},"2":{"g":"7","m":"aa","w":"08.30 - 09.00"},"3":{"g":"7","m":"aa","w":"09.00 - 09.30"},"4":{"g":"14","m":"H","w":"09.30 - 10.00"},"5":{"g":"14","m":"H","w":"10.20 - 10.50"},"6":{"g":"14","m":"H","w":"10.50 - 11.20"},"7":{"g":"20","m":"M3","w":"11.20 - 11.50"},"8":{"g":"20","m":"M3","w":"11.50 - 12.20"},"9":{"g":"20","m":"M3","w":"12.40 - 13.10"},"10":{"g":"20","m":"M3","w":"13.10 - 13.40"}},"XII ULP":{"1":{"g":"31","m":"cc","w":"08.00 - 08.30"},"2":{"g":"31","m":"cc","w":"08.30 - 09.00"},"3":{"g":"31","m":"cc","w":"09.00 - 09.30"},"4":{"g":"24","m":"ee","w":"09.30 - 10.00"},"5":{"g":"24","m":"ee","w":"10.20 - 10.50"},"6":{"g":"24","m":"ee","w":"10.50 - 11.20"},"7":{"g":"24","m":"ee","w":"11.20 - 11.50"},"8":{"g":"31","m":"aa","w":"11.50 - 12.20"},"9":{"g":"31","m":"aa","w":"12.40 - 13.10"},"10":{"g":"31","m":"aa","w":"13.10 - 13.40"}},"XII TJKT":{"1":{"g":"45","m":"KT2","w":"08.00 - 08.30"},"2":{"g":"45","m":"KT2","w":"08.30 - 09.00"},"3":{"g":"9","m":"KT3","w":"09.00 - 09.30"},"4":{"g":"9","m":"KT3","w":"09.30 - 10.00"},"5":{"g":"9","m":"aa","w":"10.20 - 10.50"},"6":{"g":"9","m":"aa","w":"10.50 - 11.20"},"7":{"g":"9","m":"aa","w":"11.20 - 11.50"},"8":{"g":"14","m":"H","w":"11.50 - 12.20"},"9":{"g":"14","m":"H","w":"12.40 - 13.10"},"10":{"g":"14","m":"H","w":"13.10 - 13.40"}},"XII TK":{"1":{"g":"11","m":"ll","w":"08.00 - 08.30"},"2":{"g":"11","m":"ll","w":"08.30 - 09.00"},"3":{"g":"11","m":"ll","w":"09.00 - 09.30"},"4":{"g":"11","m":"ll","w":"09.30 - 10.00"},"5":{"g":"6","m":"H","w":"10.20 - 10.50"},"6":{"g":"6","m":"H","w":"10.50 - 11.20"},"7":{"g":"6","m":"H","w":"11.20 - 11.50"},"8":{"g":"6","m":"H","w":"11.50 - 12.20"},"9":{"g":"25","m":"pp","w":"12.40 - 13.10"},"10":{"g":"25","m":"pp","w":"13.10 - 13.40"}}},"Rabu":{"X MPLB":{"1":{"g":"2","m":"B","w":"08.00 - 08.30"},"2":{"g":"2","m":"B","w":"08.30 - 09.00"},"3":{"g":"6","m":"ww","w":"09.00 - 09.30"},"4":{"g":"6","m":"ww","w":"09.30 - 10.00"},"5":{"g":"6","m":"ww","w":"10.20 - 10.50"},"6":{"g":"5","m":"L","w":"10.50 - 11.20"},"7":{"g":"5","m":"L","w":"11.20 - 11.50"},"8":{"g":"5","m":"L","w":"11.50 - 12.20"},"9":{"g":"46","m":"C","w":"12.40 - 13.10"},"10":{"g":"46","m":"C","w":"13.10 - 13.40"},"11":{"g":"46","m":"C","w":"13.40 - 14.10"}},"X AKL":{"1":{"g":"21","m":"K","w":"08.00 - 08.30"},"2":{"g":"21","m":"K","w":"08.30 - 09.00"},"3":{"g":"21","m":"K","w":"09.00 - 09.30"},"4":{"g":"29","m":"F","w":"09.30 - 10.00"},"5":{"g":"29","m":"F","w":"10.20 - 10.50"},"6":{"g":"22","m":"M","w":"10.50 - 11.20"},"7":{"g":"22","m":"M","w":"11.20 - 11.50"},"8":{"g":"22","m":"M","w":"11.50 - 12.20"},"9":{"g":"1","m":"I","w":"12.40 - 13.10"},"10":{"g":"1","m":"I","w":"13.10 - 13.40"},"11":{"g":"1","m":"I","w":"13.40 - 14.10"}},"X PMS":{"1":{"g":"5","m":"ww","w":"08.00 - 08.30"},"2":{"g":"5","m":"ww","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.30 - 10.00"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"},"6":{"g":"2","m":"B","w":"10.50 - 11.20"},"7":{"g":"2","m":"B","w":"11.20 - 11.50"},"8":{"g":"27","m":"Oo","w":"11.50 - 12.20"},"9":{"g":"27","m":"Oo","w":"12.40 - 13.10"},"10":{"g":"27","m":"Oo","w":"13.10 - 13.40"},"11":{"g":"27","m":"Oo","w":"13.40 - 14.10"}},"X ULP":{"1":{"g":"29","m":"F","w":"08.00 - 08.30"},"2":{"g":"29","m":"F","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.30 - 10.00"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"},"6":{"g":"31","m":"R","w":"10.50 - 11.20"},"7":{"g":"31","m":"R","w":"11.20 - 11.50"},"8":{"g":"31","m":"R","w":"11.50 - 12.20"},"9":{"g":"21","m":"K","w":"12.40 - 13.10"},"10":{"g":"21","m":"K","w":"13.10 - 13.40"},"11":{"g":"21","m":"K","w":"13.40 - 14.10"}},"X TJKT1":{"1":{"g":"44","m":"tjkt1","w":"08.00 - 08.30"},"2":{"g":"44","m":"tjkt1","w":"08.30 - 09.00"},"3":{"g":"44","m":"tjkt1","w":"09.00 - 09.30"},"4":{"g":"44","m":"tjkt1","w":"09.30 - 10.00"},"5":{"g":"40","m":"tjkt3","w":"10.20 - 10.50"},"6":{"g":"40","m":"tjkt3","w":"10.50 - 11.20"},"7":{"g":"40","m":"tjkt3","w":"11.20 - 11.50"},"8":{"g":"40","m":"tjkt3","w":"11.50 - 12.20"},"9":{"g":"48","m":"A","w":"12.40 - 13.10"},"10":{"g":"48","m":"A","w":"13.10 - 13.40"},"11":{"g":"48","m":"A","w":"13.40 - 14.10"}},"X TJKT2":{"1":{"g":"39","m":"J","w":"08.00 - 08.30"},"2":{"g":"39","m":"J","w":"08.30 - 09.00"},"3":{"g":"39","m":"J","w":"09.00 - 09.30"},"4":{"g":"21","m":"K","w":"09.30 - 10.00"},"5":{"g":"21","m":"K","w":"10.20 - 10.50"},"6":{"g":"21","m":"K","w":"10.50 - 11.20"},"7":{"g":"18","m":"E","w":"11.20 - 11.50"},"8":{"g":"18","m":"E","w":"11.50 - 12.20"},"9":{"g":"48","m":"A","w":"12.40 - 13.10"},"10":{"g":"48","m":"A","w":"13.10 - 13.40"},"11":{"g":"48","m":"A","w":"13.40 - 14.10"}},"X TK":{"1":{"g":"48","m":"A","w":"08.00 - 08.30"},"2":{"g":"48","m":"A","w":"08.30 - 09.00"},"3":{"g":"48","m":"A","w":"09.00 - 09.30"},"4":{"g":"33","m":"C","w":"09.30 - 10.00"},"5":{"g":"33","m":"C","w":"10.20 - 10.50"},"6":{"g":"33","m":"C","w":"10.50 - 11.20"},"7":{"g":"25","m":"U","w":"11.20 - 11.50"},"8":{"g":"25","m":"U","w":"11.50 - 12.20"},"9":{"g":"25","m":"U","w":"12.40 - 13.10"},"10":{"g":"18","m":"E","w":"13.10 - 13.40"},"11":{"g":"18","m":"E","w":"13.40 - 14.10"}},"X TK2":{"1":{"g":"48","m":"A","w":"08.00 - 08.30"},"2":{"g":"48","m":"A","w":"08.30 - 09.00"},"3":{"g":"48","m":"A","w":"09.00 - 09.30"},"4":{"g":"30","m":"J","w":"09.30 - 10.00"},"5":{"g":"30","m":"J","w":"10.20 - 10.50"},"6":{"g":"30","m":"J","w":"10.50 - 11.20"},"7":{"g":"28","m":"U","w":"11.20 - 11.50"},"8":{"g":"28","m":"U","w":"11.50 - 12.20"},"9":{"g":"28","m":"U","w":"12.40 - 13.10"},"10":{"g":"29","m":"F","w":"13.10 - 13.40"},"11":{"g":"29","m":"F","w":"13.40 - 14.10"}},"XI MPLB":{"1":{"g":"18","m":"E","w":"08.00 - 08.30"},"2":{"g":"18","m":"E","w":"08.30 - 09.00"},"3":{"g":"5","m":"xx","w":"09.00 - 09.30"},"4":{"g":"5","m":"xx","w":"09.30 - 10.00"},"5":{"g":"5","m":"xx","w":"10.20 - 10.50"},"6":{"g":"19","m":"C","w":"10.50 - 11.20"},"7":{"g":"19","m":"C","w":"11.20 - 11.50"},"8":{"g":"15","m":"ww","w":"11.50 - 12.20"},"9":{"g":"15","m":"ww","w":"12.40 - 13.10"},"10":{"g":"23","m":"B","w":"13.10 - 13.40"},"11":{"g":"23","m":"B","w":"13.40 - 14.10"}},"XI AKL":{"1":{"g":"1","m":"I","w":"08.00 - 08.30"},"2":{"g":"1","m":"I","w":"08.30 - 09.00"},"3":{"g":"1","m":"I","w":"09.00 - 09.30"},"4":{"g":"18","m":"E","w":"09.30 - 10.00"},"5":{"g":"18","m":"E","w":"10.20 - 10.50"},"6":{"g":"6","m":"H","w":"10.50 - 11.20"},"7":{"g":"6","m":"H","w":"11.20 - 11.50"},"8":{"g":"26","m":"I1","w":"11.50 - 12.20"},"9":{"g":"26","m":"I1","w":"12.40 - 13.10"},"10":{"g":"26","m":"I1","w":"13.10 - 13.40"},"11":{"g":"26","m":"I1","w":"13.40 - 14.10"}},"XI PMS":{"1":{"g":"10","m":"I","w":"08.00 - 08.30"},"2":{"g":"10","m":"I","w":"08.30 - 09.00"},"3":{"g":"10","m":"I","w":"09.00 - 09.30"},"4":{"g":"14","m":"ww","w":"09.30 - 10.00"},"5":{"g":"14","m":"ww","w":"10.20 - 10.50"},"6":{"g":"7","m":"aa","w":"10.50 - 11.20"},"7":{"g":"7","m":"aa","w":"11.20 - 11.50"},"8":{"g":"7","m":"aa","w":"11.50 - 12.20"},"9":{"g":"20","m":"M3","w":"12.40 - 13.10"},"10":{"g":"20","m":"M3","w":"13.10 - 13.40"},"11":{"g":"20","m":"M3","w":"13.40 - 14.10"}},"XI ULP":{"1":{"g":"31","m":"cc","w":"08.00 - 08.30"},"2":{"g":"31","m":"cc","w":"08.30 - 09.00"},"3":{"g":"31","m":"cc","w":"09.00 - 09.30"},"4":{"g":"31","m":"cc","w":"09.30 - 10.00"},"5":{"g":"8","m":"ww","w":"10.20 - 10.50"},"6":{"g":"8","m":"ww","w":"10.50 - 11.20"},"7":{"g":"24","m":"N1","w":"11.20 - 11.50"},"8":{"g":"24","m":"N1","w":"11.50 - 12.20"},"9":{"g":"24","m":"N1","w":"12.40 - 13.10"},"10":{"g":"24","m":"N1","w":"13.10 - 13.40"},"11":{"g":"24","m":"N1","w":"13.40 - 14.10"}},"XI TJKT":{"1":{"g":"9","m":"jj","w":"08.00 - 08.30"},"2":{"g":"9","m":"jj","w":"08.30 - 09.00"},"3":{"g":"9","m":"jj","w":"09.00 - 09.30"},"4":{"g":"9","m":"jj","w":"09.30 - 10.00"},"5":{"g":"1","m":"I","w":"10.20 - 10.50"},"6":{"g":"1","m":"I","w":"10.50 - 11.20"},"7":{"g":"1","m":"I","w":"11.20 - 11.50"},"8":{"g":"19","m":"ww","w":"11.50 - 12.20"},"9":{"g":"19","m":"ww","w":"12.40 - 13.10"},"10":{"g":"40","m":"gg","w":"13.10 - 13.40"},"11":{"g":"40","m":"gg","w":"13.40 - 14.10"}},"XI TJKT2":{"1":{"g":"45","m":"hh","w":"08.00 - 08.30"},"2":{"g":"45","m":"hh","w":"08.30 - 09.00"},"3":{"g":"45","m":"hh","w":"09.00 - 09.30"},"4":{"g":"39","m":"aa","w":"09.30 - 10.00"},"5":{"g":"39","m":"aa","w":"10.20 - 10.50"},"6":{"g":"23","m":"ww","w":"10.50 - 11.20"},"7":{"g":"23","m":"ww","w":"11.20 - 11.50"},"8":{"g":"29","m":"rr","w":"11.50 - 12.20"},"9":{"g":"29","m":"rr","w":"12.40 - 13.10"},"10":{"g":"30","m":"H","w":"13.10 - 13.40"},"11":{"g":"30","m":"H","w":"13.40 - 14.10"}},"XI TK":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"28","m":"aa","w":"09.00 - 09.30"},"4":{"g":"28","m":"aa","w":"09.30 - 10.00"},"5":{"g":"10","m":"I","w":"10.20 - 10.50"},"6":{"g":"10","m":"I","w":"10.50 - 11.20"},"7":{"g":"10","m":"I","w":"11.20 - 11.50"},"8":{"g":"23","m":"B","w":"11.50 - 12.20"},"9":{"g":"23","m":"B","w":"12.40 - 13.10"},"10":{"g":"16","m":"A","w":"13.10 - 13.40"},"11":{"g":"16","m":"A","w":"13.40 - 14.10"}},"XII MPLB":{"1":{"g":"23","m":"A1","w":"08.00 - 08.30"},"2":{"g":"23","m":"A1","w":"08.30 - 09.00"},"3":{"g":"23","m":"A1","w":"09.00 - 09.30"},"4":{"g":"23","m":"A1","w":"09.30 - 10.00"},"5":{"g":"32","m":"X","w":"10.20 - 10.50"},"6":{"g":"32","m":"X","w":"10.50 - 11.20"},"7":{"g":"13","m":"B","w":"11.20 - 11.50"},"8":{"g":"13","m":"B","w":"11.50 - 12.20"},"9":{"g":"22","m":"aa","w":"12.40 - 13.10"},"10":{"g":"22","m":"aa","w":"13.10 - 13.40"}},"XII AKL":{"1":{"g":"22","m":"aa","w":"08.00 - 08.30"},"2":{"g":"22","m":"aa","w":"08.30 - 09.00"},"3":{"g":"22","m":"aa","w":"09.00 - 09.30"},"4":{"g":"22","m":"aa","w":"09.30 - 10.00"},"5":{"g":"22","m":"aa","w":"10.20 - 10.50"},"6":{"g":"26","m":"K1","w":"10.50 - 11.20"},"7":{"g":"26","m":"K1","w":"11.20 - 11.50"},"8":{"g":"6","m":"H","w":"11.50 - 12.20"},"9":{"g":"6","m":"H","w":"12.40 - 13.10"},"10":{"g":"6","m":"H","w":"13.10 - 13.40"}},"XII PMS":{"1":{"g":"19","m":"C","w":"08.00 - 08.30"},"2":{"g":"19","m":"C","w":"08.30 - 09.00"},"3":{"g":"20","m":"M3","w":"09.00 - 09.30"},"4":{"g":"20","m":"M3","w":"09.30 - 10.00"},"5":{"g":"20","m":"M3","w":"10.20 - 10.50"},"6":{"g":"20","m":"M3","w":"10.50 - 11.20"},"7":{"g":"12","m":"M1","w":"11.20 - 11.50"},"8":{"g":"12","m":"M1","w":"11.50 - 12.20"},"9":{"g":"12","m":"M1","w":"12.40 - 13.10"},"10":{"g":"12","m":"M1","w":"13.10 - 13.40"}},"XII ULP":{"1":{"g":"24","m":"O1","w":"08.00 - 08.30"},"2":{"g":"24","m":"O1","w":"08.30 - 09.00"},"3":{"g":"24","m":"O1","w":"09.00 - 09.30"},"4":{"g":"24","m":"N1","w":"09.30 - 10.00"},"5":{"g":"24","m":"N1","w":"10.20 - 10.50"},"6":{"g":"24","m":"N1","w":"10.50 - 11.20"},"7":{"g":"8","m":"I","w":"11.20 - 11.50"},"8":{"g":"8","m":"I","w":"11.50 - 12.20"},"9":{"g":"5","m":"X1","w":"12.40 - 13.10"},"10":{"g":"5","m":"X1","w":"13.10 - 13.40"}},"XII TJKT":{"1":{"g":"15","m":"A","w":"08.00 - 08.30"},"2":{"g":"15","m":"A","w":"08.30 - 09.00"},"3":{"g":"19","m":"C","w":"09.00 - 09.30"},"4":{"g":"19","m":"C","w":"09.30 - 10.00"},"5":{"g":"9","m":"KT1","w":"10.20 - 10.50"},"6":{"g":"9","m":"KT1","w":"10.50 - 11.20"},"7":{"g":"9","m":"aa","w":"11.20 - 11.50"},"8":{"g":"9","m":"aa","w":"11.50 - 12.20"},"9":{"g":"45","m":"KT2","w":"12.40 - 13.10"},"10":{"g":"45","m":"KT2","w":"13.10 - 13.40"}},"XII TK":{"1":{"g":"15","m":"A","w":"08.00 - 08.30"},"2":{"g":"15","m":"A","w":"08.30 - 09.00"},"3":{"g":"25","m":"Z1","w":"09.00 - 09.30"},"4":{"g":"25","m":"Z1","w":"09.30 - 10.00"},"5":{"g":"25","m":"Z1","w":"10.20 - 10.50"},"6":{"g":"25","m":"Z1","w":"10.50 - 11.20"},"7":{"g":"11","m":"ll","w":"11.20 - 11.50"},"8":{"g":"11","m":"ll","w":"11.50 - 12.20"},"9":{"g":"11","m":"ll","w":"12.40 - 13.10"},"10":{"g":"11","m":"ll","w":"13.10 - 13.40"}}},"Kamis":{"X MPLB":{"1":{"g":"5","m":"L","w":"08.00 - 08.30"},"2":{"g":"5","m":"L","w":"08.30 - 09.00"},"3":{"g":"5","m":"L","w":"09.00 - 09.30"},"4":{"g":"6","m":"ww","w":"09.30 - 10.00"},"5":{"g":"6","m":"ww","w":"10.20 - 10.50"},"6":{"g":"17","m":"A","w":"10.50 - 11.20"},"7":{"g":"17","m":"A","w":"11.20 - 11.50"},"8":{"g":"17","m":"A","w":"12.10 - 12.40"},"9":{"g":"29","m":"F","w":"12.40 - 13.10"},"10":{"g":"29","m":"F","w":"13.10 - 13.40"}},"X AKL":{"1":{"g":"1","m":"ww","w":"08.00 - 08.30"},"2":{"g":"1","m":"ww","w":"08.30 - 09.00"},"3":{"g":"35","m":"M","w":"09.00 - 09.30"},"4":{"g":"35","m":"M","w":"09.30 - 10.00"},"5":{"g":"35","m":"M","w":"10.20 - 10.50"},"6":{"g":"17","m":"A","w":"10.50 - 11.20"},"7":{"g":"17","m":"A","w":"11.20 - 11.50"},"8":{"g":"17","m":"A","w":"12.10 - 12.40"},"9":{"g":"37","m":"G","w":"12.40 - 13.10"},"10":{"g":"37","m":"G","w":"13.10 - 13.40"}},"X PMS":{"1":{"g":"12","m":"Oo","w":"08.00 - 08.30"},"2":{"g":"12","m":"Oo","w":"08.30 - 09.00"},"3":{"g":"12","m":"Oo","w":"09.00 - 09.30"},"4":{"g":"12","m":"Oo","w":"09.30 - 10.00"},"5":{"g":"14","m":"H","w":"10.20 - 10.50"},"6":{"g":"14","m":"H","w":"10.50 - 11.20"},"7":{"g":"14","m":"H","w":"11.20 - 11.50"},"8":{"g":"49","m":"K","w":"12.10 - 12.40"},"9":{"g":"49","m":"K","w":"12.40 - 13.10"},"10":{"g":"49","m":"K","w":"13.10 - 13.40"}},"X ULP":{"1":{"g":"31","m":"R","w":"08.00 - 08.30"},"2":{"g":"31","m":"R","w":"08.30 - 09.00"},"3":{"g":"31","m":"R","w":"09.00 - 09.30"},"4":{"g":"37","m":"G","w":"09.30 - 10.00"},"5":{"g":"37","m":"G","w":"10.20 - 10.50"},"6":{"g":"21","m":"K","w":"10.50 - 11.20"},"7":{"g":"21","m":"K","w":"11.20 - 11.50"},"8":{"g":"8","m":"I","w":"12.10 - 12.40"},"9":{"g":"8","m":"I","w":"12.40 - 13.10"},"10":{"g":"8","m":"I","w":"13.10 - 13.40"}},"X TJKT1":{"1":{"g":"21","m":"K","w":"08.00 - 08.30"},"2":{"g":"21","m":"K","w":"08.30 - 09.00"},"3":{"g":"30","m":"H","w":"09.00 - 09.30"},"4":{"g":"30","m":"H","w":"09.30 - 10.00"},"5":{"g":"30","m":"H","w":"10.20 - 10.50"},"6":{"g":"33","m":"ww","w":"10.50 - 11.20"},"7":{"g":"33","m":"ww","w":"11.20 - 11.50"},"8":{"g":"33","m":"ww","w":"12.10 - 12.40"},"9":{"g":"33","m":"ww","w":"12.40 - 13.10"},"10":{"g":"33","m":"ww","w":"13.10 - 13.40"}},"X TJKT2":{"1":{"g":"33","m":"C","w":"08.00 - 08.30"},"2":{"g":"33","m":"C","w":"08.30 - 09.00"},"3":{"g":"33","m":"C","w":"09.00 - 09.30"},"4":{"g":"45","m":"tjkt1","w":"09.30 - 10.00"},"5":{"g":"45","m":"tjkt1","w":"10.20 - 10.50"},"6":{"g":"45","m":"tjkt1","w":"10.50 - 11.20"},"7":{"g":"45","m":"tjkt1","w":"11.20 - 11.50"},"8":{"g":"1","m":"I","w":"12.10 - 12.40"},"9":{"g":"1","m":"I","w":"12.40 - 13.10"},"10":{"g":"1","m":"I","w":"13.10 - 13.40"}},"X TK":{"1":{"g":"25","m":"U","w":"08.00 - 08.30"},"2":{"g":"25","m":"U","w":"08.30 - 09.00"},"3":{"g":"25","m":"U","w":"09.00 - 09.30"},"4":{"g":"38","m":"K","w":"09.30 - 10.00"},"5":{"g":"38","m":"K","w":"10.20 - 10.50"},"6":{"g":"2","m":"B","w":"10.50 - 11.20"},"7":{"g":"2","m":"B","w":"11.20 - 11.50"},"8":{"g":"10","m":"ww","w":"12.10 - 12.40"},"9":{"g":"10","m":"ww","w":"12.40 - 13.10"},"10":{"g":"10","m":"ww","w":"13.10 - 13.40"}},"X TK2":{"1":{"g":"10","m":"I","w":"08.00 - 08.30"},"2":{"g":"10","m":"I","w":"08.30 - 09.00"},"3":{"g":"10","m":"I","w":"09.00 - 09.30"},"4":{"g":"28","m":"U","w":"09.30 - 10.00"},"5":{"g":"28","m":"U","w":"10.20 - 10.50"},"6":{"g":"28","m":"U","w":"10.50 - 11.20"},"7":{"g":"18","m":"E","w":"11.20 - 11.50"},"8":{"g":"18","m":"E","w":"12.10 - 12.40"},"9":{"g":"2","m":"B","w":"12.40 - 13.10"},"10":{"g":"2","m":"B","w":"13.10 - 13.40"}},"XI MPLB":{"1":{"g":"29","m":"rr","w":"08.00 - 08.30"},"2":{"g":"29","m":"rr","w":"08.30 - 09.00"},"3":{"g":"8","m":"I","w":"09.00 - 09.30"},"4":{"g":"8","m":"I","w":"09.30 - 10.00"},"5":{"g":"8","m":"I","w":"10.20 - 10.50"},"6":{"g":"15","m":"ww","w":"10.50 - 11.20"},"7":{"g":"15","m":"ww","w":"11.20 - 11.50"},"8":{"g":"32","m":"Z","w":"12.10 - 12.40"},"9":{"g":"32","m":"Z","w":"12.40 - 13.10"},"10":{"g":"32","m":"Z","w":"13.10 - 13.40"}},"XI AKL":{"1":{"g":"3","m":"ww","w":"08.00 - 08.30"},"2":{"g":"3","m":"ww","w":"08.30 - 09.00"},"3":{"g":"3","m":"ww","w":"09.00 - 09.30"},"4":{"g":"3","m":"ww","w":"09.30 - 10.00"},"5":{"g":"29","m":"rr","w":"10.20 - 10.50"},"6":{"g":"29","m":"rr","w":"10.50 - 11.20"},"7":{"g":"26","m":"K1","w":"11.20 - 11.50"},"8":{"g":"26","m":"K1","w":"12.10 - 12.40"},"9":{"g":"26","m":"H1","w":"12.40 - 13.10"},"10":{"g":"26","m":"H1","w":"13.10 - 13.40"}},"XI PMS":{"1":{"g":"14","m":"H","w":"08.00 - 08.30"},"2":{"g":"14","m":"H","w":"08.30 - 09.00"},"3":{"g":"7","m":"W1","w":"09.00 - 09.30"},"4":{"g":"7","m":"W1","w":"09.30 - 10.00"},"5":{"g":"7","m":"W1","w":"10.20 - 10.50"},"6":{"g":"7","m":"W1","w":"10.50 - 11.20"},"7":{"g":"29","m":"rr","w":"11.20 - 11.50"},"8":{"g":"29","m":"rr","w":"12.10 - 12.40"},"9":{"g":"23","m":"B","w":"12.40 - 13.10"},"10":{"g":"23","m":"B","w":"13.10 - 13.40"}},"XI ULP":{"1":{"g":"8","m":"ww","w":"08.00 - 08.30"},"2":{"g":"8","m":"ww","w":"08.30 - 09.00"},"3":{"g":"24","m":"O1","w":"09.00 - 09.30"},"4":{"g":"24","m":"O1","w":"09.30 - 10.00"},"5":{"g":"18","m":"E","w":"10.20 - 10.50"},"6":{"g":"18","m":"E","w":"10.50 - 11.20"},"7":{"g":"31","m":"aa","w":"11.20 - 11.50"},"8":{"g":"31","m":"aa","w":"12.10 - 12.40"},"9":{"g":"19","m":"C","w":"12.40 - 13.10"},"10":{"g":"19","m":"C","w":"13.10 - 13.40"}},"XI TJKT":{"1":{"g":"15","m":"A","w":"08.00 - 08.30"},"2":{"g":"15","m":"A","w":"08.30 - 09.00"},"3":{"g":"23","m":"B","w":"09.00 - 09.30"},"4":{"g":"23","m":"B","w":"09.30 - 10.00"},"5":{"g":"39","m":"aa","w":"10.20 - 10.50"},"6":{"g":"39","m":"aa","w":"10.50 - 11.20"},"7":{"g":"30","m":"H","w":"11.20 - 11.50"},"8":{"g":"30","m":"H","w":"12.10 - 12.40"},"9":{"g":"40","m":"gg","w":"12.40 - 13.10"},"10":{"g":"40","m":"gg","w":"13.10 - 13.40"}},"XI TJKT2":{"1":{"g":"15","m":"A","w":"08.00 - 08.30"},"2":{"g":"15","m":"A","w":"08.30 - 09.00"},"3":{"g":"44","m":"oo","w":"09.00 - 09.30"},"4":{"g":"44","m":"oo","w":"09.30 - 10.00"},"5":{"g":"44","m":"oo","w":"10.20 - 10.50"},"6":{"g":"23","m":"B","w":"10.50 - 11.20"},"7":{"g":"23","m":"B","w":"11.20 - 11.50"},"8":{"g":"9","m":"aa","w":"12.10 - 12.40"},"9":{"g":"9","m":"aa","w":"12.40 - 13.10"},"10":{"g":"9","m":"aa","w":"13.10 - 13.40"}},"XI TK":{"1":{"g":"28","m":"Z1","w":"08.00 - 08.30"},"2":{"g":"28","m":"Z1","w":"08.30 - 09.00"},"3":{"g":"29","m":"rr","w":"09.00 - 09.30"},"4":{"g":"29","m":"rr","w":"09.30 - 10.00"},"5":{"g":"19","m":"C","w":"10.20 - 10.50"},"6":{"g":"19","m":"C","w":"10.50 - 11.20"},"7":{"g":"28","m":"Z1","w":"11.20 - 11.50"},"8":{"g":"28","m":"Z1","w":"12.10 - 12.40"},"9":{"g":"18","m":"ww","w":"12.40 - 13.10"},"10":{"g":"18","m":"ww","w":"13.10 - 13.40"}},"XII MPLB":{"1":{"g":"22","m":"aa","w":"08.00 - 08.30"},"2":{"g":"22","m":"aa","w":"08.30 - 09.00"},"3":{"g":"22","m":"aa","w":"09.00 - 09.30"},"4":{"g":"5","m":"U1","w":"09.30 - 10.00"},"5":{"g":"5","m":"U1","w":"10.20 - 10.50"},"6":{"g":"5","m":"U1","w":"10.50 - 11.20"},"7":{"g":"5","m":"U1","w":"11.20 - 11.50"},"8":{"g":"5","m":"xx","w":"12.10 - 12.40"},"9":{"g":"5","m":"xx","w":"12.40 - 13.10"}},"XII AKL":{"1":{"g":"19","m":"C","w":"08.00 - 08.30"},"2":{"g":"19","m":"C","w":"08.30 - 09.00"},"3":{"g":"26","m":"I1","w":"09.00 - 09.30"},"4":{"g":"26","m":"I1","w":"09.30 - 10.00"},"5":{"g":"26","m":"I1","w":"10.20 - 10.50"},"6":{"g":"4","m":"V1","w":"10.50 - 11.20"},"7":{"g":"4","m":"V1","w":"11.20 - 11.50"},"8":{"g":"4","m":"V1","w":"12.10 - 12.40"},"9":{"g":"4","m":"V1","w":"12.40 - 13.10"}},"XII PMS":{"1":{"g":"27","m":"S1","w":"08.00 - 08.30"},"2":{"g":"27","m":"S1","w":"08.30 - 09.00"},"3":{"g":"27","m":"S1","w":"09.00 - 09.30"},"4":{"g":"10","m":"I","w":"09.30 - 10.00"},"5":{"g":"10","m":"I","w":"10.20 - 10.50"},"6":{"g":"10","m":"I","w":"10.50 - 11.20"},"7":{"g":"10","m":"I","w":"11.20 - 11.50"},"8":{"g":"16","m":"A","w":"12.10 - 12.40"},"9":{"g":"16","m":"A","w":"12.40 - 13.10"}},"XII ULP":{"1":{"g":"13","m":"B","w":"08.00 - 08.30"},"2":{"g":"13","m":"B","w":"08.30 - 09.00"},"3":{"g":"19","m":"C","w":"09.00 - 09.30"},"4":{"g":"19","m":"C","w":"09.30 - 10.00"},"5":{"g":"10","m":"I","w":"10.20 - 10.50"},"6":{"g":"24","m":"N1","w":"10.50 - 11.20"},"7":{"g":"24","m":"N1","w":"11.20 - 11.50"},"8":{"g":"16","m":"A","w":"12.10 - 12.40"},"9":{"g":"16","m":"A","w":"12.40 - 13.10"}},"XII TJKT":{"1":{"g":"9","m":"KT3","w":"08.00 - 08.30"},"2":{"g":"9","m":"KT3","w":"08.30 - 09.00"},"3":{"g":"9","m":"KT3","w":"09.00 - 09.30"},"4":{"g":"9","m":"KT1","w":"09.30 - 10.00"},"5":{"g":"9","m":"KT1","w":"10.20 - 10.50"},"6":{"g":"9","m":"Y1","w":"10.50 - 11.20"},"7":{"g":"9","m":"Y1","w":"11.20 - 11.50"},"8":{"g":"13","m":"B","w":"12.10 - 12.40"},"9":{"g":"13","m":"B","w":"12.40 - 13.10"}},"XII TK":{"1":{"g":"11","m":"ll","w":"08.00 - 08.30"},"2":{"g":"11","m":"ll","w":"08.30 - 09.00"},"3":{"g":"11","m":"ll","w":"09.00 - 09.30"},"4":{"g":"11","m":"ll","w":"09.30 - 10.00"},"5":{"g":"13","m":"B","w":"10.20 - 10.50"},"6":{"g":"13","m":"B","w":"10.50 - 11.20"},"7":{"g":"25","m":"pp","w":"11.20 - 11.50"},"8":{"g":"25","m":"pp","w":"12.10 - 12.40"},"9":{"g":"25","m":"pp","w":"12.40 - 13.10"}}},"Jumat":{"X MPLB":{"1":{"g":"37","m":"G","w":"08.00 - 08.30"},"2":{"g":"37","m":"G","w":"08.30 - 09.00"},"3":{"g":"30","m":"J","w":"09.00 - 09.30"},"4":{"g":"30","m":"J","w":"09.50 - 10.20"},"5":{"g":"30","m":"J","w":"10.20 - 10.50"}},"X AKL":{"1":{"g":"18","m":"E","w":"08.00 - 08.30"},"2":{"g":"18","m":"E","w":"08.30 - 09.00"},"3":{"g":"22","m":"M","w":"09.00 - 09.30"},"4":{"g":"22","m":"M","w":"09.50 - 10.20"},"5":{"g":"22","m":"M","w":"10.20 - 10.50"}},"X PMS":{"1":{"g":"17","m":"A","w":"08.00 - 08.30"},"2":{"g":"17","m":"A","w":"08.30 - 09.00"},"3":{"g":"17","m":"A","w":"09.00 - 09.30"},"4":{"g":"49","m":"K","w":"09.50 - 10.20"},"5":{"g":"49","m":"K","w":"10.20 - 10.50"}},"X ULP":{"1":{"g":"17","m":"A","w":"08.00 - 08.30"},"2":{"g":"17","m":"A","w":"08.30 - 09.00"},"3":{"g":"17","m":"A","w":"09.00 - 09.30"},"4":{"g":"24","m":"ww","w":"09.50 - 10.20"},"5":{"g":"24","m":"ww","w":"10.20 - 10.50"}},"X TJKT1":{"1":{"g":"33","m":"C","w":"08.00 - 08.30"},"2":{"g":"33","m":"C","w":"08.30 - 09.00"},"3":{"g":"33","m":"C","w":"09.00 - 09.30"},"4":{"g":"29","m":"F","w":"09.50 - 10.20"},"5":{"g":"29","m":"F","w":"10.20 - 10.50"}},"X TJKT2":{"1":{"g":"19","m":"ww","w":"08.00 - 08.30"},"2":{"g":"19","m":"ww","w":"08.30 - 09.00"},"3":{"g":"19","m":"ww","w":"09.00 - 09.30"},"4":{"g":"9","m":"tjkt2","w":"09.50 - 10.20"},"5":{"g":"9","m":"tjkt2","w":"10.20 - 10.50"}},"X TK":{"1":{"g":"29","m":"F","w":"08.00 - 08.30"},"2":{"g":"29","m":"F","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.50 - 10.20"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"}},"X TK2":{"1":{"g":"49","m":"K","w":"08.00 - 08.30"},"2":{"g":"49","m":"K","w":"08.30 - 09.00"},"3":{"g":"3","m":"D","w":"09.00 - 09.30"},"4":{"g":"3","m":"D","w":"09.50 - 10.20"},"5":{"g":"3","m":"D","w":"10.20 - 10.50"}},"XI MPLB":{"1":{"g":"23","m":"E1","w":"08.00 - 08.30"},"2":{"g":"23","m":"E1","w":"08.30 - 09.00"},"3":{"g":"23","m":"E1","w":"09.00 - 09.30"},"4":{"g":"32","m":"yy","w":"09.50 - 10.20"},"5":{"g":"32","m":"yy","w":"10.20 - 10.50"}},"XI AKL":{"1":{"g":"26","m":"J1","w":"08.00 - 08.30"},"2":{"g":"26","m":"J1","w":"08.30 - 09.00"},"3":{"g":"26","m":"J1","w":"09.00 - 09.30"},"4":{"g":"19","m":"C","w":"09.50 - 10.20"},"5":{"g":"19","m":"C","w":"10.20 - 10.50"}},"XI PMS":{"1":{"g":"27","m":"M2","w":"08.00 - 08.30"},"2":{"g":"27","m":"M2","w":"08.30 - 09.00"},"3":{"g":"27","m":"M2","w":"09.00 - 09.30"},"4":{"g":"7","m":"aa","w":"09.50 - 10.20"},"5":{"g":"7","m":"aa","w":"10.20 - 10.50"}},"XI ULP":{"1":{"g":"31","m":"aa","w":"08.00 - 08.30"},"2":{"g":"31","m":"aa","w":"08.30 - 09.00"},"3":{"g":"31","m":"aa","w":"09.00 - 09.30"},"4":{"g":"5","m":"X1","w":"09.50 - 10.20"},"5":{"g":"5","m":"X1","w":"10.20 - 10.50"}},"XI TJKT":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"44","m":"oo","w":"09.00 - 09.30"},"4":{"g":"44","m":"oo","w":"09.50 - 10.20"},"5":{"g":"44","m":"oo","w":"10.20 - 10.50"}},"XI TJKT2":{"1":{"g":"3","m":"D","w":"08.00 - 08.30"},"2":{"g":"3","m":"D","w":"08.30 - 09.00"},"3":{"g":"40","m":"gg","w":"09.00 - 09.30"},"4":{"g":"40","m":"gg","w":"09.50 - 10.20"},"5":{"g":"40","m":"gg","w":"10.20 - 10.50"}},"XI TK":{"1":{"g":"25","m":"mm","w":"08.00 - 08.30"},"2":{"g":"25","m":"mm","w":"08.30 - 09.00"},"3":{"g":"25","m":"mm","w":"09.00 - 09.30"},"4":{"g":"18","m":"ww","w":"09.50 - 10.20"},"5":{"g":"18","m":"ww","w":"10.20 - 10.50"}},"XII MPLB":{"1":{"g":"6","m":"H","w":"08.00 - 08.30"},"2":{"g":"6","m":"H","w":"08.30 - 09.00"},"3":{"g":"6","m":"H","w":"09.00 - 09.30"},"4":{"g":"23","m":"C1","w":"09.50 - 10.20"},"5":{"g":"23","m":"C1","w":"10.20 - 10.50"}},"XII AKL":{"1":{"g":"4","m":"G1","w":"08.00 - 08.30"},"2":{"g":"4","m":"G1","w":"08.30 - 09.00"},"3":{"g":"4","m":"G1","w":"09.00 - 09.30"},"4":{"g":"26","m":"I1","w":"09.50 - 10.20"},"5":{"g":"26","m":"I1","w":"10.20 - 10.50"}},"XII PMS":{"1":{"g":"13","m":"B","w":"08.00 - 08.30"},"2":{"g":"13","m":"B","w":"08.30 - 09.00"},"3":{"g":"12","m":"M1","w":"09.00 - 09.30"},"4":{"g":"12","m":"M1","w":"09.50 - 10.20"},"5":{"g":"12","m":"M1","w":"10.20 - 10.50"}},"XII ULP":{"1":{"g":"24","m":"O1","w":"08.00 - 08.30"},"2":{"g":"24","m":"O1","w":"08.30 - 09.00"},"3":{"g":"24","m":"O1","w":"09.00 - 09.30"},"4":{"g":"31","m":"aa","w":"09.50 - 10.20"},"5":{"g":"31","m":"aa","w":"10.20 - 10.50"}},"XII TJKT":{"1":{"g":"1","m":"I","w":"08.00 - 08.30"},"2":{"g":"1","m":"I","w":"08.30 - 09.00"},"3":{"g":"45","m":"KT2","w":"09.00 - 09.30"},"4":{"g":"45","m":"KT2","w":"09.50 - 10.20"},"5":{"g":"45","m":"KT2","w":"10.20 - 10.50"}},"XII TK":{"1":{"g":"28","m":"aa","w":"08.00 - 08.30"},"2":{"g":"28","m":"aa","w":"08.30 - 09.00"},"3":{"g":"28","m":"aa","w":"09.00 - 09.30"},"4":{"g":"28","m":"aa","w":"09.50 - 10.20"},"5":{"g":"28","m":"aa","w":"10.20 - 10.50"}}}},"waktu":{"Senin":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"11.50 - 12.20","9":"12.40 - 13.10","10":"13.10 - 13.40","11":"13.40 - 14.10"},"Selasa":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"11.50 - 12.20","9":"12.40 - 13.10","10":"13.10 - 13.40","11":"13.40 - 14.10"},"Rabu":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"11.50 - 12.20","9":"12.40 - 13.10","10":"13.10 - 13.40","11":"13.40 - 14.10"},"Kamis":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"12.10 - 12.40","9":"12.40 - 13.10","10":"13.10 - 13.40"},"Jumat":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.50 - 10.20","5":"10.20 - 10.50"}},"kelas":["X MPLB","X AKL","X PMS","X ULP","X TJKT1","X TJKT2","X TK","X TK2","XI MPLB","XI AKL","XI PMS","XI ULP","XI TJKT","XI TJKT2","XI TK","XII MPLB","XII AKL","XII PMS","XII ULP","XII TJKT","XII TK"],"no_class":{"Senin":{"XII MPLB":[11],"XII AKL":[11],"XII PMS":[11],"XII ULP":[11],"XII TJKT":[11],"XII TK":[11]},"Selasa":{"XII MPLB":[11],"XII AKL":[11],"XII PMS":[11],"XII ULP":[11],"XII TJKT":[11],"XII TK":[11]},"Rabu":{"XII MPLB":[11],"XII AKL":[11],"XII PMS":[11],"XII ULP":[11],"XII TJKT":[11],"XII TK":[11]},"Kamis":{"XII MPLB":[10],"XII AKL":[10],"XII PMS":[10],"XII ULP":[10],"XII TJKT":[10],"XII TK":[10]}},"parallel":{"Jumat|1|17|A":["X PMS","X ULP"],"Jumat|1|3|D":["XI TJKT","XI TJKT2"],"Jumat|2|17|A":["X PMS","X ULP"],"Jumat|2|3|D":["XI TJKT","XI TJKT2"],"Jumat|3|17|A":["X PMS","X ULP"],"Jumat|3|3|D":["X TK","X TK2"],"Jumat|4|3|D":["X TK","X TK2"],"Jumat|5|3|D":["X TK","X TK2"],"Kamis|1|15|A":["XI TJKT","XI TJKT2"],"Kamis|2|15|A":["XI TJKT","XI TJKT2"],"Kamis|5|10|I":["XII PMS","XII ULP"],"Kamis|6|17|A":["X MPLB","X AKL"],"Kamis|7|17|A":["X MPLB","X AKL"],"Kamis|8|16|A":["XII PMS","XII ULP"],"Kamis|8|17|A":["X MPLB","X AKL"],"Kamis|9|16|A":["XII PMS","XII ULP"],"Rabu|1|15|A":["XII TJKT","XII TK"],"Rabu|1|48|A":["X TK","X TK2"],"Rabu|2|15|A":["XII TJKT","XII TK"],"Rabu|2|48|A":["X TK","X TK2"],"Rabu|3|3|D":["X PMS","X ULP"],"Rabu|3|48|A":["X TK","X TK2"],"Rabu|4|3|D":["X PMS","X ULP"],"Rabu|5|3|D":["X PMS","X ULP"],"Rabu|9|48|A":["X TJKT1","X TJKT2"],"Rabu|10|48|A":["X TJKT1","X TJKT2"],"Rabu|11|48|A":["X TJKT1","X TJKT2"],"Selasa|1|17|A":["XI PMS","XI ULP"],"Selasa|1|3|D":["XI MPLB","XI AKL"],"Selasa|2|17|A":["XI PMS","XI ULP"],"Selasa|2|3|D":["XI MPLB","XI AKL"],"Selasa|3|16|A":["XI MPLB","XI AKL"],"Selasa|3|3|D":["X MPLB","X AKL"],"Selasa|4|14|H":["XII AKL","XII PMS"],"Selasa|4|16|A":["XI MPLB","XI AKL"],"Selasa|4|3|D":["X MPLB","X AKL"],"Selasa|5|3|D":["X MPLB","X AKL"],"Senin|1|3|D":["XI PMS","XI ULP"],"Senin|2|3|D":["XI PMS","XI ULP"],"Senin|3|17|A":["XII MPLB","XII AKL"],"Senin|3|3|D":["X TJKT1","X TJKT2"],"Senin|4|17|A":["XII MPLB","XII AKL"],"Senin|4|3|D":["X TJKT1","X TJKT2"],"Senin|5|3|D":["X TJKT1","X TJKT2"]},"stats":{"records":984,"guru":45,"mapel":63}}
+;
+
+const GURU={"1":"A. Bahy, S.Pd.,M.Pd","2":"E.A. Wacanno, S.Pd","3":"O.A. Lawalata, S.Pd","4":"A. Leuwol, S.Pd","5":"B.W. Tanamal, S.Pd","6":"T.M.A. Kappuw, S.Pd","7":"R. Lewenussa, S.Pd","8":"Yulan Talarima, S.Pd.,Gr","9":"S. Singadji, S.Kom","10":"N. Ch. Elias, S.Pd.,M.Pd","11":"A. Dj. Tuasikal, S.Pd.,M.Si","12":"D. Simaela, S.Pd","13":"R. Nilapantjuran, S.Pd","14":"R. E. Ruhukail, S.Pd.,M.Pd","15":"T.S. Polnaya, S.Th","16":"Djumiaty, S.PdI","17":"F.L. Pelletimu, S.Th","18":"V. Ruhukail, S.Pd","19":"Dahasian, S.Pd.,Gr","20":"H. Salampessy, SE","21":"H.S. Kapressy, S.Pd.,M.Pd","22":"M. Kunu, S.Pd","23":"Dani Iswanti, S.Sos","24":"A. A.W.J. Soplantila, S.Tr.Par","25":"Daud Ali Pakan, S.Pd","26":"Marwana Nurdin, SST","27":"Kalsum Mony, S.Pd","28":"Abdul Manan Payapo, S.T","29":"R. A. Ririhena, SM.Gr","30":"Latumeirissa Allcresdo","31":"M. Siwabessy, S.Tr.Par","32":"E. Tamaela, A.Md","33":"Wa Mulina, S.Pd","34":"Papuangan Syamsudin, A.Md","35":"Diwanti Wally, A.Md","36":"M. Matinahoruw, S.Pd.K","37":"J. Resiloy","38":"Lukas M. Wacanno, S.Pd","39":"Mani Jamaludin, S.Kom","40":"Gloria Stevana Pattiradjawane, S.Tr.TI","43":"Netri Wailaruno, S.Pd","44":"Axl Denis Hallatu, S.Kom","45":"R.Y. Ririhena, S.PdKom","46":"Suharja Duhalim, S.Pd","47":"Efrem More Meto, S.Fil","48":"Budiarto Tahidi, S.Pd","49":"Tuasikal Boki"};
+
+const MAPEL={"A":"Pendidikan Agama dan Budi Pekerti","A2":"Pendidikan Agama Katolik","B":"Pendidikan Pancasila","C":"Bahasa Indonesia","D":"Pendidikan Jasmani, Olah Raga dan Kesehatan","E":"Sejarah","F":"Seni Budaya (Seni Musik)","G":"Muatan Lokal (Membatik)","H":"Matematika","I":"Bahasa Inggris","J":"Informatika","K":"Projek IPAS","L":"Dasar Program Keahlian MPLB","M":"Dasar Program Keahlian AKL","N":"Dasar Program Keahlian AKL2","O":"DPK PMS (Wawasan dunia kerja bidang pemasaran)","Oo":"DPK PMS (Kecakapan kerja dasar, K3 dan budaya kerja)","Q":"Dasar Program Keahlian PMS2","R":"Dasar Program Keahlian ULP","S":"Dasar Program Keahlian TJKT 2","T":"Dasar Program Keahlian PMS3","U":"Dasar Program Keahlian TK","V":"Projek Kreatif dan Kewirausahaan","W":"Mata Pelajaran Pilihan","X":"KK MPLB Peng. Adm. Umum","Y":"KK MPLB (Peng. SDM)","Z":"KK MPLB (Peng. Rapat/Pertemuan)","A1":"KK MPLB (Teknologi Perkantoran)","B1":"KK MPLB (Humas dan Keprotokolan)","C1":"KK MPLB (Pengelolaan Sarpras)","D1":"KK MPLB (Pengelolaan Keuangan)","E1":"KK MPLB (Pegelolaan Kearsipan)","F1":"Produk Kreatif dan Kewirausahaan","G1":"KK AKL (Prk Akun Perusahaan Jasa, Dagang dan Manufaktur)","H1":"KK AKL (Prk Akun Lembaga/IP)","I1":"KK AKL (MYOB)","J1":"KK AKL (Akuntansi Keuangan)","K1":"KK AKL (Administrasi Pajak)","L1":"Digital Branding","M1":"KK PMS (Komunikasi bisnis, pengemasan dan pendistribusian)","M2":"KK PMS (Marketing, perencanaan bisnis dan customers service)","M3":"KK PMS (Administrasi transaksi, pengelolaan bisnis ritel)","N1":"KK ULP (Pengelolaan Perjalanan Wisata)","O1":"KK ULP (Pemanduan Perjalanan Wisata)","Q1":"KK AKL (Ekonomi Bisnis & Adm. Umum)","R1":"KK PMS (Komunikasi Bisnis)","S1":"KK PMS (Marketing)","T1":"KK PMS (Pengelolaan Bisnis Ritel)","U1":"Mata Pelajaran Pilihan MPLB","V1":"Mata Pelajaran Pilihan AKL","W1":"Mata Pelajaran Pilihan PMS","X1":"Mata Pelajaran Pilihan ULP","Y1":"Mata Pelajaran Pilihan TJKT","Z1":"Mata Pelajaran Pilihan TK","aa":"Kreativitas, Inovasi dan Kewirausahaan","cc":"KK ULP (Pmsn dan Perh. Trf Tr. Laut Darat & Udara)","dd":"Perencanaan dan Pengelolaan Perjalanan Wisata","ee":"KK ULP (MICE)","ff":"Produk Wisata Berbasis Digital","gg":"KK TJKT (Adm. Sistem Jaringan)","hh":"KK TJKT (Teknologi Jaringan Kabel dan Nirkabel)","ii":"KK TJKT (Pem. & Konfig Perangkat Jaringan)","jj":"Mapel Pilihan TJKT (Pemograman & IoT)","kk":"Instalasi Motor Listrik","ll":"KK TK (Instalasi Penerangan Listrik)","mm":"KK TK (Instalasi Tenaga Listrik)","nn":"Mulok (Bahasa Jerman)","oo":"KK TJKT (Perencanaan dan Pengalamatan Jaringan)","pp":"KK TK (Instalasi Motor Listrik)","qq":"Konsentrasi Keahlian TJKT","rr":"Muatan Lokal","ss":"KK MPLB (Sarpras)","tt":"KK MPLB (Kearsipan)","uu":"Komunikasi","vv":"Mapel Pilihan (Koding)","ww":"Kokurikuler PJBL","xx":"KK MPLB (Komunikasi di tempat kerja)","yy":"KK MPLB (Pelayanan pelanggan/kolega)","zz":"KK TJKT (FFTh)","KT1":"KK TJKT (Keamanan Jaringan)","KT2":"KK TJKT (FFTx)","KT3":"KK TJKT (Koneksi Jaringan Telekomunikasi)","tjkt1":"DPK TJKT1 (Media dan jaringan telekomunikasi)","tjkt2":"DPK TJKT2 (Perkembangan teknologi di bidang teknik jaringan komputer)","tjkt3":"DPK TJKT3 (Proses bisnis di bidang teknik jaringan komputer)"};
+
+// Revised cells (corrected in this version)
+const REVISED=new Set(["Jumat|1|XII TJKT","Jumat|2|XII TJKT","Kamis|5|XII ULP","Selasa|4|XII AKL","Selasa|8|XII TK"]);
+
+const HARI=["Senin","Selasa","Rabu","Kamis","Jumat"];
+const JP_MAX={Senin:11,Selasa:11,Rabu:11,Kamis:10,Jumat:5};
+const IST={
+  Senin:{5:"☕ Istirahat  10.00–10.20",9:"☕ Istirahat  12.20–12.40"},
+  Selasa:{5:"☕ Istirahat  10.00–10.20",9:"☕ Istirahat  12.20–12.40"},
+  Rabu:{5:"☕ Istirahat  10.00–10.20",9:"☕ Istirahat  12.20–12.40"},
+  Kamis:{5:"☕ Istirahat  10.00–10.20",8:"☕ Istirahat  11.50–12.10"},
+  Jumat:{4:"☕ Istirahat  09.30–09.50"}
+};
+
+// ── helpers ──
+let VIEW='kelas';
+const PAR=D.parallel||{};
+
+function mn(mc){return MAPEL[mc]||mc}
+function gn(id){return GURU[id]||('Guru #'+id)}
+function gs(id){
+  const n=(GURU[id]||'#'+id).split(',')[0].split(' ');
+  return n.length<=2?n.join(' '):n.slice(-2).join(' ');
+}
+function cat(mc){
+  const c=mc.toLowerCase();
+  if(['a','a2','b'].includes(c))return'ca';
+  if(['c','d','e','f','g','h','i','j','k'].includes(c))return'cb';
+  if(c==='ww')return'cf';
+  if(c==='rr'||c==='nn')return'cf';
+  if(c.startsWith('tjkt')||c.startsWith('kt'))return'ce';
+  if(['l','m','n','o','oo','q','r','s','t','u'].includes(c))return'cd';
+  return'cc';
+}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function avatarColors(id){
+  const cols=['#c0392b','#0d7377','#217a3c','#1a5276','#8e44ad','#d35400','#1a6a70','#922b21'];
+  return cols[parseInt(id)%cols.length];
+}
+
+// ── view control ──
+function setView(v){
+  VIEW=v;
+  ['kelas','guru','mapel'].forEach(vv=>{
+    document.getElementById('nb-'+vv).classList.toggle('on',vv===v);
+    document.getElementById('view-'+vv).classList.toggle('hidden',vv!==v);
+  });
+  document.getElementById('nb-cari').classList.remove('on');
+  const showFilt=v==='kelas';
+  document.getElementById('ctrl-hari-wrap').style.display=showFilt?'':'none';
+  document.getElementById('ctrl-kelas-wrap').style.display=showFilt?'':'none';
+  render();
+}
+function focusSearch(){
+  document.getElementById('nb-cari').classList.add('on');
+  document.getElementById('q').focus();
+}
+
+// ── init ──
+function init(){
+  const sel=document.getElementById('sel-kelas');
+  D.kelas.forEach(k=>{const o=document.createElement('option');o.value=k;o.textContent=k;sel.appendChild(o)});
+  render();
+}
+
+function render(){
+  if(VIEW==='kelas')renderKelas();
+  else if(VIEW==='guru')renderGuru();
+  else renderMapel();
+}
+
+// ══════════════════════════════════════
+// VIEW 1 — TABEL PER KELAS
+// ══════════════════════════════════════
+function renderKelas(){
+  const hari=document.getElementById('sel-hari').value;
+  const fk=document.getElementById('sel-kelas').value;
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const sched=D.schedule[hari]||{};
+  const waktu=D.waktu[hari]||{};
+  const nc=(D.no_class||{})[hari]||{};
+  const ist=IST[hari]||{};
+  const jpMax=JP_MAX[hari];
+
+  let kelas=fk?[fk]:D.kelas;
+  if(q){
+    kelas=kelas.filter(k=>{
+      const kd=sched[k]||{};
+      return Object.values(kd).some(e=>
+        gn(e.g).toLowerCase().includes(q)||
+        e.m.toLowerCase().includes(q)||
+        mn(e.m).toLowerCase().includes(q)
+      );
+    });
+  }
+
+  document.getElementById('result-info').textContent=q?`${kelas.length} kelas ditemukan untuk "${q}"`:'';
+
+  let h=`<div class="anim">
+  <div class="day-hdr">
+    <span class="day-name">${hari}</span>
+    <span class="day-pill">${jpMax} JP &nbsp;·&nbsp; ${kelas.length} kelas</span>
+  </div>
+  <div class="tbl-outer"><div class="tbl-scroll"><table>
+  <thead><tr><th class="th-fix">JP</th><th class="th-time">Waktu</th>`;
+
+  kelas.forEach(k=>{
+    const[t,...r]=k.split(' ');
+    h+=`<th class="th-k" onclick="filterKelas('${k}')"><span class="th-kn">${esc(t)}&nbsp;${esc(r.join(' '))}</span></th>`;
+  });
+  h+='</tr></thead><tbody>';
+
+  for(let jp=1;jp<=jpMax;jp++){
+    if(ist[jp]){
+      h+=`<tr class="tr-ist"><td class="td-jp">—</td><td class="td-time" style="color:var(--amber);font-size:.58rem;font-weight:700">☕</td>`;
+      kelas.forEach(()=>{h+=`<td>${ist[jp]}</td>`});
+      h+='</tr>';
+    }
+    const tw=waktu[jp]||'';
+    h+=`<tr><td class="td-jp">${jp}</td><td class="td-time">${tw}</td>`;
+    kelas.forEach(k=>{
+      const kd=sched[k]||{};
+      const e=kd[jp];
+      const noClass=((nc[k]||[]).includes(jp));
+      if(noClass){h+=`<td><span class="chip-nc" title="Tidak ada kelas (XII)"></span></td>`;return;}
+      if(!e){h+=`<td><span style="color:#ddd;font-size:.6rem">·</span></td>`;return;}
+      const pKey=`${hari}|${jp}|${e.g}|${e.m}`;
+      const isPar=PAR[pKey]&&PAR[pKey].length>1;
+      const isRev=REVISED.has(`${hari}|${jp}|${k}`);
+      const catCls=cat(e.m);
+      const revCls=isRev?' revised':'';
+      const mc=esc(e.m);
+      const guruS=esc(gs(e.g));
+      const fullG=esc(gn(e.g));
+      const fullM=esc(mn(e.m));
+      const parTip=isPar?`<br><span class="tt-par">⟺ ${esc(PAR[pKey].join(', '))}</span>`:'';
+      const revTip=isRev?`<br><span class="tt-rev">✎ Direvisi (KK → Mapel Umum)</span>`:'';
+      h+=`<td><div class="chip ${catCls}${revCls}" onclick="openSheet('${hari}','${esc(k)}',${jp})">
+        ${isPar?'<span class="chip-par"></span>':''}
+        <span class="chip-code">${mc}</span>
+        <span class="chip-guru">${guruS}</span>
+        <div class="tt">
+          <span class="tt-mc">${mc}</span> <span class="tt-mn">— ${fullM}</span><br>
+          <span class="tt-g">👤 ${fullG}</span><br>
+          <span class="tt-t">⏰ ${esc(e.w)} &nbsp; JP ${jp}</span><br>
+          <span class="tt-t">🏫 ${esc(k)}</span>${parTip}${revTip}
+        </div>
+      </div></td>`;
+    });
+    h+='</tr>';
+  }
+  h+='</tbody></table></div></div></div>';
+  document.getElementById('view-kelas').innerHTML=h;
+}
+
+function filterKelas(k){
+  document.getElementById('sel-kelas').value=k;
+  render();
+}
+
+// ══════════════════════════════════════
+// VIEW 2 — KARTU PER GURU
+// ══════════════════════════════════════
+function renderGuru(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const gmap={};
+  HARI.forEach(hari=>{
+    const hd=D.schedule[hari]||{};
+    Object.entries(hd).forEach(([kelas,kd])=>{
+      Object.entries(kd).forEach(([jp,e])=>{
+        if(!gmap[e.g])gmap[e.g]=[];
+        gmap[e.g].push({hari,kelas,jp:+jp,m:e.m,w:e.w});
+      });
+    });
+  });
+
+  let ids=Object.keys(gmap).sort((a,b)=>+a-+b);
+  if(q)ids=ids.filter(id=>{
+    const nm=(GURU[id]||'').toLowerCase();
+    const ms=gmap[id].map(e=>e.m+' '+mn(e.m)).join(' ').toLowerCase();
+    return nm.includes(q)||ms.includes(q);
+  });
+
+  document.getElementById('result-info').textContent=q?`${ids.length} guru ditemukan`:'';
+
+  if(!ids.length){
+    document.getElementById('view-guru').innerHTML=`<div class="empty"><div class="empty-ico">🔍</div><p class="empty-txt">Tidak ada guru untuk "<strong>${esc(q)}</strong>"</p></div>`;
+    return;
+  }
+
+  let h='<div class="cards anim">';
+  ids.forEach(id=>{
+    const name=GURU[id]||`Guru #${id}`;
+    const ini=name.split(' ').filter(w=>/^[A-Z]/.test(w)).slice(0,2).map(w=>w[0]).join('')||id;
+    const color=avatarColors(id);
+    const byH={};
+    gmap[id].forEach(e=>{
+      if(!byH[e.hari])byH[e.hari]={};
+      if(!byH[e.hari][e.m])byH[e.hari][e.m]={k:new Set(),jps:[]};
+      byH[e.hari][e.m].k.add(e.kelas);
+      if(!byH[e.hari][e.m].jps.includes(e.jp))byH[e.hari][e.m].jps.push(e.jp);
+    });
+    let rows='';
+    HARI.forEach(hari=>{
+      if(!byH[hari])return;
+      Object.entries(byH[hari]).forEach(([mc,data])=>{
+        const jps=data.jps.sort((a,b)=>a-b);
+        const jl=`JP ${jps[0]}${jps.length>1?'–'+jps[jps.length-1]:''}`;
+        const klTags=[...data.k].map(k=>`<span class="kl-mini">${esc(k)}</span>`).join('');
+        const mfull=mn(mc);
+        rows+=`<li class="gsi">
+          <span class="gsi-day">${hari}</span>
+          <div class="gsi-info">
+            <span class="gsi-mc">${esc(mc)}</span>
+            <span class="gsi-mn"> — ${esc(mfull.length>36?mfull.slice(0,36)+'…':mfull)}</span>
+            <div class="gsi-kelas">${klTags}</div>
+          </div>
+          <span class="gsi-jp">${jl}</span>
+        </li>`;
+      });
+    });
+    h+=`<div class="card">
+      <div class="card-hdr">
+        <div class="avatar" style="background:${color}">${esc(ini)}</div>
+        <div><div class="card-name">${esc(name)}</div><div class="card-id">ID #${id}</div></div>
+      </div>
+      <div class="card-body"><ul class="gsi-list">${rows}</ul></div>
+    </div>`;
+  });
+  h+='</div>';
+  document.getElementById('view-guru').innerHTML=h;
+}
+
+// ══════════════════════════════════════
+// VIEW 3 — KARTU PER MAPEL
+// ══════════════════════════════════════
+function renderMapel(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const mmap={};
+  HARI.forEach(hari=>{
+    const hd=D.schedule[hari]||{};
+    Object.entries(hd).forEach(([kelas,kd])=>{
+      Object.entries(kd).forEach(([jp,e])=>{
+        if(!mmap[e.m])mmap[e.m]={guru:new Set(),kelas:new Set(),cnt:0};
+        mmap[e.m].guru.add(e.g);
+        mmap[e.m].kelas.add(kelas);
+        mmap[e.m].cnt++;
+      });
+    });
+  });
+
+  let codes=Object.keys(mmap).sort();
+  if(q)codes=codes.filter(mc=>
+    mc.toLowerCase().includes(q)||mn(mc).toLowerCase().includes(q)||
+    [...mmap[mc].guru].some(id=>(GURU[id]||'').toLowerCase().includes(q))
+  );
+
+  document.getElementById('result-info').textContent=q?`${codes.length} mapel ditemukan`:'';
+
+  if(!codes.length){
+    document.getElementById('view-mapel').innerHTML=`<div class="empty"><div class="empty-ico">🔍</div><p class="empty-txt">Tidak ada hasil.</p></div>`;
+    return;
+  }
+
+  let h='<div class="cards anim">';
+  codes.forEach(mc=>{
+    const data=mmap[mc];
+    const gnames=[...data.guru].map(id=>GURU[id]||`#${id}`).join(', ');
+    const kl=[...data.kelas].map(k=>`<span class="kl-mini">${esc(k)}</span>`).join('');
+    h+=`<div class="card">
+      <div class="card-hdr">
+        <div class="mcard-hdr-row">
+          <span class="mcode">${esc(mc)}</span>
+          <span class="mfull">${esc(mn(mc))}</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="mguru">👤 <span class="mguru-n">${esc(gnames)}</span></div>
+        <div class="mkelas">${kl}</div>
+        <div class="mjp">${data.cnt} JP / minggu</div>
+      </div>
+    </div>`;
+  });
+  h+='</div>';
+  document.getElementById('view-mapel').innerHTML=h;
+}
+
+// ══════════════════════════════════════
+// BOTTOM SHEET
+// ══════════════════════════════════════
+function openSheet(hari,kelas,jp){
+  const e=(D.schedule[hari]||{})[kelas]?.[jp];
+  if(!e)return;
+  const pKey=`${hari}|${jp}|${e.g}|${e.m}`;
+  const isPar=PAR[pKey]&&PAR[pKey].length>1;
+  const isRev=REVISED.has(`${hari}|${jp}|${kelas}`);
+
+  document.getElementById('sh-title').textContent=`${kelas}  ·  JP ${jp}`;
+  document.getElementById('sh-sub').textContent=`${hari}  ·  ${e.w}`;
+
+  const parRow=isPar?`<div class="sheet-row">
+    <span class="sheet-key">Kelas Paralel</span>
+    <span class="sheet-val gold"><div class="kl-list">${PAR[pKey].map(k=>`<span class="kl-tag">${esc(k)}</span>`).join('')}</div></span>
+  </div>`:'';
+  const revRow=isRev?`<div class="sheet-row">
+    <span class="sheet-key">Keterangan</span>
+    <span class="sheet-val green">✎ Direvisi — KK diganti Mapel Umum</span>
+  </div>`:'';
+
+  document.getElementById('sh-body').innerHTML=`
+    <div class="sheet-row"><span class="sheet-key">Kode Mapel</span><span class="sheet-val mono">${esc(e.m)}</span></div>
+    <div class="sheet-row"><span class="sheet-key">Mata Pelajaran</span><span class="sheet-val">${esc(mn(e.m))}</span></div>
+    <div class="sheet-row"><span class="sheet-key">ID Guru</span><span class="sheet-val mono">#${e.g}</span></div>
+    <div class="sheet-row"><span class="sheet-key">Nama Guru</span><span class="sheet-val">${esc(gn(e.g))}</span></div>
+    <div class="sheet-row"><span class="sheet-key">Kelas</span><span class="sheet-val">${esc(kelas)}</span></div>
+    <div class="sheet-row"><span class="sheet-key">Hari</span><span class="sheet-val">${esc(hari)}</span></div>
+    <div class="sheet-row"><span class="sheet-key">JP ke-</span><span class="sheet-val mono">${jp}</span></div>
+    <div class="sheet-row"><span class="sheet-key">Waktu</span><span class="sheet-val mono">${esc(e.w)}</span></div>
+    ${parRow}${revRow}
+    <div class="sheet-row"><span class="sheet-key">Status</span><span class="sheet-val green">✅ Bebas konflik</span></div>
+  `;
+  document.getElementById('sheet-ov').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeSheet(e){
+  if(e.target===document.getElementById('sheet-ov')||e.type==='click'&&!e.target.closest('.sheet')){
+    document.getElementById('sheet-ov').classList.remove('open');
+    document.body.style.overflow='';
+  }
+}
+
+// swipe down to close sheet
+let touchY=0;
+document.getElementById('sheet').addEventListener('touchstart',e=>{touchY=e.touches[0].clientY},{passive:true});
+document.getElementById('sheet').addEventListener('touchend',e=>{
+  if(e.changedTouches[0].clientY-touchY>60){
+    document.getElementById('sheet-ov').classList.remove('open');
+    document.body.style.overflow='';
+  }
+},{passive:true});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('sheet-ov').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+
+init();
+</script>
+</body>
+</html>
