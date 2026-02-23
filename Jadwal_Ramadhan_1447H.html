@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Ramadhan 1447H — SMKN 1 Maluku Tengah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d1117;
+  --paper: #f5f0e8;
+  --cream: #faf7f2;
+  --accent: #c8402a;
+  --accent2: #2a6496;
+  --gold: #c8922a;
+  --green: #2a7a4a;
+  --muted: #8a8070;
+  --border: #d4cfc5;
+  --shadow: rgba(13,17,23,0.12);
+  --card-bg: #fff;
+  --header-h: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: var(--header-h);
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.site-header .brand {
+  display: flex; flex-direction: column;
+}
+.site-header .brand-main {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+.site-header .brand-sub {
+  font-size: 0.68rem;
+  color: #c8b89a;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.header-badge {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── MAIN LAYOUT ── */
+.main-wrap {
+  padding-top: calc(var(--header-h) + 24px);
+  padding-bottom: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── HERO STRIP ── */
+.hero {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; gap: 1rem;
+}
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  color: var(--ink);
+  line-height: 1.1;
+}
+.hero-title span { color: var(--accent); }
+.hero-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 6px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.stats-row {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.stat-box {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 18px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--accent2);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* ── CONTROLS ── */
+.controls {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+@media (max-width: 860px) {
+  .controls { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .controls { grid-template-columns: 1fr; }
+}
+
+.ctrl-group { display: flex; flex-direction: column; gap: 5px; }
+.ctrl-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+select, input[type=text] {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  padding: 9px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8070' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+input[type=text] {
+  background-image: none;
+  padding-right: 12px;
+}
+select:focus, input:focus {
+  outline: none;
+  border-color: var(--accent2);
+  box-shadow: 0 0 0 3px rgba(42,100,150,0.15);
+}
+
+.view-toggle {
+  display: flex; gap: 6px;
+}
+.toggle-btn {
+  padding: 9px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.toggle-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+.toggle-btn.active {
+  background: var(--accent2);
+  color: #fff;
+  border-color: var(--accent2);
+}
+
+/* ── SEARCH BAR ── */
+.search-wrap {
+  position: relative;
+}
+.search-icon {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  color: var(--muted); font-size: 0.9rem; pointer-events: none;
+}
+input[type=text].search-input {
+  padding-left: 30px;
+  width: 100%;
+}
+
+/* ── SCHEDULE TABLE VIEW ── */
+.schedule-section { animation: fadeUp 0.35s ease both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.day-header {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 0 0 1rem;
+}
+.day-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+.day-badge {
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border-radius: 14px;
+  box-shadow: 0 2px 20px var(--shadow);
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  margin-bottom: 2rem;
+}
+table {
+  border-collapse: collapse;
+  min-width: 900px;
+  width: 100%;
+}
+thead th {
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+thead th.th-jp {
+  background: #1a2332;
+  min-width: 70px;
+}
+thead th.th-time {
+  background: #1a2332;
+  min-width: 90px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+}
+thead th.th-class {
+  min-width: 100px;
+  position: relative;
+}
+.th-kelas-name {
+  display: block;
+  font-size: 0.76rem;
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-weight: normal;
+}
+.th-kelas-jurusan {
+  font-size: 0.6rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-top: 2px;
+}
+
+tbody tr { border-bottom: 1px solid #eee8e0; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover td { background: rgba(42,100,150,0.04); }
+
+td {
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  text-align: center;
+}
+td.td-jp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--cream);
+  border-right: 2px solid var(--border);
+  width: 50px;
+}
+td.td-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: var(--cream);
+  border-right: 2px solid var(--border);
+  white-space: nowrap;
+}
+td.td-istirahat {
+  background: repeating-linear-gradient(45deg, #faf0e0, #faf0e0 4px, #f5e8d0 4px, #f5e8d0 8px);
+  font-size: 0.68rem;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── CELL CHIP ── */
+.cell-chip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--chip-bg, #eef4fb);
+  border-radius: 7px;
+  padding: 4px 7px;
+  min-width: 80px;
+  cursor: pointer;
+  border: 1.5px solid var(--chip-border, #c8ddf0);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  position: relative;
+}
+.cell-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(42,100,150,0.18);
+  border-color: var(--accent2);
+  z-index: 5;
+}
+.cell-chip:hover .chip-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+.chip-mapel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--chip-color, #2a6496);
+  line-height: 1;
+}
+.chip-guru {
+  font-size: 0.62rem;
+  color: var(--muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 88px;
+}
+
+/* Color-coded by subject category */
+.cat-agama  { --chip-bg:#fff5f5; --chip-border:#f5c6c6; --chip-color:#c0392b; }
+.cat-umum   { --chip-bg:#f0f8ff; --chip-border:#bde0f7; --chip-color:#1a6a9a; }
+.cat-kk     { --chip-bg:#f0fff4; --chip-border:#b2dfcb; --chip-color:#1e7a4a; }
+.cat-dpk    { --chip-bg:#fffbf0; --chip-border:#f0d9a0; --chip-color:#8a5a00; }
+.cat-pjbl   { --chip-bg:#f8f0ff; --chip-border:#d4b0f0; --chip-color:#6a2a9a; }
+.cat-mulog  { --chip-bg:#fff0f8; --chip-border:#f0b0d4; --chip-color:#9a2a60; }
+
+.chip-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 200;
+  min-width: 180px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  line-height: 1.5;
+}
+.chip-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--ink);
+}
+.chip-tooltip-mapel { font-weight: 600; color: #7ec8f0; }
+.chip-tooltip-guru  { color: #c8e0f0; }
+.chip-tooltip-time  { font-family: 'JetBrains Mono', monospace; color: #a0b8c0; font-size: 0.68rem; }
+
+.empty-cell { color: #ccc; font-size: 0.7rem; }
+
+/* ── GURU VIEW ── */
+.guru-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+  animation: fadeUp 0.35s ease both;
+}
+.guru-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.guru-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+.guru-card-header {
+  background: var(--ink);
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px;
+}
+.guru-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--accent2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.guru-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+.guru-id-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+.guru-card-body { padding: 14px 18px; }
+.guru-schedule-list { list-style: none; }
+.guru-schedule-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0ebe0;
+  font-size: 0.8rem;
+}
+.guru-schedule-item:last-child { border-bottom: none; }
+.gsi-day {
+  font-weight: 600;
+  color: var(--accent2);
+  min-width: 52px;
+  font-size: 0.75rem;
+}
+.gsi-info { flex: 1; }
+.gsi-mapel {
+  font-weight: 600;
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+.gsi-mapel-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.gsi-kelas {
+  display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px;
+}
+.kelas-tag {
+  font-size: 0.62rem;
+  padding: 1px 7px;
+  border-radius: 12px;
+  background: #eef4fb;
+  color: var(--accent2);
+  border: 1px solid #c8ddf0;
+  font-weight: 500;
+}
+.gsi-jp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+  min-width: 65px;
+}
+
+/* ── MAPEL VIEW ── */
+.mapel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  animation: fadeUp 0.35s ease both;
+}
+.mapel-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: transform 0.2s;
+}
+.mapel-card:hover { transform: translateY(-2px); }
+.mapel-card-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.mapel-code-box {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: var(--ink);
+  color: #fff;
+  white-space: nowrap;
+}
+.mapel-fullname {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.mapel-card-body { padding: 12px 16px; }
+.mapel-guru-line {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.mapel-guru-name { color: var(--ink); font-weight: 500; }
+.mapel-kelas-list { display: flex; flex-wrap: wrap; gap: 5px; }
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(13,17,23,0.55);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-box {
+  background: var(--card-bg);
+  border-radius: 18px;
+  width: min(500px, 100%);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  transform: scale(0.94) translateY(10px);
+  transition: transform 0.25s;
+}
+.modal-overlay.open .modal-box { transform: scale(1) translateY(0); }
+.modal-header {
+  background: var(--ink);
+  padding: 20px 24px 16px;
+  border-radius: 18px 18px 0 0;
+  position: sticky; top: 0;
+}
+.modal-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.modal-subtitle { font-size: 0.75rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.12);
+  border: none; color: #fff;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  cursor: pointer; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.25); }
+.modal-body { padding: 20px 24px; }
+.modal-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+}
+.modal-row:last-child { border-bottom: none; }
+.modal-key {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+.modal-val {
+  font-size: 0.85rem;
+  color: var(--ink);
+  text-align: right;
+  font-weight: 500;
+}
+.modal-val.mono { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+
+/* ── EMPTY STATE ── */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+}
+.empty-state-icon { font-size: 3rem; margin-bottom: 12px; }
+.empty-state-text { font-size: 0.9rem; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── HIGHLIGHT SEARCH ── */
+.hl { background: #fff176; border-radius: 2px; padding: 0 1px; }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-sub">Dinas Pendidikan dan Kebudayaan — Provinsi Maluku</span>
+    <span class="brand-main">SMK Negeri 1 Maluku Tengah</span>
+    </div>
+  <span class="header-badge">Ramadhan 1447H</span>
+</header>
+
+<div class="main-wrap">
+
+  <div class="hero">
+    <div>
+      <h1 class="hero-title">Jadwal <span>Ramadhan</span> 1447H</h1>
+      <p class="hero-meta">23 Februari – 17 Maret 2026 &nbsp;·&nbsp; 1 JP = 30 menit &nbsp;·&nbsp; Masuk 08.00 WIT</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num" id="stat-kelas">21</div><div class="stat-label">Kelas</div></div>
+      <div class="stat-box"><div class="stat-num" id="stat-guru">49</div><div class="stat-label">Guru</div></div>
+      <div class="stat-box"><div class="stat-num" id="stat-mapel">—</div><div class="stat-label">Mapel</div></div>
+      <div class="stat-box"><div class="stat-num" id="stat-jp">984</div><div class="stat-label">Entri JP</div></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label class="ctrl-label">Tampilan</label>
+      <div class="view-toggle">
+        <button class="toggle-btn active" onclick="setView('kelas')">Per Kelas</button>
+        <button class="toggle-btn" onclick="setView('guru')">Per Guru</button>
+        <button class="toggle-btn" onclick="setView('mapel')">Per Mapel</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <label class="ctrl-label">Hari</label>
+      <select id="sel-hari" onchange="render()">
+        <option value="Senin">Senin</option>
+        <option value="Selasa">Selasa</option>
+        <option value="Rabu">Rabu</option>
+        <option value="Kamis">Kamis</option>
+        <option value="Jumat">Jumat</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <label class="ctrl-label">Filter Kelas</label>
+      <select id="sel-kelas" onchange="render()">
+        <option value="">— Semua Kelas —</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <label class="ctrl-label">Cari Guru / Mapel</label>
+      <div class="search-wrap">
+        <span class="search-icon">&#x2315;</span>
+        <input type="text" class="search-input" id="search-input" placeholder="Nama guru, kode mapel..." oninput="render()">
+      </div>
+    </div>
+  </div>
+
+  <div id="view-root"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-box" id="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">Detail</div>
+      <div class="modal-subtitle" id="modal-subtitle"></div>
+      <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════
+
+const RAW_DATA = {"schedule":{"Senin":{"X MPLB":{"1":{"guru_id":"5","mapel_code":"L","waktu":"08.00 - 08.30"},"2":{"guru_id":"5","mapel_code":"L","waktu":"08.30 - 09.00"},"3":{"guru_id":"5","mapel_code":"L","waktu":"09.00 - 09.30"},"4":{"guru_id":"8","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"8","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"8","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"6","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"6","mapel_code":"H","waktu":"11.50 - 12.20"},"9":{"guru_id":"6","mapel_code":"H","waktu":"12.40 - 13.10"},"10":{"guru_id":"21","mapel_code":"K","waktu":"13.10 - 13.40"},"11":{"guru_id":"21","mapel_code":"K","waktu":"13.40 - 14.10"}},"X AKL":{"1":{"guru_id":"44","mapel_code":"J","waktu":"08.00 - 08.30"},"2":{"guru_id":"44","mapel_code":"J","waktu":"08.30 - 09.00"},"3":{"guru_id":"44","mapel_code":"J","waktu":"09.00 - 09.30"},"4":{"guru_id":"21","mapel_code":"K","waktu":"09.30 - 10.00"},"5":{"guru_id":"21","mapel_code":"K","waktu":"10.20 - 10.50"},"6":{"guru_id":"33","mapel_code":"C","waktu":"10.50 - 11.20"},"7":{"guru_id":"33","mapel_code":"C","waktu":"11.20 - 11.50"},"8":{"guru_id":"33","mapel_code":"C","waktu":"11.50 - 12.20"},"9":{"guru_id":"1","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"1","mapel_code":"ww","waktu":"13.10 - 13.40"},"11":{"guru_id":"1","mapel_code":"ww","waktu":"13.40 - 14.10"}},"X PMS":{"1":{"guru_id":"20","mapel_code":"O","waktu":"08.00 - 08.30"},"2":{"guru_id":"20","mapel_code":"O","waktu":"08.30 - 09.00"},"3":{"guru_id":"20","mapel_code":"O","waktu":"09.00 - 09.30"},"4":{"guru_id":"20","mapel_code":"O","waktu":"09.30 - 10.00"},"5":{"guru_id":"10","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"10","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"10","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"37","mapel_code":"G","waktu":"11.50 - 12.20"},"9":{"guru_id":"37","mapel_code":"G","waktu":"12.40 - 13.10"},"10":{"guru_id":"18","mapel_code":"E","waktu":"13.10 - 13.40"},"11":{"guru_id":"18","mapel_code":"E","waktu":"13.40 - 14.10"}},"X ULP":{"1":{"guru_id":"18","mapel_code":"E","waktu":"08.00 - 08.30"},"2":{"guru_id":"18","mapel_code":"E","waktu":"08.30 - 09.00"},"3":{"guru_id":"31","mapel_code":"R","waktu":"09.00 - 09.30"},"4":{"guru_id":"31","mapel_code":"R","waktu":"09.30 - 10.00"},"5":{"guru_id":"31","mapel_code":"R","waktu":"10.20 - 10.50"},"6":{"guru_id":"24","mapel_code":"ww","waktu":"10.50 - 11.20"},"7":{"guru_id":"24","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"24","mapel_code":"ww","waktu":"11.50 - 12.20"},"9":{"guru_id":"24","mapel_code":"J","waktu":"12.40 - 13.10"},"10":{"guru_id":"24","mapel_code":"J","waktu":"13.10 - 13.40"},"11":{"guru_id":"24","mapel_code":"J","waktu":"13.40 - 14.10"}},"X TJKT1":{"1":{"guru_id":"37","mapel_code":"G","waktu":"08.00 - 08.30"},"2":{"guru_id":"37","mapel_code":"G","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.30 - 10.00"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"},"6":{"guru_id":"18","mapel_code":"E","waktu":"10.50 - 11.20"},"7":{"guru_id":"18","mapel_code":"E","waktu":"11.20 - 11.50"},"8":{"guru_id":"45","mapel_code":"tjkt2","waktu":"11.50 - 12.20"},"9":{"guru_id":"45","mapel_code":"tjkt2","waktu":"12.40 - 13.10"},"10":{"guru_id":"2","mapel_code":"B","waktu":"13.10 - 13.40"},"11":{"guru_id":"2","mapel_code":"B","waktu":"13.40 - 14.10"}},"X TJKT2":{"1":{"guru_id":"19","mapel_code":"ww","waktu":"08.00 - 08.30"},"2":{"guru_id":"19","mapel_code":"ww","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.30 - 10.00"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"},"6":{"guru_id":"37","mapel_code":"G","waktu":"10.50 - 11.20"},"7":{"guru_id":"37","mapel_code":"G","waktu":"11.20 - 11.50"},"8":{"guru_id":"2","mapel_code":"B","waktu":"11.50 - 12.20"},"9":{"guru_id":"2","mapel_code":"B","waktu":"12.40 - 13.10"},"10":{"guru_id":"29","mapel_code":"F","waktu":"13.10 - 13.40"},"11":{"guru_id":"29","mapel_code":"F","waktu":"13.40 - 14.10"}},"X TK":{"1":{"guru_id":"38","mapel_code":"K","waktu":"08.00 - 08.30"},"2":{"guru_id":"38","mapel_code":"K","waktu":"08.30 - 09.00"},"3":{"guru_id":"38","mapel_code":"K","waktu":"09.00 - 09.30"},"4":{"guru_id":"30","mapel_code":"H","waktu":"09.30 - 10.00"},"5":{"guru_id":"30","mapel_code":"H","waktu":"10.20 - 10.50"},"6":{"guru_id":"30","mapel_code":"H","waktu":"10.50 - 11.20"},"7":{"guru_id":"25","mapel_code":"U","waktu":"11.20 - 11.50"},"8":{"guru_id":"25","mapel_code":"U","waktu":"11.50 - 12.20"},"9":{"guru_id":"25","mapel_code":"U","waktu":"12.40 - 13.10"},"10":{"guru_id":"10","mapel_code":"ww","waktu":"13.10 - 13.40"},"11":{"guru_id":"10","mapel_code":"ww","waktu":"13.40 - 14.10"}},"X TK2":{"1":{"guru_id":"28","mapel_code":"U","waktu":"08.00 - 08.30"},"2":{"guru_id":"28","mapel_code":"U","waktu":"08.30 - 09.00"},"3":{"guru_id":"28","mapel_code":"U","waktu":"09.00 - 09.30"},"4":{"guru_id":"37","mapel_code":"G","waktu":"09.30 - 10.00"},"5":{"guru_id":"37","mapel_code":"G","waktu":"10.20 - 10.50"},"6":{"guru_id":"49","mapel_code":"K","waktu":"10.50 - 11.20"},"7":{"guru_id":"49","mapel_code":"K","waktu":"11.20 - 11.50"},"8":{"guru_id":"49","mapel_code":"K","waktu":"11.50 - 12.20"},"9":{"guru_id":"30","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"30","mapel_code":"ww","waktu":"13.10 - 13.40"},"11":{"guru_id":"30","mapel_code":"ww","waktu":"13.40 - 14.10"}},"XI MPLB":{"1":{"guru_id":"23","mapel_code":"A1","waktu":"08.00 - 08.30"},"2":{"guru_id":"23","mapel_code":"A1","waktu":"08.30 - 09.00"},"3":{"guru_id":"23","mapel_code":"A1","waktu":"09.00 - 09.30"},"4":{"guru_id":"6","mapel_code":"H","waktu":"09.30 - 10.00"},"5":{"guru_id":"6","mapel_code":"H","waktu":"10.20 - 10.50"},"6":{"guru_id":"5","mapel_code":"U1","waktu":"10.50 - 11.20"},"7":{"guru_id":"5","mapel_code":"U1","waktu":"11.20 - 11.50"},"8":{"guru_id":"32","mapel_code":"X","waktu":"11.50 - 12.20"},"9":{"guru_id":"32","mapel_code":"X","waktu":"12.40 - 13.10"},"10":{"guru_id":"22","mapel_code":"aa","waktu":"13.10 - 13.40"},"11":{"guru_id":"22","mapel_code":"aa","waktu":"13.40 - 14.10"}},"XI AKL":{"1":{"guru_id":"4","mapel_code":"G1","waktu":"08.00 - 08.30"},"2":{"guru_id":"4","mapel_code":"G1","waktu":"08.30 - 09.00"},"3":{"guru_id":"4","mapel_code":"G1","waktu":"09.00 - 09.30"},"4":{"guru_id":"4","mapel_code":"G1","waktu":"09.30 - 10.00"},"5":{"guru_id":"22","mapel_code":"aa","waktu":"10.20 - 10.50"},"6":{"guru_id":"22","mapel_code":"aa","waktu":"10.50 - 11.20"},"7":{"guru_id":"22","mapel_code":"aa","waktu":"11.20 - 11.50"},"8":{"guru_id":"4","mapel_code":"V1","waktu":"11.50 - 12.20"},"9":{"guru_id":"4","mapel_code":"V1","waktu":"12.40 - 13.10"},"10":{"guru_id":"4","mapel_code":"V1","waktu":"13.10 - 13.40"},"11":{"guru_id":"4","mapel_code":"V1","waktu":"13.40 - 14.10"}},"XI PMS":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"12","mapel_code":"M1","waktu":"09.00 - 09.30"},"4":{"guru_id":"12","mapel_code":"M1","waktu":"09.30 - 10.00"},"5":{"guru_id":"12","mapel_code":"M1","waktu":"10.20 - 10.50"},"6":{"guru_id":"14","mapel_code":"ww","waktu":"10.50 - 11.20"},"7":{"guru_id":"14","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"18","mapel_code":"E","waktu":"11.50 - 12.20"},"9":{"guru_id":"18","mapel_code":"E","waktu":"12.40 - 13.10"},"10":{"guru_id":"19","mapel_code":"C","waktu":"13.10 - 13.40"},"11":{"guru_id":"19","mapel_code":"C","waktu":"13.40 - 14.10"}},"XI ULP":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"24","mapel_code":"O1","waktu":"09.00 - 09.30"},"4":{"guru_id":"24","mapel_code":"O1","waktu":"09.30 - 10.00"},"5":{"guru_id":"24","mapel_code":"O1","waktu":"10.20 - 10.50"},"6":{"guru_id":"29","mapel_code":"rr","waktu":"10.50 - 11.20"},"7":{"guru_id":"29","mapel_code":"rr","waktu":"11.20 - 11.50"},"8":{"guru_id":"5","mapel_code":"X1","waktu":"11.50 - 12.20"},"9":{"guru_id":"5","mapel_code":"X1","waktu":"12.40 - 13.10"},"10":{"guru_id":"14","mapel_code":"H","waktu":"13.10 - 13.40"},"11":{"guru_id":"14","mapel_code":"H","waktu":"13.40 - 14.10"}},"XI TJKT":{"1":{"guru_id":"9","mapel_code":"aa","waktu":"08.00 - 08.30"},"2":{"guru_id":"9","mapel_code":"aa","waktu":"08.30 - 09.00"},"3":{"guru_id":"9","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"45","mapel_code":"hh","waktu":"09.30 - 10.00"},"5":{"guru_id":"45","mapel_code":"hh","waktu":"10.20 - 10.50"},"6":{"guru_id":"45","mapel_code":"hh","waktu":"10.50 - 11.20"},"7":{"guru_id":"19","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"19","mapel_code":"ww","waktu":"11.50 - 12.20"},"9":{"guru_id":"44","mapel_code":"oo","waktu":"12.40 - 13.10"},"10":{"guru_id":"44","mapel_code":"oo","waktu":"13.10 - 13.40"},"11":{"guru_id":"44","mapel_code":"oo","waktu":"13.40 - 14.10"}},"XI TJKT2":{"1":{"guru_id":"45","mapel_code":"hh","waktu":"08.00 - 08.30"},"2":{"guru_id":"45","mapel_code":"hh","waktu":"08.30 - 09.00"},"3":{"guru_id":"45","mapel_code":"hh","waktu":"09.00 - 09.30"},"4":{"guru_id":"44","mapel_code":"oo","waktu":"09.30 - 10.00"},"5":{"guru_id":"44","mapel_code":"oo","waktu":"10.20 - 10.50"},"6":{"guru_id":"44","mapel_code":"oo","waktu":"10.50 - 11.20"},"7":{"guru_id":"40","mapel_code":"gg","waktu":"11.20 - 11.50"},"8":{"guru_id":"40","mapel_code":"gg","waktu":"11.50 - 12.20"},"9":{"guru_id":"40","mapel_code":"gg","waktu":"12.40 - 13.10"},"10":{"guru_id":"23","mapel_code":"ww","waktu":"13.10 - 13.40"},"11":{"guru_id":"23","mapel_code":"ww","waktu":"13.40 - 14.10"}},"XI TK":{"1":{"guru_id":"34","mapel_code":"pp","waktu":"08.00 - 08.30"},"2":{"guru_id":"34","mapel_code":"pp","waktu":"08.30 - 09.00"},"3":{"guru_id":"34","mapel_code":"pp","waktu":"09.00 - 09.30"},"4":{"guru_id":"25","mapel_code":"mm","waktu":"09.30 - 10.00"},"5":{"guru_id":"25","mapel_code":"mm","waktu":"10.20 - 10.50"},"6":{"guru_id":"25","mapel_code":"mm","waktu":"10.50 - 11.20"},"7":{"guru_id":"30","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"30","mapel_code":"H","waktu":"11.50 - 12.20"},"9":{"guru_id":"34","mapel_code":"ll","waktu":"12.40 - 13.10"},"10":{"guru_id":"34","mapel_code":"ll","waktu":"13.10 - 13.40"},"11":{"guru_id":"34","mapel_code":"ll","waktu":"13.40 - 14.10"}},"XII MPLB":{"1":{"guru_id":"32","mapel_code":"Y","waktu":"08.00 - 08.30"},"2":{"guru_id":"32","mapel_code":"Y","waktu":"08.30 - 09.00"},"3":{"guru_id":"17","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"17","mapel_code":"A","waktu":"09.30 - 10.00"},"5":{"guru_id":"2","mapel_code":"B","waktu":"10.20 - 10.50"},"6":{"guru_id":"2","mapel_code":"B","waktu":"10.50 - 11.20"},"7":{"guru_id":"23","mapel_code":"tt","waktu":"11.20 - 11.50"},"8":{"guru_id":"23","mapel_code":"tt","waktu":"11.50 - 12.20"},"9":{"guru_id":"26","mapel_code":"D1","waktu":"12.40 - 13.10"},"10":{"guru_id":"26","mapel_code":"D1","waktu":"13.10 - 13.40"}},"XII AKL":{"1":{"guru_id":"26","mapel_code":"H1","waktu":"08.00 - 08.30"},"2":{"guru_id":"26","mapel_code":"H1","waktu":"08.30 - 09.00"},"3":{"guru_id":"17","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"17","mapel_code":"A","waktu":"09.30 - 10.00"},"5":{"guru_id":"26","mapel_code":"J1","waktu":"10.20 - 10.50"},"6":{"guru_id":"26","mapel_code":"J1","waktu":"10.50 - 11.20"},"7":{"guru_id":"26","mapel_code":"J1","waktu":"11.20 - 11.50"},"8":{"guru_id":"26","mapel_code":"J1","waktu":"11.50 - 12.20"},"9":{"guru_id":"13","mapel_code":"B","waktu":"12.40 - 13.10"},"10":{"guru_id":"13","mapel_code":"B","waktu":"13.10 - 13.40"}},"XII PMS":{"1":{"guru_id":"27","mapel_code":"S1","waktu":"08.00 - 08.30"},"2":{"guru_id":"27","mapel_code":"S1","waktu":"08.30 - 09.00"},"3":{"guru_id":"27","mapel_code":"S1","waktu":"09.00 - 09.30"},"4":{"guru_id":"27","mapel_code":"S1","waktu":"09.30 - 10.00"},"5":{"guru_id":"7","mapel_code":"W1","waktu":"10.20 - 10.50"},"6":{"guru_id":"7","mapel_code":"W1","waktu":"10.50 - 11.20"},"7":{"guru_id":"7","mapel_code":"W1","waktu":"11.20 - 11.50"},"8":{"guru_id":"7","mapel_code":"W1","waktu":"11.50 - 12.20"},"9":{"guru_id":"7","mapel_code":"aa","waktu":"12.40 - 13.10"},"10":{"guru_id":"7","mapel_code":"aa","waktu":"13.10 - 13.40"}},"XII ULP":{"1":{"guru_id":"14","mapel_code":"H","waktu":"08.00 - 08.30"},"2":{"guru_id":"14","mapel_code":"H","waktu":"08.30 - 09.00"},"3":{"guru_id":"14","mapel_code":"H","waktu":"09.00 - 09.30"},"4":{"guru_id":"5","mapel_code":"X1","waktu":"09.30 - 10.00"},"5":{"guru_id":"5","mapel_code":"X1","waktu":"10.20 - 10.50"},"6":{"guru_id":"31","mapel_code":"cc","waktu":"10.50 - 11.20"},"7":{"guru_id":"31","mapel_code":"cc","waktu":"11.20 - 11.50"},"8":{"guru_id":"31","mapel_code":"cc","waktu":"11.50 - 12.20"},"9":{"guru_id":"8","mapel_code":"I","waktu":"12.40 - 13.10"},"10":{"guru_id":"8","mapel_code":"I","waktu":"13.10 - 13.40"}},"XII TJKT":{"1":{"guru_id":"1","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"1","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"1","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"1","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"9","mapel_code":"KT3","waktu":"10.20 - 10.50"},"6":{"guru_id":"9","mapel_code":"KT3","waktu":"10.50 - 11.20"},"7":{"guru_id":"9","mapel_code":"KT1","waktu":"11.20 - 11.50"},"8":{"guru_id":"9","mapel_code":"KT1","waktu":"11.50 - 12.20"},"9":{"guru_id":"9","mapel_code":"Y1","waktu":"12.40 - 13.10"},"10":{"guru_id":"9","mapel_code":"Y1","waktu":"13.10 - 13.40"}},"XII TK":{"1":{"guru_id":"10","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"10","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"10","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"10","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"19","mapel_code":"C","waktu":"10.20 - 10.50"},"6":{"guru_id":"19","mapel_code":"C","waktu":"10.50 - 11.20"},"7":{"guru_id":"11","mapel_code":"ll","waktu":"11.20 - 11.50"},"8":{"guru_id":"11","mapel_code":"ll","waktu":"11.50 - 12.20"},"9":{"guru_id":"11","mapel_code":"ll","waktu":"12.40 - 13.10"},"10":{"guru_id":"11","mapel_code":"ll","waktu":"13.10 - 13.40"}}},"Selasa":{"X MPLB":{"1":{"guru_id":"18","mapel_code":"E","waktu":"08.00 - 08.30"},"2":{"guru_id":"18","mapel_code":"E","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.30 - 10.00"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"},"6":{"guru_id":"21","mapel_code":"K","waktu":"10.50 - 11.20"},"7":{"guru_id":"21","mapel_code":"K","waktu":"11.20 - 11.50"},"8":{"guru_id":"21","mapel_code":"K","waktu":"11.50 - 12.20"},"9":{"guru_id":"5","mapel_code":"L","waktu":"12.40 - 13.10"},"10":{"guru_id":"5","mapel_code":"L","waktu":"13.10 - 13.40"},"11":{"guru_id":"5","mapel_code":"L","waktu":"13.40 - 14.10"}},"X AKL":{"1":{"guru_id":"2","mapel_code":"B","waktu":"08.00 - 08.30"},"2":{"guru_id":"2","mapel_code":"B","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.30 - 10.00"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"},"6":{"guru_id":"35","mapel_code":"M","waktu":"10.50 - 11.20"},"7":{"guru_id":"35","mapel_code":"M","waktu":"11.20 - 11.50"},"8":{"guru_id":"35","mapel_code":"M","waktu":"11.50 - 12.20"},"9":{"guru_id":"6","mapel_code":"H","waktu":"12.40 - 13.10"},"10":{"guru_id":"6","mapel_code":"H","waktu":"13.10 - 13.40"},"11":{"guru_id":"6","mapel_code":"H","waktu":"13.40 - 14.10"}},"X PMS":{"1":{"guru_id":"29","mapel_code":"F","waktu":"08.00 - 08.30"},"2":{"guru_id":"29","mapel_code":"F","waktu":"08.30 - 09.00"},"3":{"guru_id":"5","mapel_code":"ww","waktu":"09.00 - 09.30"},"4":{"guru_id":"5","mapel_code":"ww","waktu":"09.30 - 10.00"},"5":{"guru_id":"5","mapel_code":"ww","waktu":"10.20 - 10.50"},"6":{"guru_id":"46","mapel_code":"C","waktu":"10.50 - 11.20"},"7":{"guru_id":"46","mapel_code":"C","waktu":"11.20 - 11.50"},"8":{"guru_id":"46","mapel_code":"C","waktu":"11.50 - 12.20"},"9":{"guru_id":"40","mapel_code":"J","waktu":"12.40 - 13.10"},"10":{"guru_id":"40","mapel_code":"J","waktu":"13.10 - 13.40"},"11":{"guru_id":"40","mapel_code":"J","waktu":"13.40 - 14.10"}},"X ULP":{"1":{"guru_id":"14","mapel_code":"H","waktu":"08.00 - 08.30"},"2":{"guru_id":"14","mapel_code":"H","waktu":"08.30 - 09.00"},"3":{"guru_id":"14","mapel_code":"H","waktu":"09.00 - 09.30"},"4":{"guru_id":"31","mapel_code":"R","waktu":"09.30 - 10.00"},"5":{"guru_id":"31","mapel_code":"R","waktu":"10.20 - 10.50"},"6":{"guru_id":"31","mapel_code":"R","waktu":"10.50 - 11.20"},"7":{"guru_id":"2","mapel_code":"B","waktu":"11.20 - 11.50"},"8":{"guru_id":"2","mapel_code":"B","waktu":"11.50 - 12.20"},"9":{"guru_id":"33","mapel_code":"C","waktu":"12.40 - 13.10"},"10":{"guru_id":"33","mapel_code":"C","waktu":"13.10 - 13.40"},"11":{"guru_id":"33","mapel_code":"C","waktu":"13.40 - 14.10"}},"X TJKT1":{"1":{"guru_id":"21","mapel_code":"K","waktu":"08.00 - 08.30"},"2":{"guru_id":"21","mapel_code":"K","waktu":"08.30 - 09.00"},"3":{"guru_id":"21","mapel_code":"K","waktu":"09.00 - 09.30"},"4":{"guru_id":"1","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"1","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"1","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"39","mapel_code":"J","waktu":"11.20 - 11.50"},"8":{"guru_id":"39","mapel_code":"J","waktu":"11.50 - 12.20"},"9":{"guru_id":"39","mapel_code":"J","waktu":"12.40 - 13.10"},"10":{"guru_id":"45","mapel_code":"tjkt2","waktu":"13.10 - 13.40"},"11":{"guru_id":"45","mapel_code":"tjkt2","waktu":"13.40 - 14.10"}},"X TJKT2":{"1":{"guru_id":"9","mapel_code":"tjkt2","waktu":"08.00 - 08.30"},"2":{"guru_id":"9","mapel_code":"tjkt2","waktu":"08.30 - 09.00"},"3":{"guru_id":"45","mapel_code":"tjkt3","waktu":"09.00 - 09.30"},"4":{"guru_id":"45","mapel_code":"tjkt3","waktu":"09.30 - 10.00"},"5":{"guru_id":"45","mapel_code":"tjkt3","waktu":"10.20 - 10.50"},"6":{"guru_id":"45","mapel_code":"tjkt3","waktu":"10.50 - 11.20"},"7":{"guru_id":"43","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"43","mapel_code":"H","waktu":"11.50 - 12.20"},"9":{"guru_id":"43","mapel_code":"H","waktu":"12.40 - 13.10"},"10":{"guru_id":"21","mapel_code":"K","waktu":"13.10 - 13.40"},"11":{"guru_id":"21","mapel_code":"K","waktu":"13.40 - 14.10"}},"X TK":{"1":{"guru_id":"30","mapel_code":"J","waktu":"08.00 - 08.30"},"2":{"guru_id":"30","mapel_code":"J","waktu":"08.30 - 09.00"},"3":{"guru_id":"30","mapel_code":"J","waktu":"09.00 - 09.30"},"4":{"guru_id":"25","mapel_code":"U","waktu":"09.30 - 10.00"},"5":{"guru_id":"25","mapel_code":"U","waktu":"10.20 - 10.50"},"6":{"guru_id":"25","mapel_code":"U","waktu":"10.50 - 11.20"},"7":{"guru_id":"37","mapel_code":"G","waktu":"11.20 - 11.50"},"8":{"guru_id":"37","mapel_code":"G","waktu":"11.50 - 12.20"},"9":{"guru_id":"10","mapel_code":"I","waktu":"12.40 - 13.10"},"10":{"guru_id":"10","mapel_code":"I","waktu":"13.10 - 13.40"},"11":{"guru_id":"10","mapel_code":"I","waktu":"13.40 - 14.10"}},"X TK2":{"1":{"guru_id":"33","mapel_code":"C","waktu":"08.00 - 08.30"},"2":{"guru_id":"33","mapel_code":"C","waktu":"08.30 - 09.00"},"3":{"guru_id":"33","mapel_code":"C","waktu":"09.00 - 09.30"},"4":{"guru_id":"28","mapel_code":"U","waktu":"09.30 - 10.00"},"5":{"guru_id":"28","mapel_code":"U","waktu":"10.20 - 10.50"},"6":{"guru_id":"28","mapel_code":"U","waktu":"10.50 - 11.20"},"7":{"guru_id":"30","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"30","mapel_code":"ww","waktu":"11.50 - 12.20"},"9":{"guru_id":"30","mapel_code":"H","waktu":"12.40 - 13.10"},"10":{"guru_id":"30","mapel_code":"H","waktu":"13.10 - 13.40"},"11":{"guru_id":"30","mapel_code":"H","waktu":"13.40 - 14.10"}},"XI MPLB":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"16","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"16","mapel_code":"A","waktu":"09.30 - 10.00"},"5":{"guru_id":"26","mapel_code":"D1","waktu":"10.20 - 10.50"},"6":{"guru_id":"26","mapel_code":"D1","waktu":"10.50 - 11.20"},"7":{"guru_id":"5","mapel_code":"U1","waktu":"11.20 - 11.50"},"8":{"guru_id":"5","mapel_code":"U1","waktu":"11.50 - 12.20"},"9":{"guru_id":"22","mapel_code":"aa","waktu":"12.40 - 13.10"},"10":{"guru_id":"22","mapel_code":"aa","waktu":"13.10 - 13.40"},"11":{"guru_id":"22","mapel_code":"aa","waktu":"13.40 - 14.10"}},"XI AKL":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"16","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"16","mapel_code":"A","waktu":"09.30 - 10.00"},"5":{"guru_id":"22","mapel_code":"aa","waktu":"10.20 - 10.50"},"6":{"guru_id":"22","mapel_code":"aa","waktu":"10.50 - 11.20"},"7":{"guru_id":"4","mapel_code":"G1","waktu":"11.20 - 11.50"},"8":{"guru_id":"4","mapel_code":"G1","waktu":"11.50 - 12.20"},"9":{"guru_id":"4","mapel_code":"G1","waktu":"12.40 - 13.10"},"10":{"guru_id":"23","mapel_code":"B","waktu":"13.10 - 13.40"},"11":{"guru_id":"23","mapel_code":"B","waktu":"13.40 - 14.10"}},"XI PMS":{"1":{"guru_id":"17","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"17","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"20","mapel_code":"M3","waktu":"09.00 - 09.30"},"4":{"guru_id":"20","mapel_code":"M3","waktu":"09.30 - 10.00"},"5":{"guru_id":"20","mapel_code":"M3","waktu":"10.20 - 10.50"},"6":{"guru_id":"12","mapel_code":"M1","waktu":"10.50 - 11.20"},"7":{"guru_id":"12","mapel_code":"M1","waktu":"11.20 - 11.50"},"8":{"guru_id":"12","mapel_code":"M1","waktu":"11.50 - 12.20"},"9":{"guru_id":"27","mapel_code":"M2","waktu":"12.40 - 13.10"},"10":{"guru_id":"27","mapel_code":"M2","waktu":"13.10 - 13.40"},"11":{"guru_id":"27","mapel_code":"M2","waktu":"13.40 - 14.10"}},"XI ULP":{"1":{"guru_id":"17","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"17","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"23","mapel_code":"B","waktu":"09.00 - 09.30"},"4":{"guru_id":"23","mapel_code":"B","waktu":"09.30 - 10.00"},"5":{"guru_id":"8","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"8","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"8","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"24","mapel_code":"ee","waktu":"11.50 - 12.20"},"9":{"guru_id":"24","mapel_code":"ee","waktu":"12.40 - 13.10"},"10":{"guru_id":"24","mapel_code":"ee","waktu":"13.10 - 13.40"},"11":{"guru_id":"24","mapel_code":"ee","waktu":"13.40 - 14.10"}},"XI TJKT":{"1":{"guru_id":"19","mapel_code":"C","waktu":"08.00 - 08.30"},"2":{"guru_id":"19","mapel_code":"C","waktu":"08.30 - 09.00"},"3":{"guru_id":"18","mapel_code":"E","waktu":"09.00 - 09.30"},"4":{"guru_id":"18","mapel_code":"E","waktu":"09.30 - 10.00"},"5":{"guru_id":"40","mapel_code":"gg","waktu":"10.20 - 10.50"},"6":{"guru_id":"40","mapel_code":"gg","waktu":"10.50 - 11.20"},"7":{"guru_id":"45","mapel_code":"hh","waktu":"11.20 - 11.50"},"8":{"guru_id":"45","mapel_code":"hh","waktu":"11.50 - 12.20"},"9":{"guru_id":"45","mapel_code":"hh","waktu":"12.40 - 13.10"},"10":{"guru_id":"29","mapel_code":"rr","waktu":"13.10 - 13.40"},"11":{"guru_id":"29","mapel_code":"rr","waktu":"13.40 - 14.10"}},"XI TJKT2":{"1":{"guru_id":"1","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"1","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"1","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"19","mapel_code":"C","waktu":"09.30 - 10.00"},"5":{"guru_id":"19","mapel_code":"C","waktu":"10.20 - 10.50"},"6":{"guru_id":"18","mapel_code":"E","waktu":"10.50 - 11.20"},"7":{"guru_id":"18","mapel_code":"E","waktu":"11.20 - 11.50"},"8":{"guru_id":"9","mapel_code":"jj","waktu":"11.50 - 12.20"},"9":{"guru_id":"9","mapel_code":"jj","waktu":"12.40 - 13.10"},"10":{"guru_id":"9","mapel_code":"jj","waktu":"13.10 - 13.40"},"11":{"guru_id":"9","mapel_code":"jj","waktu":"13.40 - 14.10"}},"XI TK":{"1":{"guru_id":"34","mapel_code":"pp","waktu":"08.00 - 08.30"},"2":{"guru_id":"34","mapel_code":"pp","waktu":"08.30 - 09.00"},"3":{"guru_id":"34","mapel_code":"pp","waktu":"09.00 - 09.30"},"4":{"guru_id":"34","mapel_code":"ll","waktu":"09.30 - 10.00"},"5":{"guru_id":"34","mapel_code":"ll","waktu":"10.20 - 10.50"},"6":{"guru_id":"34","mapel_code":"ll","waktu":"10.50 - 11.20"},"7":{"guru_id":"28","mapel_code":"aa","waktu":"11.20 - 11.50"},"8":{"guru_id":"28","mapel_code":"aa","waktu":"11.50 - 12.20"},"9":{"guru_id":"28","mapel_code":"aa","waktu":"12.40 - 13.10"},"10":{"guru_id":"18","mapel_code":"E","waktu":"13.10 - 13.40"},"11":{"guru_id":"18","mapel_code":"E","waktu":"13.40 - 14.10"}},"XII MPLB":{"1":{"guru_id":"8","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"8","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"8","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"8","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"32","mapel_code":"Z","waktu":"10.20 - 10.50"},"6":{"guru_id":"32","mapel_code":"Z","waktu":"10.50 - 11.20"},"7":{"guru_id":"19","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"19","mapel_code":"ww","waktu":"11.50 - 12.20"},"9":{"guru_id":"19","mapel_code":"C","waktu":"12.40 - 13.10"},"10":{"guru_id":"19","mapel_code":"C","waktu":"13.10 - 13.40"}},"XII AKL":{"1":{"guru_id":"22","mapel_code":"Q1","waktu":"08.00 - 08.30"},"2":{"guru_id":"22","mapel_code":"Q1","waktu":"08.30 - 09.00"},"3":{"guru_id":"4","mapel_code":"G1","waktu":"09.00 - 09.30"},"4":{"guru_id":"4","mapel_code":"G1","waktu":"09.30 - 10.00"},"5":{"guru_id":"4","mapel_code":"G1","waktu":"10.20 - 10.50"},"6":{"guru_id":"4","mapel_code":"G1","waktu":"10.50 - 11.20"},"7":{"guru_id":"1","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"1","mapel_code":"I","waktu":"11.50 - 12.20"},"9":{"guru_id":"1","mapel_code":"I","waktu":"12.40 - 13.10"},"10":{"guru_id":"1","mapel_code":"I","waktu":"13.10 - 13.40"}},"XII PMS":{"1":{"guru_id":"7","mapel_code":"aa","waktu":"08.00 - 08.30"},"2":{"guru_id":"7","mapel_code":"aa","waktu":"08.30 - 09.00"},"3":{"guru_id":"7","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"14","mapel_code":"H","waktu":"09.30 - 10.00"},"5":{"guru_id":"14","mapel_code":"H","waktu":"10.20 - 10.50"},"6":{"guru_id":"14","mapel_code":"H","waktu":"10.50 - 11.20"},"7":{"guru_id":"20","mapel_code":"M3","waktu":"11.20 - 11.50"},"8":{"guru_id":"20","mapel_code":"M3","waktu":"11.50 - 12.20"},"9":{"guru_id":"20","mapel_code":"M3","waktu":"12.40 - 13.10"},"10":{"guru_id":"20","mapel_code":"M3","waktu":"13.10 - 13.40"}},"XII ULP":{"1":{"guru_id":"31","mapel_code":"cc","waktu":"08.00 - 08.30"},"2":{"guru_id":"31","mapel_code":"cc","waktu":"08.30 - 09.00"},"3":{"guru_id":"31","mapel_code":"cc","waktu":"09.00 - 09.30"},"4":{"guru_id":"24","mapel_code":"ee","waktu":"09.30 - 10.00"},"5":{"guru_id":"24","mapel_code":"ee","waktu":"10.20 - 10.50"},"6":{"guru_id":"24","mapel_code":"ee","waktu":"10.50 - 11.20"},"7":{"guru_id":"24","mapel_code":"ee","waktu":"11.20 - 11.50"},"8":{"guru_id":"31","mapel_code":"aa","waktu":"11.50 - 12.20"},"9":{"guru_id":"31","mapel_code":"aa","waktu":"12.40 - 13.10"},"10":{"guru_id":"31","mapel_code":"aa","waktu":"13.10 - 13.40"}},"XII TJKT":{"1":{"guru_id":"45","mapel_code":"KT2","waktu":"08.00 - 08.30"},"2":{"guru_id":"45","mapel_code":"KT2","waktu":"08.30 - 09.00"},"3":{"guru_id":"9","mapel_code":"KT3","waktu":"09.00 - 09.30"},"4":{"guru_id":"9","mapel_code":"KT3","waktu":"09.30 - 10.00"},"5":{"guru_id":"9","mapel_code":"aa","waktu":"10.20 - 10.50"},"6":{"guru_id":"9","mapel_code":"aa","waktu":"10.50 - 11.20"},"7":{"guru_id":"9","mapel_code":"aa","waktu":"11.20 - 11.50"},"8":{"guru_id":"14","mapel_code":"H","waktu":"11.50 - 12.20"},"9":{"guru_id":"14","mapel_code":"H","waktu":"12.40 - 13.10"},"10":{"guru_id":"14","mapel_code":"H","waktu":"13.10 - 13.40"}},"XII TK":{"1":{"guru_id":"11","mapel_code":"ll","waktu":"08.00 - 08.30"},"2":{"guru_id":"11","mapel_code":"ll","waktu":"08.30 - 09.00"},"3":{"guru_id":"11","mapel_code":"ll","waktu":"09.00 - 09.30"},"4":{"guru_id":"11","mapel_code":"ll","waktu":"09.30 - 10.00"},"5":{"guru_id":"6","mapel_code":"H","waktu":"10.20 - 10.50"},"6":{"guru_id":"6","mapel_code":"H","waktu":"10.50 - 11.20"},"7":{"guru_id":"6","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"25","mapel_code":"pp","waktu":"11.50 - 12.20"},"9":{"guru_id":"25","mapel_code":"pp","waktu":"12.40 - 13.10"},"10":{"guru_id":"25","mapel_code":"pp","waktu":"13.10 - 13.40"}}},"Rabu":{"X MPLB":{"1":{"guru_id":"2","mapel_code":"B","waktu":"08.00 - 08.30"},"2":{"guru_id":"2","mapel_code":"B","waktu":"08.30 - 09.00"},"3":{"guru_id":"6","mapel_code":"ww","waktu":"09.00 - 09.30"},"4":{"guru_id":"6","mapel_code":"ww","waktu":"09.30 - 10.00"},"5":{"guru_id":"6","mapel_code":"ww","waktu":"10.20 - 10.50"},"6":{"guru_id":"5","mapel_code":"L","waktu":"10.50 - 11.20"},"7":{"guru_id":"5","mapel_code":"L","waktu":"11.20 - 11.50"},"8":{"guru_id":"5","mapel_code":"L","waktu":"11.50 - 12.20"},"9":{"guru_id":"46","mapel_code":"C","waktu":"12.40 - 13.10"},"10":{"guru_id":"46","mapel_code":"C","waktu":"13.10 - 13.40"},"11":{"guru_id":"46","mapel_code":"C","waktu":"13.40 - 14.10"}},"X AKL":{"1":{"guru_id":"21","mapel_code":"K","waktu":"08.00 - 08.30"},"2":{"guru_id":"21","mapel_code":"K","waktu":"08.30 - 09.00"},"3":{"guru_id":"21","mapel_code":"K","waktu":"09.00 - 09.30"},"4":{"guru_id":"29","mapel_code":"F","waktu":"09.30 - 10.00"},"5":{"guru_id":"29","mapel_code":"F","waktu":"10.20 - 10.50"},"6":{"guru_id":"22","mapel_code":"M","waktu":"10.50 - 11.20"},"7":{"guru_id":"22","mapel_code":"M","waktu":"11.20 - 11.50"},"8":{"guru_id":"22","mapel_code":"M","waktu":"11.50 - 12.20"},"9":{"guru_id":"1","mapel_code":"I","waktu":"12.40 - 13.10"},"10":{"guru_id":"1","mapel_code":"I","waktu":"13.10 - 13.40"},"11":{"guru_id":"1","mapel_code":"I","waktu":"13.40 - 14.10"}},"X PMS":{"1":{"guru_id":"5","mapel_code":"ww","waktu":"08.00 - 08.30"},"2":{"guru_id":"5","mapel_code":"ww","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.30 - 10.00"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"},"6":{"guru_id":"2","mapel_code":"B","waktu":"10.50 - 11.20"},"7":{"guru_id":"2","mapel_code":"B","waktu":"11.20 - 11.50"},"8":{"guru_id":"27","mapel_code":"Oo","waktu":"11.50 - 12.20"},"9":{"guru_id":"27","mapel_code":"Oo","waktu":"12.40 - 13.10"},"10":{"guru_id":"27","mapel_code":"Oo","waktu":"13.10 - 13.40"},"11":{"guru_id":"27","mapel_code":"Oo","waktu":"13.40 - 14.10"}},"X ULP":{"1":{"guru_id":"29","mapel_code":"F","waktu":"08.00 - 08.30"},"2":{"guru_id":"29","mapel_code":"F","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.30 - 10.00"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"},"6":{"guru_id":"31","mapel_code":"R","waktu":"10.50 - 11.20"},"7":{"guru_id":"31","mapel_code":"R","waktu":"11.20 - 11.50"},"8":{"guru_id":"31","mapel_code":"R","waktu":"11.50 - 12.20"},"9":{"guru_id":"21","mapel_code":"K","waktu":"12.40 - 13.10"},"10":{"guru_id":"21","mapel_code":"K","waktu":"13.10 - 13.40"},"11":{"guru_id":"21","mapel_code":"K","waktu":"13.40 - 14.10"}},"X TJKT1":{"1":{"guru_id":"44","mapel_code":"tjkt1","waktu":"08.00 - 08.30"},"2":{"guru_id":"44","mapel_code":"tjkt1","waktu":"08.30 - 09.00"},"3":{"guru_id":"44","mapel_code":"tjkt1","waktu":"09.00 - 09.30"},"4":{"guru_id":"44","mapel_code":"tjkt1","waktu":"09.30 - 10.00"},"5":{"guru_id":"40","mapel_code":"tjkt3","waktu":"10.20 - 10.50"},"6":{"guru_id":"40","mapel_code":"tjkt3","waktu":"10.50 - 11.20"},"7":{"guru_id":"40","mapel_code":"tjkt3","waktu":"11.20 - 11.50"},"8":{"guru_id":"40","mapel_code":"tjkt3","waktu":"11.50 - 12.20"},"9":{"guru_id":"48","mapel_code":"A","waktu":"12.40 - 13.10"},"10":{"guru_id":"48","mapel_code":"A","waktu":"13.10 - 13.40"},"11":{"guru_id":"48","mapel_code":"A","waktu":"13.40 - 14.10"}},"X TJKT2":{"1":{"guru_id":"39","mapel_code":"J","waktu":"08.00 - 08.30"},"2":{"guru_id":"39","mapel_code":"J","waktu":"08.30 - 09.00"},"3":{"guru_id":"39","mapel_code":"J","waktu":"09.00 - 09.30"},"4":{"guru_id":"21","mapel_code":"K","waktu":"09.30 - 10.00"},"5":{"guru_id":"21","mapel_code":"K","waktu":"10.20 - 10.50"},"6":{"guru_id":"21","mapel_code":"K","waktu":"10.50 - 11.20"},"7":{"guru_id":"18","mapel_code":"E","waktu":"11.20 - 11.50"},"8":{"guru_id":"18","mapel_code":"E","waktu":"11.50 - 12.20"},"9":{"guru_id":"48","mapel_code":"A","waktu":"12.40 - 13.10"},"10":{"guru_id":"48","mapel_code":"A","waktu":"13.10 - 13.40"},"11":{"guru_id":"48","mapel_code":"A","waktu":"13.40 - 14.10"}},"X TK":{"1":{"guru_id":"48","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"48","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"48","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"33","mapel_code":"C","waktu":"09.30 - 10.00"},"5":{"guru_id":"33","mapel_code":"C","waktu":"10.20 - 10.50"},"6":{"guru_id":"33","mapel_code":"C","waktu":"10.50 - 11.20"},"7":{"guru_id":"25","mapel_code":"U","waktu":"11.20 - 11.50"},"8":{"guru_id":"25","mapel_code":"U","waktu":"11.50 - 12.20"},"9":{"guru_id":"25","mapel_code":"U","waktu":"12.40 - 13.10"},"10":{"guru_id":"18","mapel_code":"E","waktu":"13.10 - 13.40"},"11":{"guru_id":"18","mapel_code":"E","waktu":"13.40 - 14.10"}},"X TK2":{"1":{"guru_id":"48","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"48","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"48","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"30","mapel_code":"J","waktu":"09.30 - 10.00"},"5":{"guru_id":"30","mapel_code":"J","waktu":"10.20 - 10.50"},"6":{"guru_id":"30","mapel_code":"J","waktu":"10.50 - 11.20"},"7":{"guru_id":"28","mapel_code":"U","waktu":"11.20 - 11.50"},"8":{"guru_id":"28","mapel_code":"U","waktu":"11.50 - 12.20"},"9":{"guru_id":"28","mapel_code":"U","waktu":"12.40 - 13.10"},"10":{"guru_id":"29","mapel_code":"F","waktu":"13.10 - 13.40"},"11":{"guru_id":"29","mapel_code":"F","waktu":"13.40 - 14.10"}},"XI MPLB":{"1":{"guru_id":"18","mapel_code":"E","waktu":"08.00 - 08.30"},"2":{"guru_id":"18","mapel_code":"E","waktu":"08.30 - 09.00"},"3":{"guru_id":"5","mapel_code":"xx","waktu":"09.00 - 09.30"},"4":{"guru_id":"5","mapel_code":"xx","waktu":"09.30 - 10.00"},"5":{"guru_id":"5","mapel_code":"xx","waktu":"10.20 - 10.50"},"6":{"guru_id":"19","mapel_code":"C","waktu":"10.50 - 11.20"},"7":{"guru_id":"19","mapel_code":"C","waktu":"11.20 - 11.50"},"8":{"guru_id":"15","mapel_code":"ww","waktu":"11.50 - 12.20"},"9":{"guru_id":"15","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"23","mapel_code":"B","waktu":"13.10 - 13.40"},"11":{"guru_id":"23","mapel_code":"B","waktu":"13.40 - 14.10"}},"XI AKL":{"1":{"guru_id":"1","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"1","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"1","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"18","mapel_code":"E","waktu":"09.30 - 10.00"},"5":{"guru_id":"18","mapel_code":"E","waktu":"10.20 - 10.50"},"6":{"guru_id":"6","mapel_code":"H","waktu":"10.50 - 11.20"},"7":{"guru_id":"6","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"26","mapel_code":"I1","waktu":"11.50 - 12.20"},"9":{"guru_id":"26","mapel_code":"I1","waktu":"12.40 - 13.10"},"10":{"guru_id":"26","mapel_code":"I1","waktu":"13.10 - 13.40"},"11":{"guru_id":"26","mapel_code":"I1","waktu":"13.40 - 14.10"}},"XI PMS":{"1":{"guru_id":"10","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"10","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"10","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"14","mapel_code":"ww","waktu":"09.30 - 10.00"},"5":{"guru_id":"14","mapel_code":"ww","waktu":"10.20 - 10.50"},"6":{"guru_id":"7","mapel_code":"aa","waktu":"10.50 - 11.20"},"7":{"guru_id":"7","mapel_code":"aa","waktu":"11.20 - 11.50"},"8":{"guru_id":"7","mapel_code":"aa","waktu":"11.50 - 12.20"},"9":{"guru_id":"20","mapel_code":"M3","waktu":"12.40 - 13.10"},"10":{"guru_id":"20","mapel_code":"M3","waktu":"13.10 - 13.40"},"11":{"guru_id":"20","mapel_code":"M3","waktu":"13.40 - 14.10"}},"XI ULP":{"1":{"guru_id":"31","mapel_code":"cc","waktu":"08.00 - 08.30"},"2":{"guru_id":"31","mapel_code":"cc","waktu":"08.30 - 09.00"},"3":{"guru_id":"31","mapel_code":"cc","waktu":"09.00 - 09.30"},"4":{"guru_id":"31","mapel_code":"cc","waktu":"09.30 - 10.00"},"5":{"guru_id":"8","mapel_code":"ww","waktu":"10.20 - 10.50"},"6":{"guru_id":"8","mapel_code":"ww","waktu":"10.50 - 11.20"},"7":{"guru_id":"24","mapel_code":"N1","waktu":"11.20 - 11.50"},"8":{"guru_id":"24","mapel_code":"N1","waktu":"11.50 - 12.20"},"9":{"guru_id":"24","mapel_code":"N1","waktu":"12.40 - 13.10"},"10":{"guru_id":"24","mapel_code":"N1","waktu":"13.10 - 13.40"},"11":{"guru_id":"24","mapel_code":"N1","waktu":"13.40 - 14.10"}},"XI TJKT":{"1":{"guru_id":"9","mapel_code":"jj","waktu":"08.00 - 08.30"},"2":{"guru_id":"9","mapel_code":"jj","waktu":"08.30 - 09.00"},"3":{"guru_id":"9","mapel_code":"jj","waktu":"09.00 - 09.30"},"4":{"guru_id":"9","mapel_code":"jj","waktu":"09.30 - 10.00"},"5":{"guru_id":"1","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"1","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"1","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"19","mapel_code":"ww","waktu":"11.50 - 12.20"},"9":{"guru_id":"19","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"40","mapel_code":"gg","waktu":"13.10 - 13.40"},"11":{"guru_id":"40","mapel_code":"gg","waktu":"13.40 - 14.10"}},"XI TJKT2":{"1":{"guru_id":"45","mapel_code":"hh","waktu":"08.00 - 08.30"},"2":{"guru_id":"45","mapel_code":"hh","waktu":"08.30 - 09.00"},"3":{"guru_id":"45","mapel_code":"hh","waktu":"09.00 - 09.30"},"4":{"guru_id":"39","mapel_code":"aa","waktu":"09.30 - 10.00"},"5":{"guru_id":"39","mapel_code":"aa","waktu":"10.20 - 10.50"},"6":{"guru_id":"23","mapel_code":"ww","waktu":"10.50 - 11.20"},"7":{"guru_id":"23","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"29","mapel_code":"rr","waktu":"11.50 - 12.20"},"9":{"guru_id":"29","mapel_code":"rr","waktu":"12.40 - 13.10"},"10":{"guru_id":"30","mapel_code":"H","waktu":"13.10 - 13.40"},"11":{"guru_id":"30","mapel_code":"H","waktu":"13.40 - 14.10"}},"XI TK":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"28","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"28","mapel_code":"aa","waktu":"09.30 - 10.00"},"5":{"guru_id":"10","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"10","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"10","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"23","mapel_code":"B","waktu":"11.50 - 12.20"},"9":{"guru_id":"23","mapel_code":"B","waktu":"12.40 - 13.10"},"10":{"guru_id":"16","mapel_code":"A","waktu":"13.10 - 13.40"},"11":{"guru_id":"16","mapel_code":"A","waktu":"13.40 - 14.10"}},"XII MPLB":{"1":{"guru_id":"23","mapel_code":"A1","waktu":"08.00 - 08.30"},"2":{"guru_id":"23","mapel_code":"A1","waktu":"08.30 - 09.00"},"3":{"guru_id":"23","mapel_code":"A1","waktu":"09.00 - 09.30"},"4":{"guru_id":"23","mapel_code":"A1","waktu":"09.30 - 10.00"},"5":{"guru_id":"32","mapel_code":"X","waktu":"10.20 - 10.50"},"6":{"guru_id":"32","mapel_code":"X","waktu":"10.50 - 11.20"},"7":{"guru_id":"13","mapel_code":"B","waktu":"11.20 - 11.50"},"8":{"guru_id":"13","mapel_code":"B","waktu":"11.50 - 12.20"},"9":{"guru_id":"22","mapel_code":"aa","waktu":"12.40 - 13.10"},"10":{"guru_id":"22","mapel_code":"aa","waktu":"13.10 - 13.40"}},"XII AKL":{"1":{"guru_id":"22","mapel_code":"aa","waktu":"08.00 - 08.30"},"2":{"guru_id":"22","mapel_code":"aa","waktu":"08.30 - 09.00"},"3":{"guru_id":"22","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"22","mapel_code":"aa","waktu":"09.30 - 10.00"},"5":{"guru_id":"22","mapel_code":"aa","waktu":"10.20 - 10.50"},"6":{"guru_id":"26","mapel_code":"K1","waktu":"10.50 - 11.20"},"7":{"guru_id":"26","mapel_code":"K1","waktu":"11.20 - 11.50"},"8":{"guru_id":"6","mapel_code":"H","waktu":"11.50 - 12.20"},"9":{"guru_id":"6","mapel_code":"H","waktu":"12.40 - 13.10"},"10":{"guru_id":"6","mapel_code":"H","waktu":"13.10 - 13.40"}},"XII PMS":{"1":{"guru_id":"19","mapel_code":"C","waktu":"08.00 - 08.30"},"2":{"guru_id":"19","mapel_code":"C","waktu":"08.30 - 09.00"},"3":{"guru_id":"20","mapel_code":"M3","waktu":"09.00 - 09.30"},"4":{"guru_id":"20","mapel_code":"M3","waktu":"09.30 - 10.00"},"5":{"guru_id":"20","mapel_code":"M3","waktu":"10.20 - 10.50"},"6":{"guru_id":"20","mapel_code":"M3","waktu":"10.50 - 11.20"},"7":{"guru_id":"12","mapel_code":"M1","waktu":"11.20 - 11.50"},"8":{"guru_id":"12","mapel_code":"M1","waktu":"11.50 - 12.20"},"9":{"guru_id":"12","mapel_code":"M1","waktu":"12.40 - 13.10"},"10":{"guru_id":"12","mapel_code":"M1","waktu":"13.10 - 13.40"}},"XII ULP":{"1":{"guru_id":"24","mapel_code":"O1","waktu":"08.00 - 08.30"},"2":{"guru_id":"24","mapel_code":"O1","waktu":"08.30 - 09.00"},"3":{"guru_id":"24","mapel_code":"O1","waktu":"09.00 - 09.30"},"4":{"guru_id":"24","mapel_code":"N1","waktu":"09.30 - 10.00"},"5":{"guru_id":"24","mapel_code":"N1","waktu":"10.20 - 10.50"},"6":{"guru_id":"24","mapel_code":"N1","waktu":"10.50 - 11.20"},"7":{"guru_id":"8","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"8","mapel_code":"I","waktu":"11.50 - 12.20"},"9":{"guru_id":"5","mapel_code":"X1","waktu":"12.40 - 13.10"},"10":{"guru_id":"5","mapel_code":"X1","waktu":"13.10 - 13.40"}},"XII TJKT":{"1":{"guru_id":"15","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"15","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"19","mapel_code":"C","waktu":"09.00 - 09.30"},"4":{"guru_id":"19","mapel_code":"C","waktu":"09.30 - 10.00"},"5":{"guru_id":"9","mapel_code":"KT1","waktu":"10.20 - 10.50"},"6":{"guru_id":"9","mapel_code":"KT1","waktu":"10.50 - 11.20"},"7":{"guru_id":"9","mapel_code":"aa","waktu":"11.20 - 11.50"},"8":{"guru_id":"9","mapel_code":"aa","waktu":"11.50 - 12.20"},"9":{"guru_id":"45","mapel_code":"KT2","waktu":"12.40 - 13.10"},"10":{"guru_id":"45","mapel_code":"KT2","waktu":"13.10 - 13.40"}},"XII TK":{"1":{"guru_id":"15","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"15","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"25","mapel_code":"Z1","waktu":"09.00 - 09.30"},"4":{"guru_id":"25","mapel_code":"Z1","waktu":"09.30 - 10.00"},"5":{"guru_id":"25","mapel_code":"Z1","waktu":"10.20 - 10.50"},"6":{"guru_id":"25","mapel_code":"Z1","waktu":"10.50 - 11.20"},"7":{"guru_id":"11","mapel_code":"ll","waktu":"11.20 - 11.50"},"8":{"guru_id":"11","mapel_code":"ll","waktu":"11.50 - 12.20"},"9":{"guru_id":"11","mapel_code":"ll","waktu":"12.40 - 13.10"},"10":{"guru_id":"11","mapel_code":"ll","waktu":"13.10 - 13.40"}}},"Kamis":{"X MPLB":{"1":{"guru_id":"5","mapel_code":"L","waktu":"08.00 - 08.30"},"2":{"guru_id":"5","mapel_code":"L","waktu":"08.30 - 09.00"},"3":{"guru_id":"5","mapel_code":"L","waktu":"09.00 - 09.30"},"4":{"guru_id":"6","mapel_code":"ww","waktu":"09.30 - 10.00"},"5":{"guru_id":"6","mapel_code":"ww","waktu":"10.20 - 10.50"},"6":{"guru_id":"17","mapel_code":"A","waktu":"10.50 - 11.20"},"7":{"guru_id":"17","mapel_code":"A","waktu":"11.20 - 11.50"},"8":{"guru_id":"17","mapel_code":"A","waktu":"12.10 - 12.40"},"9":{"guru_id":"29","mapel_code":"F","waktu":"12.40 - 13.10"},"10":{"guru_id":"29","mapel_code":"F","waktu":"13.10 - 13.40"}},"X AKL":{"1":{"guru_id":"1","mapel_code":"ww","waktu":"08.00 - 08.30"},"2":{"guru_id":"1","mapel_code":"ww","waktu":"08.30 - 09.00"},"3":{"guru_id":"35","mapel_code":"M","waktu":"09.00 - 09.30"},"4":{"guru_id":"35","mapel_code":"M","waktu":"09.30 - 10.00"},"5":{"guru_id":"35","mapel_code":"M","waktu":"10.20 - 10.50"},"6":{"guru_id":"17","mapel_code":"A","waktu":"10.50 - 11.20"},"7":{"guru_id":"17","mapel_code":"A","waktu":"11.20 - 11.50"},"8":{"guru_id":"17","mapel_code":"A","waktu":"12.10 - 12.40"},"9":{"guru_id":"37","mapel_code":"G","waktu":"12.40 - 13.10"},"10":{"guru_id":"37","mapel_code":"G","waktu":"13.10 - 13.40"}},"X PMS":{"1":{"guru_id":"12","mapel_code":"Oo","waktu":"08.00 - 08.30"},"2":{"guru_id":"12","mapel_code":"Oo","waktu":"08.30 - 09.00"},"3":{"guru_id":"12","mapel_code":"Oo","waktu":"09.00 - 09.30"},"4":{"guru_id":"12","mapel_code":"Oo","waktu":"09.30 - 10.00"},"5":{"guru_id":"14","mapel_code":"H","waktu":"10.20 - 10.50"},"6":{"guru_id":"14","mapel_code":"H","waktu":"10.50 - 11.20"},"7":{"guru_id":"14","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"49","mapel_code":"K","waktu":"12.10 - 12.40"},"9":{"guru_id":"49","mapel_code":"K","waktu":"12.40 - 13.10"},"10":{"guru_id":"49","mapel_code":"K","waktu":"13.10 - 13.40"}},"X ULP":{"1":{"guru_id":"31","mapel_code":"R","waktu":"08.00 - 08.30"},"2":{"guru_id":"31","mapel_code":"R","waktu":"08.30 - 09.00"},"3":{"guru_id":"31","mapel_code":"R","waktu":"09.00 - 09.30"},"4":{"guru_id":"37","mapel_code":"G","waktu":"09.30 - 10.00"},"5":{"guru_id":"37","mapel_code":"G","waktu":"10.20 - 10.50"},"6":{"guru_id":"21","mapel_code":"K","waktu":"10.50 - 11.20"},"7":{"guru_id":"21","mapel_code":"K","waktu":"11.20 - 11.50"},"8":{"guru_id":"8","mapel_code":"I","waktu":"12.10 - 12.40"},"9":{"guru_id":"8","mapel_code":"I","waktu":"12.40 - 13.10"},"10":{"guru_id":"8","mapel_code":"I","waktu":"13.10 - 13.40"}},"X TJKT1":{"1":{"guru_id":"21","mapel_code":"K","waktu":"08.00 - 08.30"},"2":{"guru_id":"21","mapel_code":"K","waktu":"08.30 - 09.00"},"3":{"guru_id":"30","mapel_code":"H","waktu":"09.00 - 09.30"},"4":{"guru_id":"30","mapel_code":"H","waktu":"09.30 - 10.00"},"5":{"guru_id":"30","mapel_code":"H","waktu":"10.20 - 10.50"},"6":{"guru_id":"33","mapel_code":"ww","waktu":"10.50 - 11.20"},"7":{"guru_id":"33","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"33","mapel_code":"ww","waktu":"12.10 - 12.40"},"9":{"guru_id":"33","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"33","mapel_code":"ww","waktu":"13.10 - 13.40"}},"X TJKT2":{"1":{"guru_id":"33","mapel_code":"C","waktu":"08.00 - 08.30"},"2":{"guru_id":"33","mapel_code":"C","waktu":"08.30 - 09.00"},"3":{"guru_id":"33","mapel_code":"C","waktu":"09.00 - 09.30"},"4":{"guru_id":"45","mapel_code":"tjkt1","waktu":"09.30 - 10.00"},"5":{"guru_id":"45","mapel_code":"tjkt1","waktu":"10.20 - 10.50"},"6":{"guru_id":"45","mapel_code":"tjkt1","waktu":"10.50 - 11.20"},"7":{"guru_id":"45","mapel_code":"tjkt1","waktu":"11.20 - 11.50"},"8":{"guru_id":"1","mapel_code":"I","waktu":"12.10 - 12.40"},"9":{"guru_id":"1","mapel_code":"I","waktu":"12.40 - 13.10"},"10":{"guru_id":"1","mapel_code":"I","waktu":"13.10 - 13.40"}},"X TK":{"1":{"guru_id":"25","mapel_code":"U","waktu":"08.00 - 08.30"},"2":{"guru_id":"25","mapel_code":"U","waktu":"08.30 - 09.00"},"3":{"guru_id":"25","mapel_code":"U","waktu":"09.00 - 09.30"},"4":{"guru_id":"38","mapel_code":"K","waktu":"09.30 - 10.00"},"5":{"guru_id":"38","mapel_code":"K","waktu":"10.20 - 10.50"},"6":{"guru_id":"2","mapel_code":"B","waktu":"10.50 - 11.20"},"7":{"guru_id":"2","mapel_code":"B","waktu":"11.20 - 11.50"},"8":{"guru_id":"10","mapel_code":"ww","waktu":"12.10 - 12.40"},"9":{"guru_id":"10","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"10","mapel_code":"ww","waktu":"13.10 - 13.40"}},"X TK2":{"1":{"guru_id":"10","mapel_code":"I","waktu":"08.00 - 08.30"},"2":{"guru_id":"10","mapel_code":"I","waktu":"08.30 - 09.00"},"3":{"guru_id":"10","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"28","mapel_code":"U","waktu":"09.30 - 10.00"},"5":{"guru_id":"28","mapel_code":"U","waktu":"10.20 - 10.50"},"6":{"guru_id":"28","mapel_code":"U","waktu":"10.50 - 11.20"},"7":{"guru_id":"18","mapel_code":"E","waktu":"11.20 - 11.50"},"8":{"guru_id":"18","mapel_code":"E","waktu":"12.10 - 12.40"},"9":{"guru_id":"2","mapel_code":"B","waktu":"12.40 - 13.10"},"10":{"guru_id":"2","mapel_code":"B","waktu":"13.10 - 13.40"}},"XI MPLB":{"1":{"guru_id":"29","mapel_code":"rr","waktu":"08.00 - 08.30"},"2":{"guru_id":"29","mapel_code":"rr","waktu":"08.30 - 09.00"},"3":{"guru_id":"8","mapel_code":"I","waktu":"09.00 - 09.30"},"4":{"guru_id":"8","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"8","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"15","mapel_code":"ww","waktu":"10.50 - 11.20"},"7":{"guru_id":"15","mapel_code":"ww","waktu":"11.20 - 11.50"},"8":{"guru_id":"32","mapel_code":"Z","waktu":"12.10 - 12.40"},"9":{"guru_id":"32","mapel_code":"Z","waktu":"12.40 - 13.10"},"10":{"guru_id":"32","mapel_code":"Z","waktu":"13.10 - 13.40"}},"XI AKL":{"1":{"guru_id":"3","mapel_code":"ww","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"ww","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"ww","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"ww","waktu":"09.30 - 10.00"},"5":{"guru_id":"29","mapel_code":"rr","waktu":"10.20 - 10.50"},"6":{"guru_id":"29","mapel_code":"rr","waktu":"10.50 - 11.20"},"7":{"guru_id":"26","mapel_code":"K1","waktu":"11.20 - 11.50"},"8":{"guru_id":"26","mapel_code":"K1","waktu":"12.10 - 12.40"},"9":{"guru_id":"26","mapel_code":"H1","waktu":"12.40 - 13.10"},"10":{"guru_id":"26","mapel_code":"H1","waktu":"13.10 - 13.40"}},"XI PMS":{"1":{"guru_id":"14","mapel_code":"H","waktu":"08.00 - 08.30"},"2":{"guru_id":"14","mapel_code":"H","waktu":"08.30 - 09.00"},"3":{"guru_id":"7","mapel_code":"W1","waktu":"09.00 - 09.30"},"4":{"guru_id":"7","mapel_code":"W1","waktu":"09.30 - 10.00"},"5":{"guru_id":"7","mapel_code":"W1","waktu":"10.20 - 10.50"},"6":{"guru_id":"7","mapel_code":"W1","waktu":"10.50 - 11.20"},"7":{"guru_id":"29","mapel_code":"rr","waktu":"11.20 - 11.50"},"8":{"guru_id":"29","mapel_code":"rr","waktu":"12.10 - 12.40"},"9":{"guru_id":"23","mapel_code":"B","waktu":"12.40 - 13.10"},"10":{"guru_id":"23","mapel_code":"B","waktu":"13.10 - 13.40"}},"XI ULP":{"1":{"guru_id":"8","mapel_code":"ww","waktu":"08.00 - 08.30"},"2":{"guru_id":"8","mapel_code":"ww","waktu":"08.30 - 09.00"},"3":{"guru_id":"24","mapel_code":"O1","waktu":"09.00 - 09.30"},"4":{"guru_id":"24","mapel_code":"O1","waktu":"09.30 - 10.00"},"5":{"guru_id":"18","mapel_code":"E","waktu":"10.20 - 10.50"},"6":{"guru_id":"18","mapel_code":"E","waktu":"10.50 - 11.20"},"7":{"guru_id":"31","mapel_code":"aa","waktu":"11.20 - 11.50"},"8":{"guru_id":"31","mapel_code":"aa","waktu":"12.10 - 12.40"},"9":{"guru_id":"19","mapel_code":"C","waktu":"12.40 - 13.10"},"10":{"guru_id":"19","mapel_code":"C","waktu":"13.10 - 13.40"}},"XI TJKT":{"1":{"guru_id":"15","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"15","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"23","mapel_code":"B","waktu":"09.00 - 09.30"},"4":{"guru_id":"23","mapel_code":"B","waktu":"09.30 - 10.00"},"5":{"guru_id":"39","mapel_code":"aa","waktu":"10.20 - 10.50"},"6":{"guru_id":"39","mapel_code":"aa","waktu":"10.50 - 11.20"},"7":{"guru_id":"30","mapel_code":"H","waktu":"11.20 - 11.50"},"8":{"guru_id":"30","mapel_code":"H","waktu":"12.10 - 12.40"},"9":{"guru_id":"40","mapel_code":"gg","waktu":"12.40 - 13.10"},"10":{"guru_id":"40","mapel_code":"gg","waktu":"13.10 - 13.40"}},"XI TJKT2":{"1":{"guru_id":"15","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"15","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"44","mapel_code":"oo","waktu":"09.00 - 09.30"},"4":{"guru_id":"44","mapel_code":"oo","waktu":"09.30 - 10.00"},"5":{"guru_id":"44","mapel_code":"oo","waktu":"10.20 - 10.50"},"6":{"guru_id":"23","mapel_code":"B","waktu":"10.50 - 11.20"},"7":{"guru_id":"23","mapel_code":"B","waktu":"11.20 - 11.50"},"8":{"guru_id":"9","mapel_code":"aa","waktu":"12.10 - 12.40"},"9":{"guru_id":"9","mapel_code":"aa","waktu":"12.40 - 13.10"},"10":{"guru_id":"9","mapel_code":"aa","waktu":"13.10 - 13.40"}},"XI TK":{"1":{"guru_id":"28","mapel_code":"Z1","waktu":"08.00 - 08.30"},"2":{"guru_id":"28","mapel_code":"Z1","waktu":"08.30 - 09.00"},"3":{"guru_id":"29","mapel_code":"rr","waktu":"09.00 - 09.30"},"4":{"guru_id":"29","mapel_code":"rr","waktu":"09.30 - 10.00"},"5":{"guru_id":"19","mapel_code":"C","waktu":"10.20 - 10.50"},"6":{"guru_id":"19","mapel_code":"C","waktu":"10.50 - 11.20"},"7":{"guru_id":"28","mapel_code":"Z1","waktu":"11.20 - 11.50"},"8":{"guru_id":"28","mapel_code":"Z1","waktu":"12.10 - 12.40"},"9":{"guru_id":"18","mapel_code":"ww","waktu":"12.40 - 13.10"},"10":{"guru_id":"18","mapel_code":"ww","waktu":"13.10 - 13.40"}},"XII MPLB":{"1":{"guru_id":"22","mapel_code":"aa","waktu":"08.00 - 08.30"},"2":{"guru_id":"22","mapel_code":"aa","waktu":"08.30 - 09.00"},"3":{"guru_id":"22","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"5","mapel_code":"U1","waktu":"09.30 - 10.00"},"5":{"guru_id":"5","mapel_code":"U1","waktu":"10.20 - 10.50"},"6":{"guru_id":"5","mapel_code":"U1","waktu":"10.50 - 11.20"},"7":{"guru_id":"5","mapel_code":"U1","waktu":"11.20 - 11.50"},"8":{"guru_id":"5","mapel_code":"xx","waktu":"12.10 - 12.40"},"9":{"guru_id":"5","mapel_code":"xx","waktu":"12.40 - 13.10"}},"XII AKL":{"1":{"guru_id":"19","mapel_code":"C","waktu":"08.00 - 08.30"},"2":{"guru_id":"19","mapel_code":"C","waktu":"08.30 - 09.00"},"3":{"guru_id":"26","mapel_code":"I1","waktu":"09.00 - 09.30"},"4":{"guru_id":"26","mapel_code":"I1","waktu":"09.30 - 10.00"},"5":{"guru_id":"26","mapel_code":"I1","waktu":"10.20 - 10.50"},"6":{"guru_id":"4","mapel_code":"V1","waktu":"10.50 - 11.20"},"7":{"guru_id":"4","mapel_code":"V1","waktu":"11.20 - 11.50"},"8":{"guru_id":"4","mapel_code":"V1","waktu":"12.10 - 12.40"},"9":{"guru_id":"4","mapel_code":"V1","waktu":"12.40 - 13.10"}},"XII PMS":{"1":{"guru_id":"27","mapel_code":"S1","waktu":"08.00 - 08.30"},"2":{"guru_id":"27","mapel_code":"S1","waktu":"08.30 - 09.00"},"3":{"guru_id":"27","mapel_code":"S1","waktu":"09.00 - 09.30"},"4":{"guru_id":"10","mapel_code":"I","waktu":"09.30 - 10.00"},"5":{"guru_id":"10","mapel_code":"I","waktu":"10.20 - 10.50"},"6":{"guru_id":"10","mapel_code":"I","waktu":"10.50 - 11.20"},"7":{"guru_id":"10","mapel_code":"I","waktu":"11.20 - 11.50"},"8":{"guru_id":"16","mapel_code":"A","waktu":"12.10 - 12.40"},"9":{"guru_id":"16","mapel_code":"A","waktu":"12.40 - 13.10"}},"XII ULP":{"1":{"guru_id":"13","mapel_code":"B","waktu":"08.00 - 08.30"},"2":{"guru_id":"13","mapel_code":"B","waktu":"08.30 - 09.00"},"3":{"guru_id":"19","mapel_code":"C","waktu":"09.00 - 09.30"},"4":{"guru_id":"19","mapel_code":"C","waktu":"09.30 - 10.00"},"5":{"guru_id":"24","mapel_code":"N1","waktu":"10.20 - 10.50"},"6":{"guru_id":"24","mapel_code":"N1","waktu":"10.50 - 11.20"},"7":{"guru_id":"24","mapel_code":"N1","waktu":"11.20 - 11.50"},"8":{"guru_id":"16","mapel_code":"A","waktu":"12.10 - 12.40"},"9":{"guru_id":"16","mapel_code":"A","waktu":"12.40 - 13.10"}},"XII TJKT":{"1":{"guru_id":"9","mapel_code":"KT3","waktu":"08.00 - 08.30"},"2":{"guru_id":"9","mapel_code":"KT3","waktu":"08.30 - 09.00"},"3":{"guru_id":"9","mapel_code":"KT3","waktu":"09.00 - 09.30"},"4":{"guru_id":"9","mapel_code":"KT1","waktu":"09.30 - 10.00"},"5":{"guru_id":"9","mapel_code":"KT1","waktu":"10.20 - 10.50"},"6":{"guru_id":"9","mapel_code":"Y1","waktu":"10.50 - 11.20"},"7":{"guru_id":"9","mapel_code":"Y1","waktu":"11.20 - 11.50"},"8":{"guru_id":"13","mapel_code":"B","waktu":"12.10 - 12.40"},"9":{"guru_id":"13","mapel_code":"B","waktu":"12.40 - 13.10"}},"XII TK":{"1":{"guru_id":"11","mapel_code":"ll","waktu":"08.00 - 08.30"},"2":{"guru_id":"11","mapel_code":"ll","waktu":"08.30 - 09.00"},"3":{"guru_id":"11","mapel_code":"ll","waktu":"09.00 - 09.30"},"4":{"guru_id":"11","mapel_code":"ll","waktu":"09.30 - 10.00"},"5":{"guru_id":"13","mapel_code":"B","waktu":"10.20 - 10.50"},"6":{"guru_id":"13","mapel_code":"B","waktu":"10.50 - 11.20"},"7":{"guru_id":"25","mapel_code":"pp","waktu":"11.20 - 11.50"},"8":{"guru_id":"25","mapel_code":"pp","waktu":"12.10 - 12.40"},"9":{"guru_id":"25","mapel_code":"pp","waktu":"12.40 - 13.10"}}},"Jumat":{"X MPLB":{"1":{"guru_id":"37","mapel_code":"G","waktu":"08.00 - 08.30"},"2":{"guru_id":"37","mapel_code":"G","waktu":"08.30 - 09.00"},"3":{"guru_id":"30","mapel_code":"J","waktu":"09.00 - 09.30"},"4":{"guru_id":"30","mapel_code":"J","waktu":"09.50 - 10.20"},"5":{"guru_id":"30","mapel_code":"J","waktu":"10.20 - 10.50"}},"X AKL":{"1":{"guru_id":"18","mapel_code":"E","waktu":"08.00 - 08.30"},"2":{"guru_id":"18","mapel_code":"E","waktu":"08.30 - 09.00"},"3":{"guru_id":"22","mapel_code":"M","waktu":"09.00 - 09.30"},"4":{"guru_id":"22","mapel_code":"M","waktu":"09.50 - 10.20"},"5":{"guru_id":"22","mapel_code":"M","waktu":"10.20 - 10.50"}},"X PMS":{"1":{"guru_id":"17","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"17","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"17","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"49","mapel_code":"K","waktu":"09.50 - 10.20"},"5":{"guru_id":"49","mapel_code":"K","waktu":"10.20 - 10.50"}},"X ULP":{"1":{"guru_id":"17","mapel_code":"A","waktu":"08.00 - 08.30"},"2":{"guru_id":"17","mapel_code":"A","waktu":"08.30 - 09.00"},"3":{"guru_id":"17","mapel_code":"A","waktu":"09.00 - 09.30"},"4":{"guru_id":"24","mapel_code":"ww","waktu":"09.50 - 10.20"},"5":{"guru_id":"24","mapel_code":"ww","waktu":"10.20 - 10.50"}},"X TJKT1":{"1":{"guru_id":"33","mapel_code":"C","waktu":"08.00 - 08.30"},"2":{"guru_id":"33","mapel_code":"C","waktu":"08.30 - 09.00"},"3":{"guru_id":"33","mapel_code":"C","waktu":"09.00 - 09.30"},"4":{"guru_id":"29","mapel_code":"F","waktu":"09.50 - 10.20"},"5":{"guru_id":"29","mapel_code":"F","waktu":"10.20 - 10.50"}},"X TJKT2":{"1":{"guru_id":"19","mapel_code":"ww","waktu":"08.00 - 08.30"},"2":{"guru_id":"19","mapel_code":"ww","waktu":"08.30 - 09.00"},"3":{"guru_id":"19","mapel_code":"ww","waktu":"09.00 - 09.30"},"4":{"guru_id":"9","mapel_code":"tjkt2","waktu":"09.50 - 10.20"},"5":{"guru_id":"9","mapel_code":"tjkt2","waktu":"10.20 - 10.50"}},"X TK":{"1":{"guru_id":"29","mapel_code":"F","waktu":"08.00 - 08.30"},"2":{"guru_id":"29","mapel_code":"F","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.50 - 10.20"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"}},"X TK2":{"1":{"guru_id":"49","mapel_code":"K","waktu":"08.00 - 08.30"},"2":{"guru_id":"49","mapel_code":"K","waktu":"08.30 - 09.00"},"3":{"guru_id":"3","mapel_code":"D","waktu":"09.00 - 09.30"},"4":{"guru_id":"3","mapel_code":"D","waktu":"09.50 - 10.20"},"5":{"guru_id":"3","mapel_code":"D","waktu":"10.20 - 10.50"}},"XI MPLB":{"1":{"guru_id":"23","mapel_code":"E1","waktu":"08.00 - 08.30"},"2":{"guru_id":"23","mapel_code":"E1","waktu":"08.30 - 09.00"},"3":{"guru_id":"23","mapel_code":"E1","waktu":"09.00 - 09.30"},"4":{"guru_id":"32","mapel_code":"yy","waktu":"09.50 - 10.20"},"5":{"guru_id":"32","mapel_code":"yy","waktu":"10.20 - 10.50"}},"XI AKL":{"1":{"guru_id":"26","mapel_code":"J1","waktu":"08.00 - 08.30"},"2":{"guru_id":"26","mapel_code":"J1","waktu":"08.30 - 09.00"},"3":{"guru_id":"26","mapel_code":"J1","waktu":"09.00 - 09.30"},"4":{"guru_id":"19","mapel_code":"C","waktu":"09.50 - 10.20"},"5":{"guru_id":"19","mapel_code":"C","waktu":"10.20 - 10.50"}},"XI PMS":{"1":{"guru_id":"27","mapel_code":"M2","waktu":"08.00 - 08.30"},"2":{"guru_id":"27","mapel_code":"M2","waktu":"08.30 - 09.00"},"3":{"guru_id":"27","mapel_code":"M2","waktu":"09.00 - 09.30"},"4":{"guru_id":"7","mapel_code":"aa","waktu":"09.50 - 10.20"},"5":{"guru_id":"7","mapel_code":"aa","waktu":"10.20 - 10.50"}},"XI ULP":{"1":{"guru_id":"31","mapel_code":"aa","waktu":"08.00 - 08.30"},"2":{"guru_id":"31","mapel_code":"aa","waktu":"08.30 - 09.00"},"3":{"guru_id":"31","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"5","mapel_code":"X1","waktu":"09.50 - 10.20"},"5":{"guru_id":"5","mapel_code":"X1","waktu":"10.20 - 10.50"}},"XI TJKT":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"44","mapel_code":"oo","waktu":"09.00 - 09.30"},"4":{"guru_id":"44","mapel_code":"oo","waktu":"09.50 - 10.20"},"5":{"guru_id":"44","mapel_code":"oo","waktu":"10.20 - 10.50"}},"XI TJKT2":{"1":{"guru_id":"3","mapel_code":"D","waktu":"08.00 - 08.30"},"2":{"guru_id":"3","mapel_code":"D","waktu":"08.30 - 09.00"},"3":{"guru_id":"40","mapel_code":"gg","waktu":"09.00 - 09.30"},"4":{"guru_id":"40","mapel_code":"gg","waktu":"09.50 - 10.20"},"5":{"guru_id":"40","mapel_code":"gg","waktu":"10.20 - 10.50"}},"XI TK":{"1":{"guru_id":"25","mapel_code":"mm","waktu":"08.00 - 08.30"},"2":{"guru_id":"25","mapel_code":"mm","waktu":"08.30 - 09.00"},"3":{"guru_id":"25","mapel_code":"mm","waktu":"09.00 - 09.30"},"4":{"guru_id":"18","mapel_code":"ww","waktu":"09.50 - 10.20"},"5":{"guru_id":"18","mapel_code":"ww","waktu":"10.20 - 10.50"}},"XII MPLB":{"1":{"guru_id":"6","mapel_code":"H","waktu":"08.00 - 08.30"},"2":{"guru_id":"6","mapel_code":"H","waktu":"08.30 - 09.00"},"3":{"guru_id":"6","mapel_code":"H","waktu":"09.00 - 09.30"},"4":{"guru_id":"23","mapel_code":"C1","waktu":"09.50 - 10.20"},"5":{"guru_id":"23","mapel_code":"C1","waktu":"10.20 - 10.50"}},"XII AKL":{"1":{"guru_id":"4","mapel_code":"G1","waktu":"08.00 - 08.30"},"2":{"guru_id":"4","mapel_code":"G1","waktu":"08.30 - 09.00"},"3":{"guru_id":"4","mapel_code":"G1","waktu":"09.00 - 09.30"},"4":{"guru_id":"26","mapel_code":"I1","waktu":"09.50 - 10.20"},"5":{"guru_id":"26","mapel_code":"I1","waktu":"10.20 - 10.50"}},"XII PMS":{"1":{"guru_id":"13","mapel_code":"B","waktu":"08.00 - 08.30"},"2":{"guru_id":"13","mapel_code":"B","waktu":"08.30 - 09.00"},"3":{"guru_id":"12","mapel_code":"M1","waktu":"09.00 - 09.30"},"4":{"guru_id":"12","mapel_code":"M1","waktu":"09.50 - 10.20"},"5":{"guru_id":"12","mapel_code":"M1","waktu":"10.20 - 10.50"}},"XII ULP":{"1":{"guru_id":"24","mapel_code":"O1","waktu":"08.00 - 08.30"},"2":{"guru_id":"24","mapel_code":"O1","waktu":"08.30 - 09.00"},"3":{"guru_id":"24","mapel_code":"O1","waktu":"09.00 - 09.30"},"4":{"guru_id":"31","mapel_code":"aa","waktu":"09.50 - 10.20"},"5":{"guru_id":"31","mapel_code":"aa","waktu":"10.20 - 10.50"}},"XII TJKT":{"1":{"guru_id":"9","mapel_code":"KT1","waktu":"08.00 - 08.30"},"2":{"guru_id":"9","mapel_code":"KT1","waktu":"08.30 - 09.00"},"3":{"guru_id":"45","mapel_code":"KT2","waktu":"09.00 - 09.30"},"4":{"guru_id":"45","mapel_code":"KT2","waktu":"09.50 - 10.20"},"5":{"guru_id":"45","mapel_code":"KT2","waktu":"10.20 - 10.50"}},"XII TK":{"1":{"guru_id":"28","mapel_code":"aa","waktu":"08.00 - 08.30"},"2":{"guru_id":"28","mapel_code":"aa","waktu":"08.30 - 09.00"},"3":{"guru_id":"28","mapel_code":"aa","waktu":"09.00 - 09.30"},"4":{"guru_id":"28","mapel_code":"aa","waktu":"09.50 - 10.20"},"5":{"guru_id":"28","mapel_code":"aa","waktu":"10.20 - 10.50"}}}},"waktu":{"Senin":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"11.50 - 12.20","9":"12.40 - 13.10","10":"13.10 - 13.40","11":"13.40 - 14.10"},"Selasa":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"11.50 - 12.20","9":"12.40 - 13.10","10":"13.10 - 13.40","11":"13.40 - 14.10"},"Rabu":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"11.50 - 12.20","9":"12.40 - 13.10","10":"13.10 - 13.40","11":"13.40 - 14.10"},"Kamis":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.30 - 10.00","5":"10.20 - 10.50","6":"10.50 - 11.20","7":"11.20 - 11.50","8":"12.10 - 12.40","9":"12.40 - 13.10","10":"13.10 - 13.40"},"Jumat":{"1":"08.00 - 08.30","2":"08.30 - 09.00","3":"09.00 - 09.30","4":"09.50 - 10.20","5":"10.20 - 10.50"}},"kelas":["X MPLB","X AKL","X PMS","X ULP","X TJKT1","X TJKT2","X TK","X TK2","XI MPLB","XI AKL","XI PMS","XI ULP","XI TJKT","XI TJKT2","XI TK","XII MPLB","XII AKL","XII PMS","XII ULP","XII TJKT","XII TK"]}
+;
+
+const GURU = {
+  "1":"A. Bahy, S.Pd.,M.Pd","2":"E.A. Wacanno, S.Pd","3":"O.A. Lawalata, S.Pd",
+  "4":"A. Leuwol, S.Pd","5":"B.W. Tanamal, S.Pd","6":"T.M.A. Kappuw, S.Pd",
+  "7":"R. Lewenussa, S.Pd","8":"Yulan Talarima, S.Pd.,Gr","9":"S. Singadji, S.Kom",
+  "10":"N. Ch. Elias, S.Pd.,M.Pd","11":"A. Dj. Tuasikal, S.Pd.,M.Si","12":"D. Simaela, S.Pd",
+  "13":"R. Nilapantjuran, S.Pd","14":"R. E. Ruhukail, S.Pd.,M.Pd","15":"T.S. Polnaya, S.Th",
+  "16":"Djumiaty, S.PdI","17":"F.L. Pelletimu, S.Th","18":"V. Ruhukail, S.Pd",
+  "19":"Dahasian, S.Pd.,Gr","20":"H. Salampessy, SE","21":"H.S. Kapressy, S.Pd.,M.Pd",
+  "22":"M. Kunu, S.Pd","23":"Dani Iswanti, S.Sos","24":"A. A.W.J. Soplantila, S.Tr.Par",
+  "25":"Daud Ali Pakan, S.Pd","26":"Marwana Nurdin, SST","27":"Kalsum Mony, S.Pd",
+  "28":"Abdul Manan Payapo, S.T","29":"R. A. Ririhena, SM.Gr","30":"Latumeirissa Allcresdo",
+  "31":"M. Siwabessy, S.Tr.Par","32":"E. Tamaela, A.Md","33":"Wa Mulina, S.Pd",
+  "34":"Papuangan Syamsudin, A.Md","35":"Diwanti Wally, A.Md","36":"M. Matinahoruw, S.Pd.K",
+  "37":"J. Resiloy","38":"Lukas M. Wacanno, S.Pd","39":"Mani Jamaludin, S.Kom",
+  "40":"Gloria Stevana Pattiradjawane, S.Tr.TI","41":"—","42":"—",
+  "43":"Netri Wailaruno, S.Pd","44":"Axl Denis Hallatu, S.Kom","45":"R.Y. Ririhena, S.PdKom",
+  "46":"Suharja Duhalim, S.Pd","47":"Efrem More Meto, S.Fil","48":"Budiarto Tahidi, S.Pd","49":"Tuasikal Boki"
+};
+
+const MAPEL = {
+  "A":"Pendidikan Agama dan Budi Pekerti","A2":"Pendidikan Agama Katolik",
+  "B":"Pendidikan Pancasila","C":"Bahasa Indonesia","D":"Pendidikan Jasmani, Olah Raga dan Kesehatan",
+  "E":"Sejarah","F":"Seni Budaya (Seni Musik)","G":"Muatan Lokal (Membatik)",
+  "H":"Matematika","I":"Bahasa Inggris","J":"Informatika","K":"Projek IPAS",
+  "L":"Dasar Program Keahlian MPLB","M":"Dasar Program Keahlian AKL",
+  "N":"Dasar Program Keahlian AKL2","O":"DPK PMS (Wawasan dunia kerja bidang pemasaran)",
+  "Oo":"DPK PMS (Kecakapan kerja dasar, K3 dan budaya kerja)",
+  "P":"—","Q":"Dasar Program Keahlian PMS2","R":"Dasar Program Keahlian ULP",
+  "S":"Dasar Program Keahlian TJKT 2","T":"Dasar Program Keahlian PMS3",
+  "U":"Dasar Program Keahlian TK","V":"Projek Kreatif dan Kewirausahaan",
+  "W":"Mata Pelajaran Pilihan","X":"KK MPLB Peng. Adm. Umum","Y":"KK MPLB (Peng. SDM)",
+  "Z":"KK MPLB (Peng. Rapat/Pertemuan)","A1":"KK MPLB (Teknologi Perkantoran)",
+  "B1":"KK MPLB (Humas dan Keprotokolan)","D1":"KK MPLB (Pengelolaan Keuangan)",
+  "E1":"KK MPLB (Pegelolaan Kearsipan)","F1":"Produk Kreatif dan Kewirausahaan",
+  "G1":"KK AKL (Prk Akun Perusahaan Jasa, Dagang dan Manufaktur)",
+  "H1":"KK AKL (Prk Akun Lembaga/IP)","I1":"KK AKL (MYOB)",
+  "J1":"KK AKL (Akuntansi Keuangan)","K1":"KK AKL (Administrasi Pajak)",
+  "L1":"Digital Branding","M1":"KK PMS (komunikasi bisnis, pengemasan dan pendistribusian)",
+  "M2":"KK PMS (Marketing, perencanaan bisnis dan customers service)",
+  "M3":"KK PMS (Administrasi transaksi, pengelolaan bisnis ritel)",
+  "N1":"KK ULP (Pengelolaan Perjalanan Wisata)","O1":"KK ULP (Pemanduan Perjalanan Wisata)",
+  "Q1":"KK AKL (Ekonomi Bisnis & Adm. Umum)","R1":"KK PMS (Komunikasi Bisnis)",
+  "S1":"KK PMS (Marketing)","T1":"KK PMS (Pengelolaan Bisnis Ritel)",
+  "U1":"Mata Pelajaran Pilihan MPLB","V1":"Mata Pelajaran Pilihan AKL",
+  "W1":"Mata Pelajaran Pilihan PMS","X1":"Mata Pelajaran Pilihan ULP",
+  "Y1":"Mata Pelajaran Pilihan TJKT","Z1":"Mata Pelajaran Pilihan TK",
+  "C1":"KK MPLB (Pengelolaan Sarpras)","aa":"Kreativitas, Inovasi dan Kewirausahaan",
+  "cc":"KK ULP (Pmsn dan Perh. Trf Tr. Laut Darat & Udara","dd":"Perencanaan dan Pengelolaan Perjalanan Wisata",
+  "ee":"KK ULP (MICE)","ff":"Produk Wisata Berbasis Digital",
+  "gg":"KK TJKT (Adm. Sistem Jaringan)","hh":"KK TJKT (Teknologi Jaringan Kabel dan Nirkabel)",
+  "ii":"KK TJKT (Pem. & Konfig Perangkat Jaringan)","jj":"Mapel Pilihan TJKT (Pemograman & IoT)",
+  "kk":"Instalasi Motor Listrik","ll":"KK TK (Instalasi Penerangan Listrik)",
+  "mm":"KK TK (Instalasi Tenaga Listrik)","nn":"Mulok (Bahasa Jerman)",
+  "oo":"KK TJKT (Perencanaan dan Pengalamatan Jaringan)",
+  "pp":"KK TK (Instalasi Motor Listrik)","qq":"Konsentrasi Keahlian TJKT",
+  "rr":"Muatan Lokal","ss":"KK MPLB (Sarpras)","tt":"KK MPLB (Kearsipan)",
+  "uu":"Komunikasi","vv":"Mapel Pilihan (Koding)","ww":"Kokurikuler PJBL",
+  "xx":"KK MPLB (Komunikasi di tempat kerja)","yy":"KK MPLB (Pelayanan pelanggan/kolega)",
+  "zz":"KK TJKT (FFTh)","C1":"KK MPLB (Pengelolaan Sarpras)",
+  "tjkt1":"DPK TJKT1 (Media dan jaringan telekomunikasi)",
+  "tjkt2":"DPK TJKT2 (Perkembangan teknologi di bidang teknik jaringan komputer)",
+  "tjkt3":"DPK TJKT3 (Proses bisnis di bidang teknik jaringan komputer)",
+  "KT1":"KK TJKT (Keamanan Jaringan)","KT2":"KK TJKT (FFTx)",
+  "KT3":"KK TJKT (Koneksi Jaringan Telekomunikasi)"
+};
+
+const HARI_ORDER = ["Senin","Selasa","Rabu","Kamis","Jumat"];
+const JP_MAX = {"Senin":11,"Selasa":11,"Rabu":11,"Kamis":10,"Jumat":5};
+const ISTIRAHAT = {
+  "Senin":{"4.5":"ISTIRAHAT (10.00–10.20)","8.5":"ISTIRAHAT (12.20–12.40)"},
+  "Selasa":{"4.5":"ISTIRAHAT (10.00–10.20)","8.5":"ISTIRAHAT (12.20–12.40)"},
+  "Rabu":{"4.5":"ISTIRAHAT (10.00–10.20)","8.5":"ISTIRAHAT (12.20–12.40)"},
+  "Kamis":{"4.5":"ISTIRAHAT (10.00–10.20)","7.5":"ISTIRAHAT (11.50–12.10)"},
+  "Jumat":{"3.5":"ISTIRAHAT (09.30–09.50)"}
+};
+
+// ═══════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════
+let currentView = 'kelas';
+
+function setView(v) {
+  currentView = v;
+  document.querySelectorAll('.toggle-btn').forEach((b,i) => {
+    b.classList.toggle('active', ['kelas','guru','mapel'][i] === v);
+  });
+  // Show/hide hari and kelas controls
+  document.getElementById('sel-hari').closest('.ctrl-group').style.display = v === 'kelas' ? '' : v === 'mapel' ? 'none' : 'none';
+  render();
+}
+
+function getMapelCategory(code) {
+  const c = code.toLowerCase();
+  if (["a","a2","b"].includes(c)) return "cat-agama";
+  if (["c","d","e","f","g","h","i","j","k"].includes(c)) return "cat-umum";
+  if (c === "ww") return "cat-pjbl";
+  if (c === "rr" || c === "nn") return "cat-mulog";
+  if (c.startsWith("tjkt") || c.startsWith("kt") || c === "qq") return "cat-dpk";
+  if (["l","m","n","o","oo","q","r","s","t","u"].includes(c)) return "cat-dpk";
+  return "cat-kk";
+}
+
+function guruShort(id) {
+  const full = GURU[id] || ("Guru #" + id);
+  const parts = full.split(",")[0].split(" ");
+  if (parts.length <= 2) return parts.join(" ");
+  return parts.slice(-2).join(" ");
+}
+
+function mapelName(code) { return MAPEL[code] || code; }
+
+// ═══════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════
+function init() {
+  const kelas = RAW_DATA.kelas;
+  const sel = document.getElementById('sel-kelas');
+  kelas.forEach(k => {
+    const o = document.createElement('option');
+    o.value = k; o.textContent = k;
+    sel.appendChild(o);
+  });
+  // Stats
+  const mapelSet = new Set();
+  Object.values(RAW_DATA.schedule).forEach(hd => {
+    Object.values(hd).forEach(kd => {
+      Object.values(kd).forEach(e => mapelSet.add(e.mapel_code));
+    });
+  });
+  document.getElementById('stat-mapel').textContent = mapelSet.size;
+  render();
+}
+
+// ═══════════════════════════════════════════════
+// RENDER DISPATCHER
+// ═══════════════════════════════════════════════
+function render() {
+  const root = document.getElementById('view-root');
+  if (currentView === 'kelas') renderKelas(root);
+  else if (currentView === 'guru') renderGuruView(root);
+  else renderMapelView(root);
+}
+
+// ═══════════════════════════════════════════════
+// VIEW 1: PER KELAS (TABLE)
+// ═══════════════════════════════════════════════
+function renderKelas(root) {
+  const hari = document.getElementById('sel-hari').value;
+  const filterKelas = document.getElementById('sel-kelas').value;
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+
+  const sched = RAW_DATA.schedule[hari] || {};
+  const waktu = RAW_DATA.waktu[hari] || {};
+  let kelasList = filterKelas ? [filterKelas] : RAW_DATA.kelas;
+
+  // Filter by search
+  if (q) {
+    kelasList = kelasList.filter(k => {
+      const kd = sched[k] || {};
+      return Object.values(kd).some(e =>
+        (GURU[e.guru_id]||'').toLowerCase().includes(q) ||
+        e.mapel_code.toLowerCase().includes(q) ||
+        mapelName(e.mapel_code).toLowerCase().includes(q)
+      );
+    });
+  }
+
+  const jpMax = JP_MAX[hari] || 11;
+  const jps = Array.from({length: jpMax}, (_, i) => i + 1);
+
+  // Build istirahat rows
+  const iRows = ISTIRAHAT[hari] || {};
+
+  let html = `<div class="schedule-section">
+    <div class="day-header">
+      <span class="day-name">${hari}</span>
+      <span class="day-badge">${jpMax} JP &nbsp; ${kelasList.length} kelas</span>
+    </div>
+    <div class="table-scroll"><table>
+      <thead><tr>
+        <th class="th-jp">JP</th>
+        <th class="th-time">Waktu</th>`;
+
+  kelasList.forEach(k => {
+    const parts = k.split(' ');
+    const tingkat = parts[0];
+    const jurusan = parts.slice(1).join(' ');
+    html += `<th class="th-class"><span class="th-kelas-name">${tingkat} ${jurusan}</span></th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  // Insert rows with istirahat breaks
+  const allJps = [];
+  jps.forEach((jp, idx) => {
+    // Check if need istirahat before this jp
+    const prevKey = (jp - 0.5) + '';
+    if (iRows[prevKey] && idx > 0) {
+      allJps.push({type:'istirahat', label: iRows[prevKey]});
+    }
+    allJps.push({type:'jp', jp});
+  });
+
+  allJps.forEach(row => {
+    if (row.type === 'istirahat') {
+      html += `<tr><td class="td-jp">—</td><td class="td-time td-istirahat" style="font-size:0.65rem;font-weight:700;color:var(--gold);letter-spacing:0.06em;">☕</td>`;
+      kelasList.forEach(() => {
+        html += `<td class="td-istirahat" style="font-size:0.65rem;color:var(--gold);font-weight:600;letter-spacing:0.04em;">${row.label}</td>`;
+      });
+      html += '</tr>';
+    } else {
+      const jp = row.jp;
+      const time = waktu[jp] || '';
+      html += `<tr><td class="td-jp">${jp}</td><td class="td-time">${time}</td>`;
+      kelasList.forEach(k => {
+        const kd = sched[k] || {};
+        const e = kd[jp];
+        if (!e) {
+          html += '<td><span class="empty-cell">·</span></td>';
+          return;
+        }
+        const cat = getMapelCategory(e.mapel_code);
+        const gShort = guruShort(e.guru_id);
+        const fullGuru = GURU[e.guru_id] || `Guru #${e.guru_id}`;
+        const fullMapel = mapelName(e.mapel_code);
+        // highlight search
+        let mapelDisp = e.mapel_code;
+        let guruDisp = gShort;
+        if (q && (mapelDisp.toLowerCase().includes(q) || guruDisp.toLowerCase().includes(q) || fullGuru.toLowerCase().includes(q) || fullMapel.toLowerCase().includes(q))) {
+          mapelDisp = mapelDisp.replace(new RegExp(q,'gi'), m => `<span class="hl">${m}</span>`);
+          guruDisp = guruDisp.replace(new RegExp(q,'gi'), m => `<span class="hl">${m}</span>`);
+        }
+        html += `<td>
+          <div class="cell-chip ${cat}" onclick="openModal('${hari}','${k}',${jp})">
+            <span class="chip-mapel">${mapelDisp}</span>
+            <span class="chip-guru">${guruDisp}</span>
+            <div class="chip-tooltip">
+              <span class="chip-tooltip-mapel">${e.mapel_code} — ${fullMapel}</span><br>
+              <span class="chip-tooltip-guru">👤 ${fullGuru}</span><br>
+              <span class="chip-tooltip-time">⏰ ${e.waktu} &nbsp; JP ${jp}</span><br>
+              <span class="chip-tooltip-guru">🏫 ${k}</span>
+            </div>
+          </div></td>`;
+      });
+      html += '</tr>';
+    }
+  });
+
+  html += '</tbody></table></div></div>';
+  root.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════
+// VIEW 2: PER GURU
+// ═══════════════════════════════════════════════
+function renderGuruView(root) {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+
+  // Build guru schedule summary
+  const guruMap = {}; // guru_id -> [{hari, kelas, jp, mapel_code, waktu}]
+  HARI_ORDER.forEach(hari => {
+    const hd = RAW_DATA.schedule[hari] || {};
+    Object.entries(hd).forEach(([kelas, kd]) => {
+      Object.entries(kd).forEach(([jp, e]) => {
+        if (!guruMap[e.guru_id]) guruMap[e.guru_id] = [];
+        guruMap[e.guru_id].push({hari, kelas, jp: parseInt(jp), mapel_code: e.mapel_code, waktu: e.waktu});
+      });
+    });
+  });
+
+  // Group by guru, then by hari+mapel+kelas
+  let guruIds = Object.keys(guruMap).sort((a,b) => parseInt(a)-parseInt(b));
+
+  if (q) {
+    guruIds = guruIds.filter(id => {
+      const name = (GURU[id]||'').toLowerCase();
+      const codes = guruMap[id].map(e => e.mapel_code.toLowerCase() + ' ' + mapelName(e.mapel_code).toLowerCase()).join(' ');
+      return name.includes(q) || codes.includes(q);
+    });
+  }
+
+  if (!guruIds.length) {
+    root.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🔍</div><p class="empty-state-text">Tidak ada guru ditemukan untuk pencarian "<strong>${q}</strong>"</p></div>`;
+    return;
+  }
+
+  let html = '<div class="guru-grid">';
+  guruIds.forEach(id => {
+    const name = GURU[id] || `Guru #${id}`;
+    const entries = guruMap[id];
+    const initials = name.split(' ').filter(w=>w.match(/^[A-Z]/)).slice(0,2).map(w=>w[0]).join('');
+
+    // Group by hari -> mapel -> kelas
+    const byHari = {};
+    entries.forEach(e => {
+      if (!byHari[e.hari]) byHari[e.hari] = {};
+      const key = e.mapel_code;
+      if (!byHari[e.hari][key]) byHari[e.hari][key] = {kelas: new Set(), jps: []};
+      byHari[e.hari][key].kelas.add(e.kelas);
+      if (!byHari[e.hari][key].jps.includes(e.jp)) byHari[e.hari][key].jps.push(e.jp);
+    });
+
+    html += `<div class="guru-card">
+      <div class="guru-card-header">
+        <div class="guru-avatar">${initials||id}</div>
+        <div>
+          <div class="guru-name">${name}</div>
+          <div class="guru-id-badge">ID #${id}</div>
+        </div>
+      </div>
+      <div class="guru-card-body"><ul class="guru-schedule-list">`;
+
+    HARI_ORDER.forEach(hari => {
+      if (!byHari[hari]) return;
+      Object.entries(byHari[hari]).forEach(([mc, data]) => {
+        const jpsorted = data.jps.sort((a,b)=>a-b);
+        const jpLabel = `JP ${jpsorted[0]}${jpsorted.length>1?'–'+jpsorted[jpsorted.length-1]:''}`;
+        html += `<li class="guru-schedule-item">
+          <span class="gsi-day">${hari}</span>
+          <div class="gsi-info">
+            <div class="gsi-mapel">${mc} <span style="font-weight:400;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.7rem;font-style:italic;">— ${mapelName(mc).slice(0,38)}${mapelName(mc).length>38?'…':''}</span></div>
+            <div class="gsi-kelas">${[...data.kelas].map(k=>`<span class="kelas-tag">${k}</span>`).join('')}</div>
+          </div>
+          <span class="gsi-jp">${jpLabel}</span>
+        </li>`;
+      });
+    });
+
+    html += '</ul></div></div>';
+  });
+
+  html += '</div>';
+  root.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════
+// VIEW 3: PER MAPEL
+// ═══════════════════════════════════════════════
+function renderMapelView(root) {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+
+  // Build mapel summary
+  const mapelMap = {};
+  HARI_ORDER.forEach(hari => {
+    const hd = RAW_DATA.schedule[hari] || {};
+    Object.entries(hd).forEach(([kelas, kd]) => {
+      Object.entries(kd).forEach(([jp, e]) => {
+        const mc = e.mapel_code;
+        if (!mapelMap[mc]) mapelMap[mc] = {guru_ids: new Set(), kelas: new Set(), count: 0};
+        mapelMap[mc].guru_ids.add(e.guru_id);
+        mapelMap[mc].kelas.add(kelas);
+        mapelMap[mc].count++;
+      });
+    });
+  });
+
+  let codes = Object.keys(mapelMap).sort();
+  if (q) {
+    codes = codes.filter(mc =>
+      mc.toLowerCase().includes(q) ||
+      mapelName(mc).toLowerCase().includes(q) ||
+      [...mapelMap[mc].guru_ids].some(id => (GURU[id]||'').toLowerCase().includes(q))
+    );
+  }
+
+  if (!codes.length) {
+    root.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🔍</div><p class="empty-state-text">Tidak ada mapel ditemukan.</p></div>`;
+    return;
+  }
+
+  let html = '<div class="mapel-grid">';
+  codes.forEach(mc => {
+    const data = mapelMap[mc];
+    const cat = getMapelCategory(mc);
+    const guruNames = [...data.guru_ids].map(id => GURU[id]||`#${id}`);
+    html += `<div class="mapel-card">
+      <div class="mapel-card-header">
+        <span class="mapel-code-box">${mc}</span>
+        <span class="mapel-fullname">${mapelName(mc)}</span>
+      </div>
+      <div class="mapel-card-body">
+        <div class="mapel-guru-line">👤 <span class="mapel-guru-name">${guruNames.join(', ')}</span></div>
+        <div class="mapel-kelas-list">${[...data.kelas].map(k=>`<span class="kelas-tag">${k}</span>`).join('')}</div>
+        <div style="margin-top:8px;font-size:0.7rem;color:var(--muted);">${data.count} JP / minggu</div>
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+  root.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════════
+function openModal(hari, kelas, jp) {
+  const sched = RAW_DATA.schedule[hari] || {};
+  const kd = sched[kelas] || {};
+  const e = kd[jp];
+  if (!e) return;
+
+  document.getElementById('modal-title').textContent = `${kelas} — JP ${jp}`;
+  document.getElementById('modal-subtitle').textContent = `${hari} · ${e.waktu}`;
+
+  const guru = GURU[e.guru_id] || `Guru #${e.guru_id}`;
+  const mapel = mapelName(e.mapel_code);
+
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-row">
+      <span class="modal-key">Kode Mapel</span>
+      <span class="modal-val mono">${e.mapel_code}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">Mata Pelajaran</span>
+      <span class="modal-val">${mapel}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">ID Guru</span>
+      <span class="modal-val mono">#${e.guru_id}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">Nama Guru</span>
+      <span class="modal-val">${guru}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">Kelas</span>
+      <span class="modal-val">${kelas}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">Hari</span>
+      <span class="modal-val">${hari}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">JP ke-</span>
+      <span class="modal-val mono">${jp}</span>
+    </div>
+    <div class="modal-row">
+      <span class="modal-key">Waktu</span>
+      <span class="modal-val mono">${e.waktu}</span>
+    </div>
+  `;
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeModalDirect(); });
+
+// ── INIT ──
+init();
+</script>
+</body>
+</html>
